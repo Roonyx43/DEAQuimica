@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    font-family: verdana;
+    background-color: white;
+    color: rgb(23, 172, 138);
+    text-align: center;
+    padding-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 0 black;
+}
+
+body{
+    
+    background-color: lightgray;
+    font-family: verdana;
+}
+
+img {
+    width: 4%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+.login{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(179, 179, 179);
+    width: 37%;
+    margin-top: 140px;
+    height: 40%;
+    border-radius: 10px;
+    border: solid rgb(143, 143, 143);
+}
+
+h1 {
+    color: rgb(10, 93, 167);
+    margin-top: 30px;
+}
+
+.usuario{
+    margin-top: 40px
+}
+
+input {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+.senha { 
+    margin-top: 15px;
+}
+
+.button-login {
+    margin-top: 25px;
+}
+
+.log-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(25, 228, 25);
+    cursor: pointer;
+    font-family: verdana;
+}
+
+.log-button:hover {
+    transition: 0.3s;
+    background-color: rgb(16, 190, 16);
+}
+
+
+@media (max-width: 999px) {
+    img{
+        width: 8%;
+    }
+}
