@@ -7,11 +7,4 @@
     $MYSQLPORT = '45439';
 
     $conn = new mysqli($MYSQLHOST, $MYSQLUSER, $MYSQLPASSWORD, $MYSQLDATABASE, $MYSQLPORT);
-
-    if($conn->connect_errno){
-        echo "Erro";
-    } else {
-        echo "Conexão bem sucedida";
-    }
-
 ?>
