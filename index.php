@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D&A Tools</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleformlogin.css"> 
+    <link rel="stylesheet" href="styleformlogin.css">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/logo.ico">
 <body>
     <header>
         <img src="assets/logo.jpg" alt="Logo">
