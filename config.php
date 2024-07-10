@@ -1,17 +1,11 @@
 <?php
 
-    $dbHost = 'localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
-    $dbName = 'test';
+    $MYSQLDATABASE = 'railway';
+    $MYSQLHOST = 'viaduct.proxy.rlwy.net';
+    $MYSQLPASSWORD = 'fciTFQVmDVPzwUXFlZcTZenmCmAnpSTl';
+    $MYSQLUSER = 'root';
+    $MYSQLPORT = '45439';
 
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-    if($conexao->connect_errno){
-        echo "Erro";
-    } else {
-        echo "Conexão bem sucedida";
-    }
-
+    $conn = new mysqli($MYSQLHOST, $MYSQLUSER, $MYSQLPASSWORD, $MYSQLDATABASE, $MYSQLPORT);
 
 ?>

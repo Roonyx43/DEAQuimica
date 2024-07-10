@@ -66,3 +66,32 @@ function runScript() {
     // Chame a função original do script.js aqui
     originalRunScript();
 }
+
+document.getElementById('texto-sem-numeros').addEventListener('keydown', function (e) {
+    // Verifica se a tecla pressionada é um número
+    if (e.key >= '0' && e.key <= '9') {
+        e.preventDefault(); // Impede a entrada do número
+    }
+});
+
+document.getElementById('texto-sem-numeros2').addEventListener('keydown', function (e) {
+    // Verifica se a tecla pressionada é um número
+    if (e.key >= '0' && e.key <= '9') {
+        e.preventDefault(); // Impede a entrada do número
+    }
+});
+
+document.getElementById('texto-sem-numeros3').addEventListener('keydown', function (e) {
+    // Verifica se a tecla pressionada é um número
+    if (e.key >= '0' && e.key <= '9') {
+        e.preventDefault(); // Impede a entrada do número
+    }
+});
+
+function atualizarValor() {
+    var input = document.getElementsByid('medpai1');
+    var valor = input.value;
+    if (valor) {
+        input.value = valor + 'm';
+    }
+}

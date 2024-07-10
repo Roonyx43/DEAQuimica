@@ -15,7 +15,7 @@
         if(mysqli_num_rows($result) < 1){
             header('Location: index.php');
         } else {
-            header('Location: /ProjetoDEA-main/index.html');
+            header('Location: /ProjetoDEA-main/formlav.html');
         }
     }
 

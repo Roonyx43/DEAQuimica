@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    font-family: verdana;
+    background-color: white;
+    color: rgb(23, 172, 138);
+    text-align: center;
+    padding-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 0 black;
+}
+
+body {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    font-family:"Poppins", sans-serif; height:100vh; 
+}
+
+img {
+    width: 4%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+
+@media (max-width: 999px) {
+    img{
+        width: 8%;
+    }
+}
