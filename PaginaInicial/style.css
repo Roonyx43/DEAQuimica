@@ -68,9 +68,19 @@ main{
     padding: 5px;
 }
 
+.logout-but:hover{
+    background-color: rgb(180, 0, 0);
+    transition: 0.3s;
+}
+
+
 .title-mainpage{
-    margin-top: 73px;
+    margin-top: 33px;
     color: #0071bd;
+    height: 37px;
+}
+.title-mainpage2{
+    color: rgb(23, 172, 138);
 }
 
 hr{
@@ -102,40 +112,9 @@ hr{
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    border: 1px dashed rgb(23, 172, 138);
+    border: 4px solid rgb(23, 172, 138);
     color: rgb(23, 172, 138);
-    cursor: pointer;
     overflow: hidden;
-}
-
-.picture:hover{
-    background-color: #eee;
-    transition: 0.3s;
-}
-
-.button-envfoto{
-    margin-bottom: 10px;
-    margin-left: 72px;
-    padding: 3px 5px;
-    border: none;
-    background-color: rgb(23, 172, 138);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.picture__image {
-    
-    object-position: center;
-    object-fit: cover;
-    
-}
-
-.picture__img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    
 }
 @media (max-width: 1074px) {
     img{
@@ -158,6 +137,9 @@ hr{
     }
     .logout {
         margin-left: -70px;
+    }
+    .title-mainpage{
+        margin-top: 73px;
     }
 }
 

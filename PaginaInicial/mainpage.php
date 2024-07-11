@@ -9,10 +9,6 @@
     <title>D&A Tools</title>
     <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script>
-        // Passa a URL da imagem para o JavaScript
-        const userImage = "<?php echo htmlspecialchars($imagem_usuario); ?>";
-    </script>
     <script src="fotoperf.js"></script>
     <link rel="stylesheet" href="stylechecklist.css">
 </head>
@@ -29,12 +25,15 @@
             <div class="cabecalho-main">
                 <div class="fotoperf">
                     <label class="picture" for="picture__input" tabIndex="0">
-                        <span class="picture__image"></span>
+                        <img src="../assets/logo.jpg" alt="" style="width: 100%;">
                     </label>
-                    <input type="file" id="picture__input" name="picture__input">
-                    <button class="button-envfoto">Enviar</button>
+                    
                 </div>
-                <h1 class="title-mainpage">Olá, <?php echo htmlspecialchars($nome_usuario); ?>!</h1>
+                <h1 class="title-mainpage">Olá,<break>
+                    <h1 class="title-mainpage2"> 
+                        <?php echo htmlspecialchars($nome_usuario); ?>!
+                    </h1>
+                </h1>
                 <div class="logout">
                     <a href="../logout.php" class="logout-but">SAIR</a>
                 </div>
@@ -44,7 +43,7 @@
                 <ul>
                     <h2 class="title-checklists">Checklists</h2>
                     <hr class="divisoria-checklist">
-                    <li class="checklist-lavanderia"><a href="../ProjetoDEA-main/formlav.html">Lavanderia</a></li>
+                    <li class="checklist-lavanderia"><a href="../ProjetoDEA-main/formlav.html" class="checklist-a">Lavanderia</a></li>
                     <li class="checklist-diluidor"></li>
                 </ul>
             </div>

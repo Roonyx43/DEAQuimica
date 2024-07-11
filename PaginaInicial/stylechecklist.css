@@ -15,9 +15,22 @@ li {
 
 a{
     text-decoration: none;
-    color: #0071bd;
+    color: rgb(23, 172, 138);
     font-weight: bold;
 }
+
+.checklist-a{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2373ec;
+}
+
+.checklist-a:hover{
+    background-color: #1753ad;
+    transition: 0.3s;
+}
+
 
 .divisoria-checklist{
     width: 80%;

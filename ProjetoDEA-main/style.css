@@ -75,6 +75,12 @@ body{
 
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
 p {
     font-weight: bold;
     color: black;
@@ -186,6 +192,7 @@ textarea {
     border-radius: 10px;
     box-shadow: 0 0 4px 0 black;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .next-page-2 {
@@ -197,6 +204,7 @@ textarea {
     color: #fff;
     box-shadow: 0 0 4px 0 black;
     cursor: pointer;
+    font-weight: bold;
 }
 
 
@@ -209,6 +217,7 @@ textarea {
     color: #fff;
     box-shadow: 0 0 4px 0 black;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .next-page:active{
@@ -388,8 +397,8 @@ img {
 }
 
 .time-style{
-    padding-left: 63px;
-    padding-right: 63px;
+    padding-left: 75px;
+    padding-right: 75px;
     color: rgb(100, 100, 100);
 }
 
@@ -424,6 +433,10 @@ input[type="number"]{
     img {
         width: 8%;
        
+    }
+    .time-style {
+        padding-left: 60px;
+        padding-right: 60px;
     }
 }
 
