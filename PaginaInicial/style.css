@@ -116,7 +116,7 @@ hr{
     color: rgb(23, 172, 138);
     overflow: hidden;
 }
-@media (max-width: 1074px) {
+@media (max-width: 1356px) {
     img{
         width: 10%;
     }
@@ -140,6 +140,10 @@ hr{
     }
     .title-mainpage{
         margin-top: 73px;
+    }
+
+    .title-mainpage2{
+        font-size: 40px;
     }
 }
 
