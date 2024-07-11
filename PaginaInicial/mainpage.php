@@ -1,6 +1,5 @@
 <?php
-    include('../check_session.php');
-    include('name.php')
+    include('name.php'); // Inclui o name.php que agora contém a URL da imagem
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,17 +9,20 @@
     <title>D&A Tools</title>
     <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Passa a URL da imagem para o JavaScript
+        const userImage = "<?php echo htmlspecialchars($imagem_usuario); ?>";
+    </script>
     <script src="fotoperf.js"></script>
     <link rel="stylesheet" href="stylechecklist.css">
 </head>
 <body>
     <header>
         <div class="imaged">
-            <a href="../PaginaInicial/mainpage.php">
+            <a href="../PaginaInicial/mainpage.html">
                 <img src="../assets/logo.jpg" alt="D&A Tools">
             </a>
         </div>
-        
     </header>
     <main>
         <div class="main-page">
@@ -31,9 +33,7 @@
                     </label>
                     <input type="file" id="picture__input" name="picture__input">
                     <button class="button-envfoto">Enviar</button>
-                    
                 </div>
-                
                 <h1 class="title-mainpage">Olá, <?php echo htmlspecialchars($nome_usuario); ?>!</h1>
                 <div class="logout">
                     <a href="../logout.php" class="logout-but">SAIR</a>
@@ -49,7 +49,6 @@
                 </ul>
             </div>
         </div>
-        
     </main>
 </body>
 </html>
