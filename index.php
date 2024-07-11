@@ -27,9 +27,6 @@
                     <input type="password" id="password" class="campo" name="senha" placeholder="Senha" required>
                     <input type="submit" class="botao" name="entrar" id="entrar" value="Entrar">
                 </form>
-                <div class="box-lembrar-senha">  
-                    <a class="link" href="#">Lembrar Senha?</a>
-                </div>
             </div>
         </div>
     </main>
