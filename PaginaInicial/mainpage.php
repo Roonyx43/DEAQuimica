@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="imaged">
-            <a href="../PaginaInicial/mainpage.html">
+            <a href="../PaginaInicial/mainpage.php">
                 <img src="../assets/logo.jpg" alt="D&A Tools">
             </a>
         </div>
