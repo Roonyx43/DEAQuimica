@@ -17,10 +17,12 @@ header {
     
 }
 
-body {
-    font-family:"Poppins", sans-serif;
-    max-height: 100vh; /* Alterado de height para min-height para garantir que ocupe a altura total */
+body{
     background-image: url(../assets/background.jpg);
+    background-size: cover;
+    font-family:"Poppins", sans-serif;
+    height:100vh; 
+    background-attachment: fixed;
 }
 
 .imaged{
