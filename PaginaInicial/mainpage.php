@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="imaged">
-            <a href="../PaginaInicial/mainpage.php">
+            <a href="../PaginaInicial/mainpage.html">
                 <img src="../assets/logo.jpg" alt="D&A Tools">
             </a>
         </div>
@@ -44,7 +44,7 @@
                     <h2 class="title-checklists">Checklists</h2>
                     <hr class="divisoria-checklist">
                     <li class="checklist-lavanderia"><a href="../ProjetoDEA-main/formlav.php" class="checklist-a">Lavanderia</a></li>
-                    <li class="checklist-diluidor"></li>
+                    <li class="checklist-lavanderia2"><a href="../Checklist-Diluidor/formdil.php" class="checklist-b">Diluidor</a></li>
                 </ul>
             </div>
         </div>
