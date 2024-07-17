@@ -10,7 +10,8 @@
 li {
     
     list-style: none;
-    margin: 20px;
+    margin: 30px;
+    
 }
 
 a{
@@ -22,6 +23,7 @@ a{
 .checklist-a{
     color: white;
     padding: 10px;
+    margin-bottom: 2;
     border-radius: 10px;
     background-color: #2373ec;
 }
@@ -40,4 +42,21 @@ a{
 .title-checklists{
     margin-top: 20px;
     color: rgb(23, 172, 138)
+}
+
+.checklist-b{
+    color: white;
+    padding: 10px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-radius: 10px;
+    background-color: #2373ec;
+    
+}
+
+
+
+.checklist-b:hover{
+    background-color: #1753ad;
+    transition: 0.3s;
 }
