@@ -331,15 +331,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('B26').value = prodeq1;
                 worksheet.getCell('D28').value = selectedValueBb;
                 worksheet.getCell('D29').value = qtdm1;
-                worksheet.getCell('D30').value = desconto1;
-                worksheet.getCell('B32').value = dil1;
+                worksheet.getCell('D30').value = desconto1 + "%";
+                worksheet.getCell('B32').value = dil1 + "ml/L";
                 worksheet.getCell('C41').value = bh1_a ? 'X' : '';
                 worksheet.getCell('E41').value = bh1_b ? 'X' : '';
                 worksheet.getCell('C43').value = ms1_a ? 'X' : '';
                 worksheet.getCell('E43').value = ms1_b ? 'X' : '';
                 worksheet.getCell('C45').value = sp1_a ? 'X' : '';
                 worksheet.getCell('E45').value = sp1_b ? 'X' : '';
-                worksheet.getCell('B51').value = mang1;
+                worksheet.getCell('B51').value = mang1 + "m";
 
                 // Preenchimento Equipamento 2
 
@@ -348,15 +348,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('F26').value = prodeq2;
                 worksheet.getCell('H28').value = selectedValueBb2;
                 worksheet.getCell('H29').value = qtdm2;
-                worksheet.getCell('H30').value = desconto2;
-                worksheet.getCell('F32').value = dil2;
+                worksheet.getCell('H30').value = desconto2 + "%";
+                worksheet.getCell('F32').value = dil2 + "ml/L";
                 worksheet.getCell('G41').value = bh2_a ? 'X' : '';
                 worksheet.getCell('I41').value = bh2_b ? 'X' : '';
                 worksheet.getCell('G43').value = ms2_a ? 'X' : '';
                 worksheet.getCell('I43').value = ms2_b ? 'X' : '';
                 worksheet.getCell('G45').value = sp2_a ? 'X' : '';
                 worksheet.getCell('I45').value = sp2_b ? 'X' : '';
-                worksheet.getCell('F51').value = mang2;
+                worksheet.getCell('F51').value = mang2 + "m";
 
                 // Preenchimento Equipamento 3
 
@@ -365,15 +365,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('J26').value = prodeq3;
                 worksheet.getCell('L28').value = selectedValueBb3;
                 worksheet.getCell('L29').value = qtdm3;
-                worksheet.getCell('L30').value = desconto3;
-                worksheet.getCell('J32').value = dil3;
+                worksheet.getCell('L30').value = desconto3 + "%";
+                worksheet.getCell('J32').value = dil3 + "ml/L";
                 worksheet.getCell('K41').value = bh3_a ? 'X' : '';
                 worksheet.getCell('M41').value = bh3_b ? 'X' : '';
                 worksheet.getCell('K43').value = ms3_a ? 'X' : '';
                 worksheet.getCell('M43').value = ms3_b ? 'X' : '';
                 worksheet.getCell('K45').value = sp3_a ? 'X' : '';
                 worksheet.getCell('M45').value = sp3_b ? 'X' : '';
-                worksheet.getCell('J51').value = mang3;
+                worksheet.getCell('J51').value = mang3 + "m";
 
                 // Preenchimento Equipamento 4
 
@@ -383,14 +383,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('P28').value = selectedValueBb4;
                 worksheet.getCell('P29').value = qtdm4;
                 worksheet.getCell('P30').value = desconto4;
-                worksheet.getCell('N32').value = dil4;
+                worksheet.getCell('N32').value = dil4 + "ml/L";
                 worksheet.getCell('O41').value = bh4_a ? 'X' : '';
                 worksheet.getCell('Q41').value = bh4_b ? 'X' : '';
                 worksheet.getCell('O43').value = ms4_a ? 'X' : '';
                 worksheet.getCell('Q43').value = ms4_b ? 'X' : '';
                 worksheet.getCell('O45').value = sp4_a ? 'X' : '';
                 worksheet.getCell('Q45').value = sp4_b ? 'X' : '';
-                worksheet.getCell('N51').value = mang4;
+                worksheet.getCell('N51').value = mang4 + "m";
 
                 // Preenchimento Equipamento 5
 
@@ -399,15 +399,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('R26').value = prodeq5;
                 worksheet.getCell('T28').value = selectedValueBb5;
                 worksheet.getCell('T29').value = qtdm5;
-                worksheet.getCell('T30').value = desconto5;
-                worksheet.getCell('R32').value = dil5;
+                worksheet.getCell('T30').value = desconto5 + "%";
+                worksheet.getCell('R32').value = dil5 + "ml/L";
                 worksheet.getCell('S41').value = bh5_a ? 'X' : '';
                 worksheet.getCell('U41').value = bh5_b ? 'X' : '';
                 worksheet.getCell('S43').value = ms5_a ? 'X' : '';
                 worksheet.getCell('U43').value = ms5_b ? 'X' : '';
                 worksheet.getCell('S45').value = sp5_a ? 'X' : '';
                 worksheet.getCell('U45').value = sp5_b ? 'X' : '';
-                worksheet.getCell('R51').value = mang5;
+                worksheet.getCell('R51').value = mang5 + "m";
 
                 // Preenchimento Equipamento 6
 
@@ -416,15 +416,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('V26').value = prodeq6;
                 worksheet.getCell('X28').value = selectedValueBb6;
                 worksheet.getCell('X29').value = qtdm6;
-                worksheet.getCell('X30').value = desconto6;
-                worksheet.getCell('V32').value = dil6;
+                worksheet.getCell('X30').value = desconto6 + "%";
+                worksheet.getCell('V32').value = dil6 + "ml/L";
                 worksheet.getCell('W41').value = bh6_a ? 'X' : '';
                 worksheet.getCell('Y41').value = bh6_b ? 'X' : '';
                 worksheet.getCell('W43').value = ms6_a ? 'X' : '';
                 worksheet.getCell('Y43').value = ms6_b ? 'X' : '';
                 worksheet.getCell('W45').value = sp6_a ? 'X' : '';
                 worksheet.getCell('Y45').value = sp6_b ? 'X' : '';
-                worksheet.getCell('V51').value = mang6;
+                worksheet.getCell('V51').value = mang6 + "m";
 
                 // Adiciona os valores dos produtos nas células específicas
                 productValues.forEach((value, index) => {
