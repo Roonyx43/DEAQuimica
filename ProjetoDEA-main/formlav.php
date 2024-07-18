@@ -77,20 +77,20 @@ session_start();
                 </div>
                 <div class="med1">
                     <p>Medida do chão ao ponto inferior do painel: </p>
-                        <input type="number" class="med-painel" placeholder="Ex: 0.0m" id="medpai1" required>
+                        <input type="number" class="med-painel" placeholder="Ex: 0,0m" id="medpai1" required>
                 </div>
                 <div class="med1">
                     <p>Medida da parede: <p>
-                    <label>Altura<input type="number" class="med-painel" placeholder="Ex: 0.0m" id="medpar1" required></label>
-                    <label>Largura<input type="number" class="med-painel" placeholder="Ex: 0.0m" id="medpar2" required></label>
+                    <label>Altura<input type="number" class="med-painel" placeholder="Ex: 0,0" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
+                    <label>Largura<input type="number" class="med-painel" placeholder="Ex: 0,0" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
                 </div>
                 <div class="med1">
                     <p>Distancia ponto de água até central: </p>
-                        <input type="number" class="med-painel" placeholder="Ex: 0.0m" id="dist" required>
+                        <input type="number" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist" required>
                 </div>
                 <div class="med1">
                     <p>Distancia tomada até central: </p>
-                        <input type="number" class="med-painel" placeholder="Ex: 0.0m" id="dist2" required>
+                        <input type="number" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist2" required>
                 </div>
                 <div class="buttons-conex2">
                     <label class="title-tens">Ponto de água cliente:</label>
