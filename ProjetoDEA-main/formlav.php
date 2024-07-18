@@ -65,15 +65,15 @@ session_start();
 
             <form id="secondForm" class="fm2 hidden">
                 <h1 class="title-cliente">Dados do Painel</h1>
-                <div class="buttons">
-                    <p>Posição CPU no Painel:</p>
-                    <input type="checkbox" id="opt7" name="option4" value="7" required>Direita
-                    <input type="checkbox" id="opt8" name="option4" value="8" required>Esquerda
-                </div>
                 <div class="buttons-tens2">
                     <p>O painel cabe?</p>
                     <input type="checkbox" id="opt9" name="option5" value="9" required>Sim
                     <input type="checkbox" id="opt10" name="option5" value="10" required>Não
+                </div>
+                <div class="buttons">
+                    <p>Posição CPU no Painel:</p>
+                    <input type="checkbox" id="opt7" name="option4" value="7" required>Direita
+                    <input type="checkbox" id="opt8" name="option4" value="8" required>Esquerda
                 </div>
                 <div class="med1">
                     <p>Medida do chão ao ponto inferior do painel: </p>
