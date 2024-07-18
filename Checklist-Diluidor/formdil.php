@@ -67,11 +67,11 @@
                 </div>
                 <div class="distanciahidr">
                     <label class="title-tens">Distancia da hidraulica à central:</label>
-                    <input type="number" id="disthidr">
+                    <input type="text" id="disthidr" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="distanciaelet">
                     <label class="title-tens">Distancia do ponto elétrico à central:</label>
-                    <input type="number" id="distelet">
+                    <input type="text" id="distelet" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar"><a href="../PaginaInicial/mainpage.php">Voltar</a></button>
@@ -99,8 +99,8 @@
                 </div>
                 <div class="med1">
                     <p>Medida da parede: <p>
-                    <input type="number" class="med-painel" placeholder="Altura" id="medpar1" required></label>
-                    <input type="number" class="med-painel" placeholder="Largura" id="medpar2" required></label>
+                    <input type="text" class="med-painel" placeholder="Altura" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
+                    <input type="text" class="med-painel" placeholder="Largura" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario()">Voltar</button>
@@ -134,10 +134,11 @@
                     <input type="text" placeholder="Quantidade Por Mês" id="qtdm1" required>
                 </div>
                 <div class="desconto">
-                    <input type="text" placeholder="Desconto" id="desconto1" required>
+                    <input type="text" placeholder="Desconto" id="desconto1" >
                 </div>
                 <div class="diluicao">
-                    <input type="text" placeholder="Diluição ml/L" id="dil1" required>
+                    <input type="text" placeholder="Diluição ml/L" id="dil1"
+                    inputmode="decimal" pattern="\d*,?\d*" required>
                 </div>
                 <div class="buttons">
                     <p>Bitola Hidraulica:</p>
