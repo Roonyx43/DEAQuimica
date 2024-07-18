@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     checkedValue = checkbox.value;
                 }
             });
-            checkboxValues.push(checkedValue);
+            checkboxValues.push(checkedValue); 
         });
 
         // Carrega o arquivo de modelo usando fetch
@@ -173,18 +173,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('O17').value = CPUesq ? 'X' : '';
                 worksheet.getCell('W17').value = painelSim ? 'X' : '';
                 worksheet.getCell('Z17').value = painelNao ? 'X' : '';
-                worksheet.getCell('J18').value = medPai;
-                worksheet.getCell('S18').value = medPar1;
-                worksheet.getCell('X18').value = medPar2;
-                worksheet.getCell('J19').value = dist;
-                worksheet.getCell('J20').value = dist2;
+                worksheet.getCell('J18').value = medPai + "m";
+                worksheet.getCell('S18').value = medPar1 + "m";
+                worksheet.getCell('X18').value = medPar2 + "m";
+                worksheet.getCell('J19').value = dist + "m";
+                worksheet.getCell('J20').value = dist2 + "m";
                 worksheet.getCell('V19').value = pacd ? 'X' : '';
                 worksheet.getCell('Z19').value = pace ? 'X' : '';
                 worksheet.getCell('V20').value = pecd ? 'X' : '';
                 worksheet.getCell('Z20').value = pece ? 'X' : '';
 
                 // Inserindo Máquina 1
-                worksheet.getCell('B34').value = kg0;
+                worksheet.getCell('B34').value = kg0 + "KG";
                 worksheet.getCell('N31').value = ssc1 ? 'X' : '';
                 worksheet.getCell('R31').value = check500024v1 ? 'X' : '';
                 worksheet.getCell('V31').value = check5000220v1 ? 'X' : '';
@@ -196,16 +196,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('O33').value = vb50 ? 'X' : '';
                 worksheet.getCell('S33').value = vbel ? 'X' : '';
                 worksheet.getCell('Y33').value = vbpn ? 'X' : '';
-                worksheet.getCell('X34').value = drenoinp;
+                worksheet.getCell('X34').value = drenoinp + "mm";
                 worksheet.getCell('M34').value = drenoel ? 'X' : '';
                 worksheet.getCell('R34').value = drenopn ? 'X' : '';
-                worksheet.getCell('J35').value = distlp;
+                worksheet.getCell('J35').value = distlp + "m";
                 worksheet.getCell('U35').value = flesq ? 'X' : '';
                 worksheet.getCell('S35').value = fldir ? 'X' : '';
 
                 // Inserção da Máquina 2 (se a div equipment-item2 existir)
                 if (equipmentItem2Exists) {
-                    worksheet.getCell('B39').value = kg1;
+                    worksheet.getCell('B39').value = kg1 + "KG";
                     worksheet.getCell('N36').value = ssc2 ? 'X' : '';
                     worksheet.getCell('R36').value = check500024v2 ? 'X' : '';
                     worksheet.getCell('V36').value = check5000220v2 ? 'X' : '';
@@ -217,16 +217,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     worksheet.getCell('O38').value = vb50_2 ? 'X' : '';
                     worksheet.getCell('S38').value = vbel2 ? 'X' : '';
                     worksheet.getCell('Y38').value = vbpn2 ? 'X' : '';
-                    worksheet.getCell('X39').value = drenoinp2;
+                    worksheet.getCell('X39').value = drenoinp2 + "mm";
                     worksheet.getCell('M39').value = drenoel2 ? 'X' : '';
                     worksheet.getCell('R39').value = drenopn2 ? 'X' : '';
-                    worksheet.getCell('J40').value = distlp2;
+                    worksheet.getCell('J40').value = distlp2 + "m";
                     worksheet.getCell('U40').value = flesq2 ? 'X' : '';
                     worksheet.getCell('S40').value = fldir2 ? 'X' : '';
                 }
 
                 if (equipmentItem3Exists) {
-                    worksheet.getCell('B44').value = kg2;
+                    worksheet.getCell('B44').value = kg2 + "KG";
                     worksheet.getCell('N41').value = ssc3 ? 'X' : '';
                     worksheet.getCell('R41').value = check500024v3 ? 'X' : '';
                     worksheet.getCell('V41').value = check5000220v3 ? 'X' : '';
@@ -238,16 +238,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     worksheet.getCell('O43').value = vb50_3 ? 'X' : '';
                     worksheet.getCell('S43').value = vbel3 ? 'X' : '';
                     worksheet.getCell('Y44').value = vbpn3 ? 'X' : '';
-                    worksheet.getCell('X44').value = drenoinp3;
+                    worksheet.getCell('X44').value = drenoinp3 + "mm";
                     worksheet.getCell('M44').value = drenoel3 ? 'X' : '';
                     worksheet.getCell('R44').value = drenopn3 ? 'X' : '';
-                    worksheet.getCell('J45').value = distlp3;
+                    worksheet.getCell('J45').value = distlp3 + "m";
                     worksheet.getCell('U45').value = flesq3 ? 'X' : '';
                     worksheet.getCell('S45').value = fldir3 ? 'X' : '';
                 }
 
                 if (equipmentItem4Exists) {
-                    worksheet.getCell('B49').value = kg3;
+                    worksheet.getCell('B49').value = kg3 + "KG";
                     worksheet.getCell('N46').value = ssc4 ? 'X' : '';
                     worksheet.getCell('R46').value = check500024v4 ? 'X' : '';
                     worksheet.getCell('V46').value = check5000220v4 ? 'X' : '';
@@ -259,10 +259,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     worksheet.getCell('O48').value = vb50_4 ? 'X' : '';
                     worksheet.getCell('S48').value = vbel4 ? 'X' : '';
                     worksheet.getCell('Y49').value = vbpn4 ? 'X' : '';
-                    worksheet.getCell('X49').value = drenoinp4;
+                    worksheet.getCell('X49').value = drenoinp4 + "mm";
                     worksheet.getCell('M49').value = drenoel4 ? 'X' : '';
                     worksheet.getCell('R49').value = drenopn4 ? 'X' : '';
-                    worksheet.getCell('J50').value = distlp4;
+                    worksheet.getCell('J50').value = distlp4 + "m";
                     worksheet.getCell('U50').value = flesq4 ? 'X' : '';
                     worksheet.getCell('S50').value = fldir4 ? 'X' : '';
                 }
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const blob = new Blob([buffer], { type: "application/octet-stream" });
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
-                link.download = 'dados_cliente.xlsx';
+                link.download = ('dados_cliente_' +nomeCliente +'.xlsx');
                 link.click();
             })
             .catch(error => console.error('Erro ao carregar o modelo:', error));
