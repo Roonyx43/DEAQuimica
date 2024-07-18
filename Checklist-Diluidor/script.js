@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod1_a) {
             selectedValue = 'Diluidor';
         } else if (tiprod1_b) {
-            selectedValue = 'Protwin';
+            selectedValue = 'Protuin';
         } else if (tiprod1_c) {
             selectedValue = 'Dosador';
         }
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod2_a) {
             selectedValue2 = 'Diluidor';
         } else if (tiprod2_b) {
-            selectedValue2 = 'Protwin';
+            selectedValue2 = 'Protuin';
         } else if (tiprod2_c) {
             selectedValue2 = 'Dosador';
         }
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod3_a) {
             selectedValue3 = 'Diluidor';
         } else if (tiprod3_b) {
-            selectedValue3 = 'Protwin';
+            selectedValue3 = 'Protuin';
         } else if (tiprod3_c) {
             selectedValue3 = 'Dosador';
         }
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod4_a) {
             selectedValue4 = 'Diluidor';
         } else if (tiprod4_b) {
-            selectedValue4 = 'Protwin';
+            selectedValue4 = 'Protuin';
         } else if (tiprod4_c) {
             selectedValue4 = 'Dosador';
         }
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod5_a) {
             selectedValue5 = 'Diluidor';
         } else if (tiprod5_b) {
-            selectedValue5 = 'Protwin';
+            selectedValue5 = 'Protuin';
         } else if (tiprod5_c) {
             selectedValue5 = 'Dosador';
         }
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod6_a) {
             selectedValue6 = 'Diluidor';
         } else if (tiprod6_b) {
-            selectedValue6 = 'Protwin';
+            selectedValue6 = 'Protuin';
         } else if (tiprod6_c) {
             selectedValue6 = 'Dosador';
         }
@@ -312,16 +312,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('K14').value = tensao220v ? 'X' : '';
                 worksheet.getCell('H15').value = conexao34 ? 'X' : '';
                 worksheet.getCell('K15').value = conexao12 ? 'X' : '';
-                worksheet.getCell('H16').value = disthidr + ",0m";
-                worksheet.getCell('T16').value = distelet + ",0m";
+                worksheet.getCell('H16').value = disthidr + "m";
+                worksheet.getCell('T16').value = distelet + "m";
                 worksheet.getCell('B19').value = PCBs ? 'X' : '';
                 worksheet.getCell('E19').value = PCBn ? 'X' : '';
                 worksheet.getCell('M18').value = entrAd ? 'X' : '';
                 worksheet.getCell('P18').value = entrAe ? 'X' : '';
                 worksheet.getCell('M19').value = entrEd ? 'X' : '';
                 worksheet.getCell('P19').value = entrEe ? 'X' : '';
-                worksheet.getCell('V19').value = medpar1 + ",0m";
-                worksheet.getCell('X19').value = medpar2 + ",0m";
+                worksheet.getCell('V19').value = medpar1 + "m";
+                worksheet.getCell('X19').value = medpar2 + "m";
                 worksheet.getCell('P18').value = entrAe ? 'X' : '';
                 worksheet.getCell('M19').value = entrEd ? 'X' : '';
 
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('N26').value = prodeq4;
                 worksheet.getCell('P28').value = selectedValueBb4;
                 worksheet.getCell('P29').value = qtdm4;
-                worksheet.getCell('P30').value = desconto4;
+                worksheet.getCell('P30').value = desconto4 + "%";
                 worksheet.getCell('N32').value = dil4 + "ml/L";
                 worksheet.getCell('O41').value = bh4_a ? 'X' : '';
                 worksheet.getCell('Q41').value = bh4_b ? 'X' : '';
