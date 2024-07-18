@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod1_a) {
             selectedValue = 'Diluidor';
         } else if (tiprod1_b) {
-            selectedValue = 'Protuin';
+            selectedValue = 'Protwin';
         } else if (tiprod1_c) {
             selectedValue = 'Dosador';
         }
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod2_a) {
             selectedValue2 = 'Diluidor';
         } else if (tiprod2_b) {
-            selectedValue2 = 'Protuin';
+            selectedValue2 = 'Protwin';
         } else if (tiprod2_c) {
             selectedValue2 = 'Dosador';
         }
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod3_a) {
             selectedValue3 = 'Diluidor';
         } else if (tiprod3_b) {
-            selectedValue3 = 'Protuin';
+            selectedValue3 = 'Protwin';
         } else if (tiprod3_c) {
             selectedValue3 = 'Dosador';
         }
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod4_a) {
             selectedValue4 = 'Diluidor';
         } else if (tiprod4_b) {
-            selectedValue4 = 'Protuin';
+            selectedValue4 = 'Protwin';
         } else if (tiprod4_c) {
             selectedValue4 = 'Dosador';
         }
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod5_a) {
             selectedValue5 = 'Diluidor';
         } else if (tiprod5_b) {
-            selectedValue5 = 'Protuin';
+            selectedValue5 = 'Protwin';
         } else if (tiprod5_c) {
             selectedValue5 = 'Dosador';
         }
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tiprod6_a) {
             selectedValue6 = 'Diluidor';
         } else if (tiprod6_b) {
-            selectedValue6 = 'Protuin';
+            selectedValue6 = 'Protwin';
         } else if (tiprod6_c) {
             selectedValue6 = 'Dosador';
         }
