@@ -25,6 +25,7 @@ body{
     background-attachment: fixed;
 }
 
+
 .imaged{
     cursor:pointer
 }
@@ -90,6 +91,7 @@ hr{
     background-color: rgb(23, 172, 138);
     width: 94%;
     margin: 0 auto;
+    margin-top: 7px;
     border: none;
     border-radius: 5px;
     
@@ -145,15 +147,15 @@ hr{
     }
 
     .title-mainpage2{
-        font-size: 40px;
+        font-size: 31px;
     }
 }
 
-@media (max-width: 378px){
+@media (max-width: 400px){
     .logout{
         margin-left: -85px;
     }
-    h1{
+    .title-mainpage2 {
         font-size: 25px;
     }
 }
