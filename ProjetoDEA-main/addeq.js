@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const drenoDiv = createSectionWithInput('Dreno', [
             'Elétrico',
             'Pneumático'
-        ], 'Diametro da Saída', `dreno${id}`, 1, false, true);
+        ], 'Diametro da Saída(mm)', `dreno${id}`, 1, false, true);
         columnsContainer.appendChild(drenoDiv);
 
         // Distancia da lavadora ao painel
