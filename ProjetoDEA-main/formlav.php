@@ -77,7 +77,7 @@ session_start();
                 </div>
                 <div class="med1">
                     <p>Medida do chão ao ponto inferior do painel: </p>
-                        <input type="text" class="med-painel" placeholder="Ex: 0,0" id="medpai1" required>
+                        <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="medpai1" required>
                 </div>
                 <div class="med1">
                     <p>Medida da parede: <p>
