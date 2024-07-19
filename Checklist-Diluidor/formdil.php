@@ -42,7 +42,7 @@
                 <input type="date" id="dateInput" placeholder="Data de instalação" class="data-style">
                 <input type="time" placeholder="Horário" class="time-style">
                 <input type="text" id="texto-sem-numeros" placeholder="Nome do Cliente" required>
-                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente" required>
+                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente">
                 <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" required>
                 <input type="text" id="texto-sem-numeros3" placeholder="Contato na instalação" required>
                 <textarea placeholder="Observação" class="obs"></textarea> 
@@ -66,11 +66,11 @@
                     <input type="checkbox" name="option3" id="opt6" value="6" required>Não
                 </div>
                 <div class="distanciahidr">
-                    <label class="title-tens">Distancia da hidraulica à central:</label>
+                    <label class="title-tens">Distancia da hidraulica à central(M):</label>
                     <input type="text" id="disthidr" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="distanciaelet">
-                    <label class="title-tens">Distancia do ponto elétrico à central:</label>
+                    <label class="title-tens">Distancia do ponto elétrico à central(M):</label>
                     <input type="text" id="distelet" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons-enviar">
