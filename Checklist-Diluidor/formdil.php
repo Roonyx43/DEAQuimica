@@ -114,7 +114,7 @@
                 <h2 class="title-diluidor">Opções de Equipamento 1</h2>
                 <div class="buttons">
                     <input type="checkbox" name="option7" id="opt13" value="13" required>Diluidor
-                    <input type="checkbox" name="option7" id="opt14" value="14" required>Protuin
+                    <input type="checkbox" name="option7" id="opt14" value="14" required>Protwin
                     <input type="checkbox" name="option7" id="opt15" value="15" required>Dosador
                 </div>
                 <div class="setor">
@@ -171,7 +171,7 @@
                 <h2 class="title-diluidor">Opções de Equipamento 2</h2>
                 <div class="buttons">
                     <input type="checkbox" name="option12" id="opt25" value="25">Diluidor
-                    <input type="checkbox" name="option12" id="opt26" value="26">Protuin
+                    <input type="checkbox" name="option12" id="opt26" value="26">Protwin
                     <input type="checkbox" name="option12" id="opt27" value="27">Dosador
                 </div>
                 <div class="setor">
@@ -226,7 +226,7 @@
                 <h2 class="title-diluidor">Opções de Equipamento 3</h2>
                 <div class="buttons">
                     <input type="checkbox" name="option17" id="opt37" value="37">Diluidor
-                    <input type="checkbox" name="option17" id="opt38" value="38">Protuin
+                    <input type="checkbox" name="option17" id="opt38" value="38">Protwin
                     <input type="checkbox" name="option17" id="opt39" value="39">Dosador
                 </div>
                 <div class="setor">
@@ -282,7 +282,7 @@
                 <h2 class="title-diluidor">Opções de Equipamento 4</h2>
                 <div class="buttons">
                     <input type="checkbox" name="option22" id="opt49" value="49">Diluidor
-                    <input type="checkbox" name="option22" id="opt50" value="50">Protuin
+                    <input type="checkbox" name="option22" id="opt50" value="50">Protwin
                     <input type="checkbox" name="option22" id="opt51" value="51">Dosador
                 </div>
                 <div class="setor">
@@ -338,7 +338,7 @@
                 <h2 class="title-diluidor">Opções de Equipamento 5</h2>
                 <div class="buttons">
                     <input type="checkbox" name="option27" id="opt61" value="61">Diluidor
-                    <input type="checkbox" name="option27" id="opt62" value="62">Protuin
+                    <input type="checkbox" name="option27" id="opt62" value="62">Protwin
                     <input type="checkbox" name="option27" id="opt63" value="63">Dosador
                 </div>
                 <div class="setor">
@@ -393,7 +393,7 @@
                 <h2 class="title-diluidor">Opções de Equipamento 6</h2>
                 <div class="buttons">
                     <input type="checkbox" name="option32" id="opt73" value="73">Diluidor
-                    <input type="checkbox" name="option32" id="opt74" value="74">Protuin
+                    <input type="checkbox" name="option32" id="opt74" value="74">Protwin
                     <input type="checkbox" name="option32" id="opt75" value="75">Dosador
                 </div>
                 <div class="setor">
