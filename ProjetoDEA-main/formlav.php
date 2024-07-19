@@ -39,7 +39,7 @@ session_start();
                 <input type="date" placeholder="Data de instalação" class="data-style">
                 <input type="time" placeholder="Horário" class="time-style">
                 <input type="text" id="texto-sem-numeros" placeholder="Nome do Cliente" required>
-                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente" required>
+                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente">
                 <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" required>
                 <input type="text" id="texto-sem-numeros3" placeholder="Contato na instalação" required>
                 <textarea placeholder="Observação" class="obs"></textarea> 
@@ -76,29 +76,29 @@ session_start();
                     <input type="checkbox" id="opt8" name="option4" value="8" required>Esquerda
                 </div>
                 <div class="med1">
-                    <p>Medida do chão ao ponto inferior do painel: </p>
+                    <p>Medida do chão ao ponto inferior do painel(M): </p>
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="medpai1" required>
                 </div>
                 <div class="med1">
-                    <p>Medida da parede: <p>
+                    <p>Medida da parede(M): <p>
                     <label>Altura<input type="text" class="med-painel" placeholder="Ex: 0,0" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
                     <label>Largura<input type="text" class="med-painel" placeholder="Ex: 0,0" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
                 </div>
                 <div class="med1">
-                    <p>Distancia ponto de água até central: </p>
+                    <p>Distancia ponto de água até central(M): </p>
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist" required>
                 </div>
                 <div class="med1">
-                    <p>Distancia tomada até central: </p>
+                    <p>Distancia tomada até central(M): </p>
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist2" required>
                 </div>
                 <div class="buttons-conex2">
-                    <label class="title-tens">Ponto de água cliente:</label>
+                    <label class="title-tens">Ponto de água cliente(M):</label>
                     <input type="checkbox" id="opt11" name="option6" value="11" required>Direita
                     <input type="checkbox" id="opt12" name="option6" value="12" required>Esquerda
                 </div>
                 <div class="buttons-conex2">
-                    <label class="title-tens">Ponto elétrica cliente:</label>
+                    <label class="title-tens">Ponto elétrica cliente(M):</label>
                     <input type="checkbox" id="opt13" name="option7" value="13" required>Direita
                     <input type="checkbox" id="opt14" name="option7" value="14" required>Esquerda
                 </div>
