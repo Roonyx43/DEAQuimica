@@ -21,6 +21,7 @@
     <script src="checkbox.js"></script>
     <script src="script.js"></script>
     <script src="alert.js"></script>
+    <script src="show.js"></script>
 
 </head>
 <body>
@@ -66,12 +67,10 @@
                     <input type="checkbox" name="option3" id="opt6" value="6" required>Não
                 </div>
                 <div class="distanciahidr">
-                    <label class="title-tens">Distancia da hidraulica à central(M):</label>
-                    <input type="text" id="disthidr" inputmode="decimal" pattern="\d*,?\d*">
+                    <input type="text" id="disthidr" placeholder="Distancia da hidraulica à central (m):" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="distanciaelet">
-                    <label class="title-tens">Distancia do ponto elétrico à central(M):</label>
-                    <input type="text" id="distelet" inputmode="decimal" pattern="\d*,?\d*">
+                    <input type="text" id="distelet" placeholder="Distancia do ponto elétrico à central (m):" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar"><a href="../PaginaInicial/mainpage.php">Voltar</a></button>
@@ -98,7 +97,7 @@
                     <input type="checkbox" name="option6" id="opt12" value="12" required>Esquerda
                 </div>
                 <div class="med1">
-                    <p>Medida da parede: <p>
+                    <p>Medida da parede (m): <p>
                     <input type="text" class="med-painel" placeholder="Altura" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
                     <input type="text" class="med-painel" placeholder="Largura" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
                 </div>
@@ -123,22 +122,41 @@
                 <div class="produto">
                     <input type="text" class="inp_produto" placeholder="Produto" id="prodeq1" required>
                 </div>
+                <div id="prod-hid1">
+                    <input type="text" class="inp_produto" placeholder="Produto 2" id="prodeq1_b">
+                </div>
                 <div class="buttons">
                     <p>Galão:</p>
                     <input type="checkbox" name="option8" id="opt16" value="16" required>5L
                     <input type="checkbox" name="option8" id="opt17" value="17" required>20L
                     <input type="checkbox" name="option8" id="opt18" value="18" required>50L
                 </div>
+                <div class="buttons" id="prod-hid1_b">
+                    <p>Galão 2:</p>
+                    <input type="checkbox" name="option8_b" id="opt16_b" value="16" >5L
+                    <input type="checkbox" name="option8_b" id="opt17_b" value="17" >20L
+                    <input type="checkbox" name="option8_b" id="opt18_b" value="18" >50L
+                </div>
                 <h4 class="title-diluidor2">Informações Comerciais</h4>
                 <div class="qntdmes">
                     <input type="text" placeholder="Quantidade Por Mês" id="qtdm1" required>
                 </div>
+                <div class="qntdmes" id="prod-hid1_c">
+                    <input type="text" placeholder="Quantidade Por Mês (2)" id="qtdm1_b">
+                </div>
                 <div class="desconto">
-                    <input type="text" placeholder="Desconto" id="desconto1" >
+                    <input type="text" placeholder="Desconto" id="desconto1">
+                </div>
+                <div class="desconto" id="prod-hid1_d">
+                    <input type="text" placeholder="Desconto (2)" id="desconto1_b">
                 </div>
                 <div class="diluicao">
-                    <input type="text" placeholder="Diluição ml/L" id="dil1"
+                    <input type="text" placeholder="Diluição (ml/L)" id="dil1"
                     inputmode="decimal" pattern="\d*,?\d*" required>
+                </div>
+                <div class="diluicao" id="prod-hid1_e">
+                    <input type="text" placeholder="Diluição 2 (ml/L)" id="dil1_b"
+                    inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons">
                     <p>Bitola Hidraulica:</p>
@@ -154,9 +172,6 @@
                     <p>Suporte de Produto:</p>
                     <input type="checkbox" name="option11" id="opt23" value="23" required>Sim
                     <input type="checkbox" name="option11" id="opt24" value="24" required>Não
-                </div>
-                <div class="mang15">
-                    <input type="text" placeholder="Mangueira (15m MAX)" id="mang1" required>
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario2()">Voltar</button>
@@ -180,21 +195,41 @@
                 <div class="produto">
                     <input type="text" class="inp_produto" placeholder="Produto" id="prodeq2">
                 </div>
+                <div id="prod-hid2">
+                    <input type="text" class="inp_produto" placeholder="Produto 2"
+                    id="prodeq2_b">
+                </div>
                 <div class="buttons">
                     <p>Galão:</p>
                     <input type="checkbox" name="option13" id="opt28" value="28">5L
                     <input type="checkbox" name="option13" id="opt29" value="29">20L
                     <input type="checkbox" name="option13" id="opt30" value="30">50L
                 </div>
+                <div class="buttons" id="prod-hid2_b">
+                    <p>Galão 2:</p>
+                    <input type="checkbox" name="option13_b" id="opt28_b" value="28" >5L
+                    <input type="checkbox" name="option13_b" id="opt29_b" value="29" >20L
+                    <input type="checkbox" name="option13_b" id="opt30_b" value="30" >50L
+                </div>
                 <h4 class="title-diluidor2">Informações Comerciais</h4>
                 <div class="qntdmes">
                     <input type="text" placeholder="Quantidade Por Mês" id="qtdm2">
                 </div>
+                <div class="qntdmes" id="prod-hid2_c">
+                    <input type="text" placeholder="Quantidade Por Mês (2)" id="qtdm2_b">
+                </div>
                 <div class="desconto">
                     <input type="text" placeholder="Desconto" id="desconto2">
                 </div>
+                <div class="desconto" id="prod-hid2_d">
+                    <input type="text" placeholder="Desconto (2)" id="desconto2_b" >
+                </div>
                 <div class="diluicao">
-                    <input type="text" placeholder="Diluição ml/L" id="dil2">
+                    <input type="text" placeholder="Diluição (ml/L)" id="dil2">
+                </div>
+                <div class="diluicao" id="prod-hid2_e">
+                    <input type="text" placeholder="Diluição 2 (ml/L)" id="dil2_b"
+                    inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons">
                     <p>Bitola Hidraulica:</p>
@@ -210,9 +245,6 @@
                     <p>Suporte de Produto:</p>
                     <input type="checkbox" name="option16" id="opt35" value="35">Sim
                     <input type="checkbox" name="option16" id="opt36" value="36">Não
-                </div>
-                <div class="mang15">
-                    <input type="text" placeholder="Mangueira (15m MAX)" id="mang2">
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario3()">Voltar</button>
@@ -235,21 +267,42 @@
                 <div class="produto">
                     <input type="text" class="inp_produto" placeholder="Produto" id="prodeq3">
                 </div>
+                <div id="prod-hid3">
+                    <input type="text" class="inp_produto" placeholder="Produto 2"
+                    id="prodeq3_b">
+                </div>
+
                 <div class="buttons">
                     <p>Galão:</p>
                     <input type="checkbox" name="option18" id="opt40" value="40">5L
                     <input type="checkbox" name="option18" id="opt41" value="41">20L
                     <input type="checkbox" name="option18" id="opt42" value="42">50L
                 </div>
+                <div class="buttons" id="prod-hid3_b">
+                    <p>Galão 2:</p>
+                    <input type="checkbox" name="option18_b" id="opt40_b" value="40" >5L
+                    <input type="checkbox" name="option18_b" id="opt41_b" value="41" >20L
+                    <input type="checkbox" name="option18_b" id="opt42_b" value="42" >50L
+                </div>
                 <h4 class="title-diluidor2">Informações Comerciais</h4>
                 <div class="qntdmes">
                     <input type="text" placeholder="Quantidade Por Mês" id="qtdm3">
                 </div>
+                <div class="qntdmes" id="prod-hid3_c">
+                    <input type="text" placeholder="Quantidade Por Mês (2)" id="qtdm3_b">
+                </div>
                 <div class="desconto">
                     <input type="text" placeholder="Desconto" id="desconto3">
                 </div>
+                <div class="desconto" id="prod-hid3_d">
+                    <input type="text" placeholder="Desconto (2)" id="desconto3_b" >
+                </div>
                 <div class="diluicao">
-                    <input type="text" placeholder="Diluição ml/L" id="dil3">
+                    <input type="text" placeholder="Diluição (ml/L)" id="dil3">
+                </div>
+                <div class="diluicao" id="prod-hid3_e">
+                    <input type="text" placeholder="Diluição 2 (ml/L)" id="dil3_b"
+                    inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons">
                     <p>Bitola Hidraulica:</p>
@@ -265,9 +318,6 @@
                     <p>Suporte de Produto:</p>
                     <input type="checkbox" name="option21" id="opt47" value="47">Sim
                     <input type="checkbox" name="option21" id="opt48" value="48">Não
-                </div>
-                <div class="mang15">
-                    <input type="text" placeholder="Mangueira (15m MAX)" id="mang3">
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario4()">Voltar</button>
@@ -291,21 +341,41 @@
                 <div class="produto">
                     <input type="text" class="inp_produto" placeholder="Produto" id="prodeq4">
                 </div>
+                <div id="prod-hid4">
+                    <input type="text" class="inp_produto" placeholder="Produto 2"
+                    id="prodeq4_b">
+                </div>
                 <div class="buttons">
                     <p>Galão:</p>
                     <input type="checkbox" name="option23" id="opt52" value="52">5L
                     <input type="checkbox" name="option23" id="opt53" value="53">20L
                     <input type="checkbox" name="option23" id="opt54" value="54">50L
                 </div>
+                <div class="buttons" id="prod-hid4_b">
+                    <p>Galão 2:</p>
+                    <input type="checkbox" name="option23_b" id="opt52_b" value="52" >5L
+                    <input type="checkbox" name="option23_b" id="opt53_b" value="53" >20L
+                    <input type="checkbox" name="option23_b" id="opt54_b" value="54" >50L
+                </div>
                 <h4 class="title-diluidor2">Informações Comerciais</h4>
                 <div class="qntdmes">
                     <input type="text" placeholder="Quantidade Por Mês" id="qtdm4">
                 </div>
+                <div class="qntdmes" id="prod-hid4_c">
+                    <input type="text" placeholder="Quantidade Por Mês (2)" id="qtdm4_b">
+                </div>
                 <div class="desconto">
                     <input type="text" placeholder="Desconto" id="desconto4">
                 </div>
+                <div class="desconto" id="prod-hid4_d">
+                    <input type="text" placeholder="Desconto (2)" id="desconto4_b" >
+                </div>
                 <div class="diluicao">
-                    <input type="text" placeholder="Diluição ml/L" id="dil4">
+                    <input type="text" placeholder="Diluição (ml/L)" id="dil4">
+                </div>
+                <div class="diluicao" id="prod-hid4_e">
+                    <input type="text" placeholder="Diluição 2 (ml/L)" id="dil4_b"
+                    inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons">
                     <p>Bitola Hidraulica:</p>
@@ -321,9 +391,6 @@
                     <p>Suporte de Produto:</p>
                     <input type="checkbox" name="option26" id="opt59" value="59">Sim
                     <input type="checkbox" name="option26" id="opt60" value="60">Não
-                </div>
-                <div class="mang15">
-                    <input type="text" placeholder="Mangueira (15m MAX)" id="mang4">
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario5()">Voltar</button>
@@ -347,21 +414,41 @@
                 <div class="produto">
                     <input type="text" class="inp_produto" placeholder="Produto" id="prodeq5">
                 </div>
+                <div id="prod-hid5">
+                    <input type="text" class="inp_produto" placeholder="Produto 2"
+                    id="prodeq5_b">
+                </div>
                 <div class="buttons">
                     <p>Galão:</p>
                     <input type="checkbox" name="option28" id="opt64" value="64">5L
                     <input type="checkbox" name="option28" id="opt65" value="65">20L
                     <input type="checkbox" name="option28" id="opt66" value="66">50L
                 </div>
+                <div class="buttons" id="prod-hid5_b">
+                    <p>Galão 2:</p>
+                    <input type="checkbox" name="option28_b" id="opt64_b" value="64" >5L
+                    <input type="checkbox" name="option28_b" id="opt65_b" value="65" >20L
+                    <input type="checkbox" name="option28_b" id="opt66_b" value="66" >50L
+                </div>
                 <h4 class="title-diluidor2">Informações Comerciais</h4>
                 <div class="qntdmes">
                     <input type="text" placeholder="Quantidade Por Mês" id="qtdm5">
                 </div>
+                <div class="qntdmes" id="prod-hid5_c">
+                    <input type="text" placeholder="Quantidade Por Mês (2)" id="qtdm5_b">
+                </div>
                 <div class="desconto">
                     <input type="text" placeholder="Desconto" id="desconto5">
                 </div>
+                <div class="desconto" id="prod-hid5_d">
+                    <input type="text" placeholder="Desconto (2)" id="desconto5_b" >
+                </div>
                 <div class="diluicao">
-                    <input type="text" placeholder="Diluição ml/L" id="dil5">
+                    <input type="text" placeholder="Diluição (ml/L)" id="dil5">
+                </div>
+                <div class="diluicao" id="prod-hid5_e">
+                    <input type="text" placeholder="Diluição 2 (ml/L)" id="dil5_b"
+                    inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons">
                     <p>Bitola Hidraulica:</p>
@@ -377,9 +464,6 @@
                     <p>Suporte de Produto:</p>
                     <input type="checkbox" name="option31" id="opt71" value="71">Sim
                     <input type="checkbox" name="option31" id="opt72" value="72">Não
-                </div>
-                <div class="mang15">
-                    <input type="text" placeholder="Mangueira (15m MAX)" id="mang5">
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario6()">Voltar</button>
@@ -402,21 +486,41 @@
                 <div class="produto">
                     <input type="text" class="inp_produto" placeholder="Produto" id="prodeq6">
                 </div>
+                <div id="prod-hid6">
+                    <input type="text" class="inp_produto" placeholder="Produto 2"
+                    id="prodeq6_b">
+                </div>
                 <div class="buttons">
                     <p>Galão:</p>
                     <input type="checkbox" name="option33" id="opt76" value="76">5L
                     <input type="checkbox" name="option33" id="opt77" value="77">20L
                     <input type="checkbox" name="option33" id="opt78" value="78">50L
                 </div>
+                <div class="buttons" id="prod-hid6_b">
+                    <p>Galão 2:</p>
+                    <input type="checkbox" name="option33_b" id="opt76_b" value="76" >5L
+                    <input type="checkbox" name="option33_b" id="opt77_b" value="77" >20L
+                    <input type="checkbox" name="option33_b" id="opt78_b" value="78" >50L
+                </div>
                 <h4 class="title-diluidor2">Informações Comerciais</h4>
                 <div class="qntdmes">
                     <input type="text" placeholder="Quantidade Por Mês" id="qtdm6">
                 </div>
+                <div class="qntdmes" id="prod-hid6_c">
+                    <input type="text" placeholder="Quantidade Por Mês (2)" id="qtdm6_b">
+                </div>
                 <div class="desconto">
                     <input type="text" placeholder="Desconto" id="desconto6">
                 </div>
+                <div class="desconto" id="prod-hid6_d">
+                    <input type="text" placeholder="Desconto (2)" id="desconto6_b" >
+                </div>
                 <div class="diluicao">
-                    <input type="text" placeholder="Diluição ml/L" id="dil6">
+                    <input type="text" placeholder="Diluição (ml/L)" id="dil6">
+                </div>
+                <div class="diluicao" id="prod-hid6_e">
+                    <input type="text" placeholder="Diluição 2 (ml/L)" id="dil6_b"
+                    inputmode="decimal" pattern="\d*,?\d*">
                 </div>
                 <div class="buttons">
                     <p>Bitola Hidraulica:</p>
@@ -432,9 +536,6 @@
                     <p>Suporte de Produto:</p>
                     <input type="checkbox" name="option36" id="opt83" value="83">Sim
                     <input type="checkbox" name="option36" id="opt84" value="84">Não
-                </div>
-                <div class="mang15">
-                    <input type="text" placeholder="Mangueira (15m MAX)" id="mang6">
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar2" onclick="voltarParaFormulario7()">Voltar</button>

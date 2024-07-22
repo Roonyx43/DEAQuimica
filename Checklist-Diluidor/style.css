@@ -20,7 +20,7 @@
     background-size:cover;
     font-family:"Poppins",sans-serif;
     height:100vh;
-    background-attachment:fixed
+    background-attachment:fixed;
     }
     
     img {
@@ -31,7 +31,7 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    flex-grow:1
+    flex-grow:1;
     }
     
     a {
@@ -49,6 +49,7 @@
     margin-bottom:40px;
     color:#7bc3cb
     }
+
     
     label {
     font-weight:700;
@@ -121,6 +122,12 @@
     .hidden {
     display:none
     }
+    #prod-hid1, #prod-hid2, #prod-hid3, #prod-hid4, #prod-hid5, #prod-hid6, #prod-hid1_b,#prod-hid2_b,#prod-hid3_b,#prod-hid4_b,#prod-hid5_b, #prod-hid6_b,
+    #prod-hid1_c,#prod-hid2_c,#prod-hid3_c,#prod-hid4_c,#prod-hid5_c, #prod-hid6_c,
+    #prod-hid1_d,#prod-hid2_d,#prod-hid3_d,#prod-hid4_d,#prod-hid5_d, #prod-hid6_d, 
+    #prod-hid1_e,#prod-hid2_e,#prod-hid3_e,#prod-hid4_e,#prod-hid5_e, #prod-hid6_e{
+        display: none;
+    }
     
     .title-lavand {
     font-family:"Poppins",sans-serif;
@@ -190,6 +197,13 @@
     }
     
     .buttons {
+    display:flex;
+    margin:15px;
+    margin-top:25px;
+    align-items: center;
+    }
+
+    .buttons-hid {
     display:flex;
     margin:15px;
     margin-top:25px;
@@ -293,6 +307,11 @@
     .obs {
     padding-left:25px;
     padding-right:25px
+    }
+
+    #distelet, #disthidr {
+
+        width: 238px;
     }
     
     img {

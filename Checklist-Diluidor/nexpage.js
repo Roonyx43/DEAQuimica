@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const formdil1 = document.getElementById('formdil1');
     const formdil2 = document.getElementById('formdil2');
@@ -178,8 +179,8 @@ function voltarParaFormulario5() {
     formdil5.classList.remove('hidden');
 }
 function voltarParaFormulario6() {
-    const formdil7 = document.getElementById('formdil6');
-    const formdil6 = document.getElementById('formdil7');
+    const formdil6 = document.getElementById('formdil6');
+    const formdil7 = document.getElementById('formdil7');
     // Oculta o segundo formulário
     formdil7.classList.add('hidden');
     // Exibe o primeiro formulário
