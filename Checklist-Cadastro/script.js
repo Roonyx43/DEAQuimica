@@ -4,15 +4,15 @@ function validateForms() {
 
     if (!formCliente.checkValidity()) {
         formCliente.reportValidity();
-        return;
+        return false; // Retorna falso se o formulário não for válido
     }
 
     if (!formVendedor.checkValidity()) {
         formVendedor.reportValidity();
-        return;
+        return false; // Retorna falso se o formulário não for válido
     }
 
-    generatePDF();
+    return true; // Retorna verdadeiro se ambos os formulários forem válidos
 }
 
 function generatePDF() {
@@ -117,3 +117,33 @@ function generatePDF() {
 
     doc.save('checklist_cadastro.pdf');
 }
+
+// Adiciona evento de clique ao botão para validar os formulários
+document.getElementById('validarForm').addEventListener('click', function() {
+    if (validateForms()) {
+        document.getElementById('overlay').classList.remove('hidden');
+        document.getElementById('popup').classList.remove('hidden');
+    }
+});
+
+// Adiciona evento de clique ao overlay para fechar a div de senha
+document.getElementById('overlay').addEventListener('click', function() {
+    document.getElementById('overlay').classList.add('hidden');
+    document.getElementById('popup').classList.add('hidden');
+    document.getElementById('errorMessage').classList.add('hidden'); // Oculta a mensagem de erro ao fechar o popup
+});
+
+// Adiciona evento de clique ao botão de confirmação da senha
+document.getElementById('passwordSubmit').addEventListener('click', function() {
+    const senha = document.getElementById('password').value;
+    const errorMessage = document.getElementById('errorMessage');
+
+    if (senha === 'deaquimica') {
+        errorMessage.classList.add('hidden'); // Oculta a mensagem de erro se a senha estiver correta
+        generatePDF();
+        document.getElementById('overlay').classList.add('hidden');
+        document.getElementById('popup').classList.add('hidden');
+    } else {
+        errorMessage.classList.remove('hidden'); // Exibe a mensagem de erro se a senha estiver incorreta
+    }
+});

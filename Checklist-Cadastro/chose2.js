@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clearFields();
         }
 
-        if (sim.checked) {
+        if (nao.checked) {
             cep2.parentElement.classList.remove('hidden');
             end2.parentElement.classList.remove('hidden');
             num2.parentElement.classList.remove('hidden');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             municipio2.parentElement.classList.remove('hidden');
             uf2.parentElement.classList.remove('hidden');
             enableFields();
-        } else if (nao.checked) {
+        } else if (sim.checked) {
             cep2.parentElement.classList.add('hidden');
             end2.parentElement.classList.add('hidden');
             num2.parentElement.classList.add('hidden');

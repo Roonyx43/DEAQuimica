@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checklist Cadastro</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/logo.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
     <script src="mask.js"></script>
-    <script src="script.js"></script>
     <script src="cep.js"></script>
     <script src="chose.js"></script>
     <script src="cnpj.js"></script>
@@ -30,7 +30,7 @@
                 <h1 class="title-cliente">Dados do Cliente</h1>
 
                 <div class="form-group">
-                    <label>Tipo de Documento:</label>
+                    <label>Tipo de Cadastro:</label>
                     <div class="form-group2">
                         <input type="radio" id="cnpjRadio" name="tipoDocumento" value="cnpj" checked>
                         <label for="cnpjRadio" class="labelCnpj">CNPJ</label>
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="ramo">Ramo da Atividade:</label>
+                    <label for="ramo">Ramo de Atividade:</label>
                     <input type="text" id="ramo" name="ramo" required placeholder="*">
                 </div>
 
@@ -110,11 +110,11 @@
                 <hr>
 
                 <div class="form-group">
-                    <label>Endereço de Entrega?</label>
+                    <label>Endereço de Entrega é o mesmo?</label>
                     <div class="form-group2">
-                        <input type="radio" id="sim" name="endereco?" value="sim">
+                        <input type="radio" id="sim" name="endereco?" value="sim" checked>
                         <label for="sim" class="labelCnpj">Sim</label>
-                        <input type="radio" id="nao" name="endereco?" value="nao" checked>
+                        <input type="radio" id="nao" name="endereco?" value="nao">
                         <label for="nao" class="labelCpf">Não</label>
                     </div>
                 </div>
@@ -168,6 +168,8 @@
                     <input type="email" id="emailComercial" name="emailComercial" required placeholder="*">
                 </div>
 
+                <hr>
+
                 <div class="form-group">
                     <label>Os dados de contato financeiro são os mesmos que os de contato comercial?</label>
                     <div class="form-group2">
@@ -193,6 +195,8 @@
                     <input type="email" id="emailFinanceiro" name="emailFinanceiro" required placeholder="*">
                 </div>
 
+                <hr>
+
                 <div class="form-group">
                     <label for="emailNF">Email para envio de NF:</label>
                     <input type="email" id="emailNF" name="emailNF" required placeholder="*">
@@ -214,13 +218,15 @@
                     <input type="text" id="apelido" name="apelido" >
                 </div>
 
+                <hr>
+
                 <div class="form-group">
                     <label for="comodato">Comodato:</label>
                     <input type="text" id="comodato" name="comodato" required placeholder="*" >
                 </div>
 
                 <div class="form-group">
-                    <label for="condicoesPagamento">Condições de pagamento (Mensal ou Quinzenal):</label>
+                    <label for="condicoesPagamento">Condições de pagamento (Dias):</label>
                     <input type="text" id="condicoesPagamento" name="condicoesPagamento" required placeholder="*">
                 </div>
 
@@ -229,9 +235,20 @@
                     <input type="text" id="volumeCompras" name="volumeCompras" required placeholder="*">
                 </div>
 
-                <button type="button" onclick="validateForms()">Enviar</button>
-            </form>
+                <button type="button" id="validarForm" onclick="validateForms()">Validar</button>
 
+                
+            </form>
+            <div id="overlay" class="hidden"></div>
+            <div id="popup" class="hidden">
+                <label for="password">Digite a senha:</label>
+                <input type="password" id="password">
+                <button id="passwordSubmit">Enviar</button>
+                <p id="errorMessage" class="hidden" style="color: red;">Senha incorreta. Tente novamente.</p>
+            </div>
+
+
+            <script src="script.js"></script>
         </div>
     </main>
 </body>
