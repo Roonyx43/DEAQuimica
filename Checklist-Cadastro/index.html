@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="mask.js"></script>
+    <script src="script.js"></script>
+    <script src="cep.js"></script>
+    <script src="chose.js"></script>
+    <script src="cnpj.js"></script>
+    <script src="chose2.js"></script>
+    <script src="chose3.js"></script>
+</head>
+<body>
+    <header>
+        <div class="imaged">
+            <img src="/assets/logo.jpg" alt="D&A Tools">
+        </div>
+    </header>
+    <main>
+        <div class="display-main">
+            <h1 class="title-lavand">Bem-Vindo</h1>
+            <form id="formdil1" class="formulario">
+                <h1 class="title-cliente">Dados do Cliente</h1>
+
+                <div class="form-group">
+                    <label>Tipo de Documento:</label>
+                    <div class="form-group2">
+                        <input type="radio" id="cnpjRadio" name="tipoDocumento" value="cnpj" checked>
+                        <label for="cnpjRadio" class="labelCnpj">CNPJ</label>
+                        <input type="radio" id="cpfRadio" name="tipoDocumento" value="cpf">
+                        <label for="cpfRadio" class="labelCpf">CPF</label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="cnpjField" class="form-group hidden">
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" id="cnpj" name="cnpj" onblur="buscarCNPJ()" placeholder="*">
+                </div>
+
+                <div id="cpfField" class="form-group hidden">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="*">
+                </div>
+
+                <div id="rgField" class="form-group hidden">
+                    <label for="rg">RG:</label>
+                    <input type="text" id="rg" name="rg">
+                </div>
+
+                <div class="form-group">
+                    <label for="razaoSocial">Razão Social:</label>
+                    <input type="text" id="razaoSocial" name="razaoSocial" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="nomeFantasia">Nome Fantasia:</label>
+                    <input type="text" id="nomeFantasia" name="nomeFantasia" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="ramo">Ramo da Atividade:</label>
+                    <input type="text" id="ramo" name="ramo" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="ie">Inscrição Estadual:</label>
+                    <input type="text" id="ie" name="ie" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" required placeholder="*">
+                <br>
+                </div>
+
+                <div class="form-group">
+                    <label for="end">Endereço:</label>
+                    <input type="text" id="end" name="end" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="num">Número:</label>
+                    <input type="text" id="num" name="num" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="municipio">Município:</label>
+                    <input type="text" id="municipio" name="municipio" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="uf">UF:</label>
+                    <input type="text" id="uf" name="uf" required placeholder="*">
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label>Endereço de Entrega?</label>
+                    <div class="form-group2">
+                        <input type="radio" id="sim" name="endereco?" value="sim">
+                        <label for="sim" class="labelCnpj">Sim</label>
+                        <input type="radio" id="nao" name="endereco?" value="nao" checked>
+                        <label for="nao" class="labelCpf">Não</label>
+                    </div>
+                </div>
+
+                <div class="form-group hidden">
+                    <label for="cep2">CEP (Entrega):</label>
+                    <input type="text" id="cep2" name="cep2" required onblur="buscarCEP()" value="2">
+                <br>
+                </div>
+
+                
+                <div class="form-group hidden">
+                    <label for="end2">Endereço (Entrega):</label>
+                    <input type="text" id="end2" name="end2" value="2">
+                </div>
+
+                <div class="form-group hidden">
+                    <label for="num2">Número (Entrega):</label>
+                    <input type="text" id="num2" name="num2" value="2">
+                </div>
+
+                <div class="form-group hidden">
+                    <label for="bairro2">Bairro (Entrega):</label>
+                    <input type="text" id="bairro2" name="bairro2" value="2">
+                </div>
+
+                <div class="form-group hidden">
+                    <label for="municipio2">Município (Entrega):</label>
+                    <input type="text" id="municipio2" name="municipio2" value="2">
+                </div>
+
+                <div class="form-group  hidden">
+                    <label for="uf2">UF (Entrega):</label>
+                    <input type="text" id="uf2" name="uf2" value="2" >
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label for="contatoComercial">Contato Comercial:</label>
+                    <input type="text" id="contatoComercial" name="contatoComercial" required placeholder="Nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="telComercial">Telefone/Celular Comercial:</label>
+                    <input type="text" id="telComercial" name="telComercial" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailComercial">Email Comercial:</label>
+                    <input type="email" id="emailComercial" name="emailComercial" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label>Os dados de contato financeiro são os mesmos que os de contato comercial?</label>
+                    <div class="form-group2">
+                        <input type="radio" id="dadosSim" name="dadosIguais" value="sim">
+                        <label for="dadosSim" class="dadosSim">Sim</label>
+                        <input type="radio" id="dadosNao" name="dadosIguais" value="nao" checked>
+                        <label for="dadosNao" class="dadosNao">Não</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contatoFinanceiro">Contato Financeiro:</label>
+                    <input type="text" id="contatoFinanceiro" name="contatoFinanceiro" required placeholder="Nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="telFinanceiro">Telefone/Celular Financeiro:</label>
+                    <input type="text" id="telFinanceiro" name="telFinanceiro" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailFinanceiro">Email Financeiro:</label>
+                    <input type="email" id="emailFinanceiro" name="emailFinanceiro" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="emailNF">Email para envio de NF:</label>
+                    <input type="email" id="emailNF" name="emailNF" required placeholder="*">
+                </div>
+
+
+            </form>
+
+            <form id="formdil2" class="formulario">
+                <h1 class="title-cliente">Dados Vendedor</h1>
+
+                <div class="form-group">
+                    <label for="vendedor">Consultor de Venda:</label>
+                    <input type="text" id="vendedor" name="vendedor" placeholder="Nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apelido">Apelido Empresa:</label>
+                    <input type="text" id="apelido" name="apelido" >
+                </div>
+
+                <div class="form-group">
+                    <label for="comodato">Comodato:</label>
+                    <input type="text" id="comodato" name="comodato" required placeholder="*" >
+                </div>
+
+                <div class="form-group">
+                    <label for="condicoesPagamento">Condições de pagamento (Mensal ou Quinzenal):</label>
+                    <input type="text" id="condicoesPagamento" name="condicoesPagamento" required placeholder="*">
+                </div>
+
+                <div class="form-group">
+                    <label for="volumeCompras">Volume de compras:</label>
+                    <input type="text" id="volumeCompras" name="volumeCompras" required placeholder="*">
+                </div>
+
+                <button type="button" onclick="validateForms()">Enviar</button>
+            </form>
+
+        </div>
+    </main>
+</body>
+</html>
