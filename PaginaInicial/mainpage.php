@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="imaged">
-            <a href="../PaginaInicial/mainpage.php">
+            <a href="../PaginaInicial/mainpage.html">
                 <img src="../assets/logo.jpg" alt="D&A Tools">
             </a>
         </div>
@@ -25,7 +25,7 @@
             <div class="cabecalho-main">
                 <div class="fotoperf">
                     <label class="picture" for="picture__input" tabIndex="0">
-                        <img src="../assets/logo.jpg" alt="" style="width: 100%;">
+                        <img src="../assets/Logo2.jpg" alt="" style="width: 100%;">
                     </label>
                     
                 </div>
@@ -39,13 +39,22 @@
                 </div>
             </div>
             <hr>
-            <div class="checkboxlist-list">
-                <ul>
-                    <h2 class="title-checklists">Checklists</h2>
-                    <hr class="divisoria-checklist">
-                    <li class="checklist-lavanderia"><a href="../ProjetoDEA-main/formlav.php" class="checklist-a">Lavanderia</a></li>
-                    <li class="checklist-lavanderia2"><a href="../Checklist-Diluidor/formdil.php" class="checklist-b">Diluidor</a></li>
-                </ul>
+            <div class="checks">
+                <div class="checkboxlist-list" style="width: 80%;">
+                    <ul>
+                        <h2 class="title-checklists">Checklists</h2>
+                        <hr class="divisoria-checklist">
+                        <li class="checklist-lavanderia"><a href="../Checklist-Lavanderia/formlav.php" class="checklist-a">Lavanderia</a></li>
+                        <li class="checklist-lavanderia2"><a href="../Checklist-Diluidor/formdil.php" class="checklist-b">Diluidor</a></li>
+                    </ul>
+                </div>
+                <div class="checkboxlist-list" style="width: 80%;">
+                    <ul>
+                        <h2 class="title-checklists">Clientes</h2>
+                        <hr class="divisoria-checklist">
+                        <li class="checklist-lavanderia"><a href="../gestao-cliente/index.php" class="checklist-a">Gestão</a></li
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
