@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     $('#cnpj').mask('99.999.999/9999-99');
     $('#cpf').mask('999.999.999-99');
-    $('#ie').mask('999.999.999.999');
+    $('#ie').mask('9999999999');
     $('#rg').mask('99.999.999-9');
     $('#cep').mask('99999-999');
     $('#cep2').mask('99999-999');
