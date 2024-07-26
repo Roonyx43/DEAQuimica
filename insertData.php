@@ -3,7 +3,7 @@ include 'config.php';
 
 // Função para limpar dados de entrada
 function cleanInput($data) {
-    return htmlspecialchars(stripslashes(trim($data)));
+    return stripslashes(trim($data));
 }
 
 // Capturar dados do formulário
@@ -40,6 +40,17 @@ $telFinanceiro = !empty($_POST['telFinanceiro']) ? cleanInput($_POST['telFinance
 $emailFinanceiro = !empty($_POST['emailFinanceiro']) ? cleanInput($_POST['emailFinanceiro']) : null;
 $emailNF = !empty($_POST['emailNF']) ? cleanInput($_POST['emailNF']) : null;
 
+// Obter a maior ID existente
+$sql = "SELECT MAX(id) as last_id FROM clientes";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$last_id = $row['last_id'];
+
+// Ajustar o próximo valor de AUTO_INCREMENT
+$next_id = $last_id + 1;
+$sql = "ALTER TABLE clientes AUTO_INCREMENT = $next_id";
+$conn->query($sql);
+
 // Inserir dados no banco de dados
 $stmt = $conn->prepare("INSERT INTO clientes (cnpj, cpf, rg, razaoSocial, nomeFantasia, ramo, ie, cep, end, num, comp, bairro, municipio, uf, cep2, end2, num2, comp2, bairro2, municipio2, uf2, contatoComercial, telComercial, emailComercial, contatoFinanceiro, telFinanceiro, emailFinanceiro, emailNF) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
@@ -56,9 +67,10 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    echo json_encode(['success' => true]);
+    header('Location: /gestao-cliente/index.html');
+    exit();
 } else {
-    echo json_encode(['success' => false, 'message' => $stmt->error]);
+    echo 'Não foi possível realizar o cadastro.';
 }
 
 $stmt->close();
