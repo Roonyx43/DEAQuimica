@@ -212,7 +212,7 @@
                     <input type="email" id="emailNF" name="emailNF" required placeholder="*">
                 </div>
 
-                <button type="submit" id="validarForm">Validar</button>
+                <button type="submit" id="validarForm">Cadastrar</button>
 
             </form>
 
