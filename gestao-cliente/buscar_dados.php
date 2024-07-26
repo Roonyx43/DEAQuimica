@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <td>" . $row["razaoSocial"] . "</td>
                     <td>" . $cnpj_cpf . "</td>
                     <td>" . $row["uf"] . "</td>
-                    <td><button class='edit-btn' data-id='" . $row["id"] . "' style='background-color: green; color: white; padding: 5px; border: none; cursor: pointer;'>Editar</button></td>
+                    <td><button class='edit-btn' data-id='" . $row["id"] . "' style='background-color: green; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer;'>Editar</button></td>
                   </tr>";
         }
         echo "</table></div>";

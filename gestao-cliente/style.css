@@ -3,6 +3,7 @@
     padding: 0px;
 }
 header {
+    width: 100%;
     display:flex;
     font-family:"Poppins",sans-serif;
     background-color:#fff;
@@ -191,7 +192,7 @@ form button:hover {
     color: white;
     background-color: red;
     cursor: pointer;
-    margin-top: 10px;
+    margin-right: 200px;
     text-decoration: none;
 }
 
@@ -260,12 +261,59 @@ input#valor:focus {
 
 @media (max-width: 480px) {
     header {
-        flex-direction: column;
+        
+        width: 100%;
     }
     img {
         width: 20%;
     }
     .form-group label, .form-group input, .form-actions button {
         font-size: 12px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .container-busca{
+        width: 86%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    tr{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    th{
+        display: none;
+    }
+
+    form{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    a.volt{
+        width: 13%;
+        text-align: center;
+        margin-bottom: 15px;
+        margin-right: 270px;
+        margin-top: 10px;
     }
 }

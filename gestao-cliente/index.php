@@ -1,3 +1,7 @@
+<?php
+    include('../check_session.php')
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,23 +16,27 @@
             <img src="/assets/logo.jpg" alt="D&A Tools">
         </div>
     </header>
-    <div class="container-busca">
-        <form id="buscarForm">
-            <label for="campo">Filtro:</label>
-            <select name="campo" id="campo">
-                <option value="cnpj">CNPJ</option>
-                <option value="cpf">CPF</option>
-                <option value="razaoSocial">Razão Social</option>
-                <option value="nomeFantasia">Nome Fantasia</option>
-            </select>
-            <label for="valor">Pesquisa:</label>
-            <input type="text" name="valor" id="valor" required>
-            <button type="submit">Buscar</button>
-        </form>
-    </div>
-    <div id="resultados" class="container">
-        <H1>Clientes</H1>
-    </div>
+    <main>
+        <div class="container-busca">
+            <a class='volt' href="../PaginaInicial/mainpage.php" >Voltar</a>
+            <form id="buscarForm">
+                <label for="campo">Filtro:</label>
+                <select name="campo" id="campo">
+                    <option value="cnpj">CNPJ</option>
+                    <option value="cpf">CPF</option>
+                    <option value="razaoSocial">Razão Social</option>
+                    <option value="nomeFantasia">Nome Fantasia</option>
+                </select>
+                <label for="valor">Pesquisa:</label>
+                <input type="text" name="valor" id="valor" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <div id="resultados" class="container">
+            <H1>Clientes</H1>
+        </div>
+    </main>
+    
 
     <script>
         document.getElementById('buscarForm').addEventListener('submit', function(event) {

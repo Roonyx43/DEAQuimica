@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Realizado com Sucesso</title>
+    <link rel="stylesheet" href="sucess-style.css">
+</head>
+<body>
+    <header>
+        <div class="imaged">
+            <img src="/assets/logo.jpg" alt="D&A Tools">
+        </div>
+    </header>
+    <main>
+        <div class="success-container">
+            <div class="checkmark-circle">
+                <div class="background"></div>
+                <div class="checkmark draw"></div>
+            </div>
+            <h1>Cadastro Realizado com Sucesso!</h1>
+            <p>Seu cadastro foi realizado com sucesso. Obrigado por se registrar!</p>
+            <a id="actionButton" class="button">Voltar para a Página Inicial</a>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var actionButton = document.getElementById('actionButton');
+
+            function isMobileDevice() {
+                return /Mobi|Android/i.test(navigator.userAgent);
+            }
+
+            actionButton.addEventListener('click', function() {
+                if (isMobileDevice()) {
+                    window.close();
+                } else {
+                    window.location.href = 'https://www.deaquimica.com.br/';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

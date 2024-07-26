@@ -15,11 +15,11 @@
         <div class="imaged">
             <img src="/assets/logo.jpg" alt="D&A Tools">
         </div>
-        <a class='volt' href="../gestao-cliente/index.php" >Voltar</a>
 
         </div>
     </header>
     <div class="container">
+        <a class='volt' href="../gestao-cliente/index.php" >Voltar</a>
         <h1>Gestão Clientes</h1>
         <form id="clienteForm" action="salvar_cliente.php" method="post">
             <input type="hidden" id="id" name="id">
@@ -151,7 +151,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="vendedor">Vendedor</label>
-                    <input type="text" id="vendedor" name="vendedor">
+                    <input type="text" id="vendedor" name="vendedor" required>
                 </div>
             </div>
             <div class="form-row">
@@ -163,11 +163,11 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="comodato">Comodato</label>
-                    <input type="text" id="comodato" name="comodato">
+                    <input type="text" id="comodato" name="comodato" required>
                 </div>
                 <div class="form-group">
                     <label for="condicoesPagamento">Condições de Pagamento</label>
-                    <input type="text" id="condicoesPagamento" name="condicoesPagamento">
+                    <input type="text" id="condicoesPagamento" name="condicoesPagamento" required>
                 </div>
                 <div class="form-group">
                     <label for="volumeCompras">Volume de Compras</label>
@@ -175,7 +175,7 @@
                 </div>
             </div>
             <div class="form-actions">
-                <button type="button" onclick="generateReport()">Gerar Relatório</button>
+                <button type="submit" onclick="generateReport()">Gerar Relatório</button>
                 <button type="submit">Salvar</button>
             </div>
         </form>
