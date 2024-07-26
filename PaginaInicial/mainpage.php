@@ -52,7 +52,8 @@
                     <ul>
                         <h2 class="title-checklists">Clientes</h2>
                         <hr class="divisoria-checklist">
-                        <li class="checklist-lavanderia"><a href="../gestao-cliente/index.php" class="checklist-a">Gestão</a></li
+                        <li class="checklist-lavanderia"><a href="../gestao-cliente/index.php" class="checklist-a">Gestão</a></li>
+                        <li class="checklist-lavanderia"><a href="../Checklist-Cadastro/index.php" class="checklist-a">Cadastro</a></li>
                     </ul>
                 </div>
             </div>
