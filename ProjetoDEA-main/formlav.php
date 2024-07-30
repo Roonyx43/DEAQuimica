@@ -76,16 +76,16 @@ session_start();
                     <input type="checkbox" id="opt8" name="option4" value="8" required>Esquerda
                 </div>
                 <div class="med1">
-                    <p>Medida do chão ao ponto inferior do painel(M): </p>
+                    <p>Medida do chão ao ponto inferior do painel (m): </p>
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="medpai1" required>
                 </div>
                 <div class="med1">
-                    <p>Medida da parede(M): <p>
+                    <p>Medida da parede (m): <p>
                     <label>Altura<input type="text" class="med-painel" placeholder="Ex: 0,0" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
                     <label>Largura<input type="text" class="med-painel" placeholder="Ex: 0,0" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
                 </div>
                 <div class="med1">
-                    <p>Distancia ponto de água até central(M): </p>
+                    <p>Distancia ponto de água até central (m): </p>
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist" required>
                 </div>
                 <div class="med1">
@@ -93,12 +93,12 @@ session_start();
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist2" required>
                 </div>
                 <div class="buttons-conex2">
-                    <label class="title-tens">Ponto de água cliente(M):</label>
+                    <label class="title-tens">Ponto de água cliente (m):</label>
                     <input type="checkbox" id="opt11" name="option6" value="11" required>Direita
                     <input type="checkbox" id="opt12" name="option6" value="12" required>Esquerda
                 </div>
                 <div class="buttons-conex2">
-                    <label class="title-tens">Ponto elétrica cliente(M):</label>
+                    <label class="title-tens">Ponto elétrica cliente (m):</label>
                     <input type="checkbox" id="opt13" name="option7" value="13" required>Direita
                     <input type="checkbox" id="opt14" name="option7" value="14" required>Esquerda
                 </div>
