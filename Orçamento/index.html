@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Orçamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="imaged">
+            <a href="../PaginaInicial/mainpage.php">
+                <img src="../assets/logo.jpg" alt="D&A Tools">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <a class="voltar" href="../PaginaInicial/mainpage.php">Voltar</a>
+        <h1 class="orc">Orçamento</h1>
+        <form id="budget-form">
+            <label for="budget-number">Nº Orçamento</label>
+            <input type="text" id="budget-number" name="budget-number" required><br><br>
+            
+            <label for="seller-name">Nome Vendedor</label>
+            <input type="text" id="seller-name" name="seller-name" required><br><br>
+            
+            <label for="document">Documentos (RG ou CPF)</label>
+            <input type="text" id="document" name="document" required><br><br>
+            
+            <label for="signature-pad">Assinatura</label>
+            <div id="signature-pad"></div><br>
+            <button type="button" class="but-limp" onclick="clearSignature()">Limpar Assinatura</button><br><br>
+            
+            <button type="button" onclick="generatePDF()">Gerar PDF</button>
+        </form>
+    
+        <div id="pdf-preview" class="hidden">
+            <h2>Pré-visualização do PDF</h2>
+            <iframe id="pdf-frame" style="width:100%; height:500px;"></iframe><br><br>
+        </div>
+        <button class="button-enviar" type="button" onclick="submitForm()">Enviar</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://unpkg.com/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+    <script src="script.js"></script>
+    </script>
+</body>
+</html>
