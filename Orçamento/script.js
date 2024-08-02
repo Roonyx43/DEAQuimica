@@ -85,11 +85,6 @@ function generateClientLink() {
         shortenUrl(clientFormLink, shortUrl => {
             const clientLinkContainer = document.getElementById('client-link');
             clientLinkContainer.innerHTML = '';
-
-            const linkText = document.createElement('p'); // Adiciona esta linha
-            
-            linkText.textContent = shortUrl; // Adiciona esta linha
-            clientLinkContainer.appendChild(linkText); // Adiciona esta linha
     
             const copyButton = document.createElement('button');
             copyButton.textContent = 'Copiar Link';
@@ -210,4 +205,3 @@ function submitForm() {
     .then(result => alert(result))
     .catch(error => console.error('Error:', error));
 }
-
