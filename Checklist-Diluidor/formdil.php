@@ -170,8 +170,8 @@
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option11" id="opt23" value="23" required>Sim
-                    <input type="checkbox" name="option11" id="opt24" value="24" required>Não
+                    <input type="checkbox" name="option11" id="opt23" value="23" required>1X5
+                    <input type="checkbox" name="option11" id="opt24" value="24" required>1X20
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario2()">Voltar</button>
@@ -243,8 +243,8 @@
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option16" id="opt35" value="35">Sim
-                    <input type="checkbox" name="option16" id="opt36" value="36">Não
+                    <input type="checkbox" name="option16" id="opt35" value="35">1X5
+                    <input type="checkbox" name="option16" id="opt36" value="36">1X20
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario3()">Voltar</button>
@@ -316,8 +316,8 @@
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option21" id="opt47" value="47">Sim
-                    <input type="checkbox" name="option21" id="opt48" value="48">Não
+                    <input type="checkbox" name="option21" id="opt47" value="47">1X5
+                    <input type="checkbox" name="option21" id="opt48" value="48">1X20
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario4()">Voltar</button>
@@ -389,8 +389,8 @@
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option26" id="opt59" value="59">Sim
-                    <input type="checkbox" name="option26" id="opt60" value="60">Não
+                    <input type="checkbox" name="option26" id="opt59" value="59">1X5
+                    <input type="checkbox" name="option26" id="opt60" value="60">1X20
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario5()">Voltar</button>
@@ -462,8 +462,8 @@
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option31" id="opt71" value="71">Sim
-                    <input type="checkbox" name="option31" id="opt72" value="72">Não
+                    <input type="checkbox" name="option31" id="opt71" value="71">1X5
+                    <input type="checkbox" name="option31" id="opt72" value="72">1X20
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario6()">Voltar</button>
@@ -534,8 +534,8 @@
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option36" id="opt83" value="83">Sim
-                    <input type="checkbox" name="option36" id="opt84" value="84">Não
+                    <input type="checkbox" name="option36" id="opt83" value="83">1X5
+                    <input type="checkbox" name="option36" id="opt84" value="84">1X20
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar2" onclick="voltarParaFormulario7()">Voltar</button>
