@@ -148,11 +148,6 @@ function generatePDF() {
     doc.text(`Documentos (RG ou CPF): ${documentField2}`, 105, 165, 'center');
     doc.text(`Email: ${emailValue2}`, 105, 175, 'center');
 
-    // Assinatura do vendedor
-    if (vendorSignatureData) {
-        doc.addImage(vendorSignatureData, 'PNG', 80, 90, 50, 25);
-    }
-
     // Assinatura do cliente
     if (clientSignatureData) {
         doc.text('Assinatura do Cliente', 105, 230, null, null, 'center');
