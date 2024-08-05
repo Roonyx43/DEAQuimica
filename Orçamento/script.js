@@ -96,9 +96,6 @@ function copyToClipboard(text) {
     });
 }
 
-function clearSignature() {
-    signaturePad.clear();
-}
 
 function clearSignature2() {
     signaturePad2.clear();
