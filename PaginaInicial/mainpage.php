@@ -60,7 +60,7 @@
                     <ul>
                         <h2 class="title-checklists">Orçamento</h2>
                         <hr class="divisoria-checklist">
-                        <li class="checklist-lavanderia"><a href="../Orçamento/index.php" class="checklist-a">Novo</a></li>
+                        <li class="checklist-lavanderia"><a href="../Orçamento/index.html" class="checklist-a">Novo</a></li>
                         
                     </ul>
                 </div>
