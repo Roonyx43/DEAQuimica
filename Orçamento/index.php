@@ -30,10 +30,6 @@
             <label for="seller-email">Email do Vendedor</label>
             <input type="email" id="seller-email" name="seller-email" required><br><br>
             
-            <label for="signature-pad">Assinatura Vendedor</label>
-            <div id="signature-pad"></div><br>
-            <button type="button" class="but-limp" onclick="clearSignature()">Limpar Assinatura</button><br><br>
-            
             <button type="button" onclick="generateClientLink()">Informações Cliente</button>
         </form>
         
