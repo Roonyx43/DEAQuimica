@@ -1,14 +1,8 @@
-let signaturePad;
 let signaturePad2;
 let generatedPDF = null;
 let vendorSignatureData = null;
 
 window.onload = () => {
-    const canvas = document.createElement('canvas');
-    canvas.width = 300;
-    canvas.height = 200;
-    document.getElementById('signature-pad').appendChild(canvas);
-    signaturePad = new SignaturePad(canvas);
 
     const canvas2 = document.createElement('canvas');
     canvas2.width = 300;
@@ -43,7 +37,7 @@ window.onload = () => {
 
     // Verificar URL para preencher formulário do cliente
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('budgetNumber') && urlParams.has('sellerName') && urlParams.has('document') && urlParams.has('email') && urlParams.has('signature')) {
+    if (urlParams.has('budgetNumber') && urlParams.has('sellerName') && urlParams.has('document') && urlParams.has('email')) {
         showClientForm();
     }
 };
@@ -66,7 +60,6 @@ function showClientForm() {
     document.getElementById('seller-name').value = urlParams.get('sellerName');
     document.getElementById('seller-document').value = urlParams.get('document');
     document.getElementById('seller-email').value = urlParams.get('email');
-    vendorSignatureData = urlParams.get('signature');
     document.getElementById('client-form-container').style.display = 'flex';
     document.getElementById('vend-form').style.display= 'none';
 }
@@ -76,10 +69,9 @@ function generateClientLink() {
     const sellerName = document.getElementById('seller-name').value;
     const documentValue = document.getElementById('seller-document').value;
     const emailValue = document.getElementById('seller-email').value;
-    const signatureData = signaturePad.toDataURL();
     
-    if (budgetNumber && sellerName && documentValue && emailValue && !signaturePad.isEmpty()) {
-        const queryParams = `?budgetNumber=${encodeURIComponent(budgetNumber)}&sellerName=${encodeURIComponent(sellerName)}&document=${encodeURIComponent(documentValue)}&email=${encodeURIComponent(emailValue)}&signature=${encodeURIComponent(signatureData)}`;
+    if (budgetNumber && sellerName && documentValue && emailValue) {
+        const queryParams = `?budgetNumber=${encodeURIComponent(budgetNumber)}&sellerName=${encodeURIComponent(sellerName)}&document=${encodeURIComponent(documentValue)}&email=${encodeURIComponent(emailValue)}`;
         const clientFormLink = `${window.location.origin}${window.location.pathname}${queryParams}`;
         
         shortenUrl(clientFormLink, shortUrl => {
@@ -161,7 +153,6 @@ function generatePDF() {
 
     // Assinatura do vendedor
     if (vendorSignatureData) {
-        doc.text('Assinatura do Vendedor', 105, 120, null, null, 'center');
         doc.addImage(vendorSignatureData, 'PNG', 80, 90, 50, 25);
     }
 
