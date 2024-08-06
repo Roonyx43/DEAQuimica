@@ -89,16 +89,16 @@ session_start();
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist" required>
                 </div>
                 <div class="med1">
-                    <p>Distancia tomada até central(M): </p>
+                    <p>Distancia tomada até central (m): </p>
                         <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist2" required>
                 </div>
                 <div class="buttons-conex2">
-                    <label class="title-tens">Ponto de água cliente (m):</label>
+                    <label class="title-tens">Ponto de água cliente:</label>
                     <input type="checkbox" id="opt11" name="option6" value="11" required>Direita
                     <input type="checkbox" id="opt12" name="option6" value="12" required>Esquerda
                 </div>
                 <div class="buttons-conex2">
-                    <label class="title-tens">Ponto elétrica cliente (m):</label>
+                    <label class="title-tens">Ponto elétrica cliente:</label>
                     <input type="checkbox" id="opt13" name="option7" value="13" required>Direita
                     <input type="checkbox" id="opt14" name="option7" value="14" required>Esquerda
                 </div>
