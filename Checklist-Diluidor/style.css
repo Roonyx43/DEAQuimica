@@ -100,7 +100,7 @@
     }
     
     input {
-    background-color:#f6f6f6;
+    background-color:#fff;
     text-align:center;
     outline:none;
     font-family:"Poppins",sans-serif;
@@ -108,7 +108,7 @@
     padding-left:25px;
     padding-right:25px;
     margin:5px;
-    border:2px solid #f6f6f6;
+    border:2px solid #7bc3cb;
     border-radius:8px
     }
     
@@ -163,7 +163,7 @@
     }
     
     .data-style {
-    background-color:#f6f6f6;
+    background-color:#fff;
     padding-left:53px;
     padding-right:53px;
     color:#646464
@@ -192,8 +192,8 @@
     margin-top:8px;
     outline:none;
     resize:none;
-    background-color:#f6f6f6;
-    border:2px solid #f6f6f6
+    background-color:#fff;
+    border:2px solid #7bc3cb
     }
     
     .buttons {
