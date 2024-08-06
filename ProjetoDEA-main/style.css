@@ -427,6 +427,13 @@ input[type="number"]{
     appearance: none
 }
 
+.medidaparlar {
+    margin-right: 56px;
+}
+.medidaparalt {
+    margin-right: 43px;
+}
+
 .inline-options label {
     display: inline-block;
     margin-right: 10px;
@@ -452,6 +459,16 @@ input[type="number"]{
     .time-style {
         padding-left: 55px;
         padding-right: 55px;
+    }
+}
+
+@media (max-width: 532px){
+    .medidaparalt{
+        margin-right: 0px;
+    }
+
+    .medidaparlar{
+        margin-right: 0px;
     }
 }
 
