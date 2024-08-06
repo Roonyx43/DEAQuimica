@@ -44,7 +44,7 @@
                     <ul>
                         <h2 class="title-checklists">Checklists</h2>
                         <hr class="divisoria-checklist">
-                        <li class="checklist-lavanderia"><a href="../Checklist-Lavanderia/formlav.php" class="checklist-a">Lavanderia</a></li>
+                        <li class="checklist-lavanderia"><a href="../ProjetoDEA-main/formlav.php" class="checklist-a">Lavanderia</a></li>
                         <li class="checklist-lavanderia2"><a href="../Checklist-Diluidor/formdil.php" class="checklist-b">Diluidor</a></li>
                     </ul>
                 </div>
