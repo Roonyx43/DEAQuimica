@@ -41,7 +41,7 @@
                 <input type="date" placeholder="Data de instalação" class="data-style">
                 <input type="time" placeholder="Horário" class="time-style">
                 <input type="text" id="texto-sem-numeros" placeholder="Nome do Cliente" required>
-                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente" required>
+                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente">
                 <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" value="<?php echo htmlspecialchars($nome_usuario); ?>" required>
                 <input type="text" id="texto-sem-numeros3" placeholder="Contato na instalação" required>
                 <textarea placeholder="Observação" class="obs"></textarea> 
