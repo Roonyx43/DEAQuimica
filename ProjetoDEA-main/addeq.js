@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const kgLabel = document.createElement("label");
         kgLabel.textContent = "KG";
         const kgInput = document.createElement("input");
-        kgInput.type = "text";
+        kgInput.type = "number";
         kgInput.name = `kg${id}`;
         kgInput.setAttribute('required', 'required');
         kgLabel.appendChild(kgInput);
@@ -81,11 +81,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const drenoDiv = createSectionWithInput('Dreno', [
             'Elétrico',
             'Pneumático'
-        ], 'Diametro da Saída(mm)', `dreno${id}`, 1, false, true);
+        ], 'Diametro da Saída (mm)', `dreno${id}`, 1, false, true);
         columnsContainer.appendChild(drenoDiv);
 
         // Distancia da lavadora ao painel
-        const distanciaDiv = createSectionWithInput('Distancia da lavadora ao painel', [], "", `distancia${id}`, 1, false, false);
+        const distanciaDiv = createSectionWithInput('Distancia da lavadora ao painel (m)', [], "", `distancia${id}`, 1, false, false);
         distanciaDiv.querySelector('input[type="text"]').classList.add('large-input');
         columnsContainer.appendChild(distanciaDiv);
 

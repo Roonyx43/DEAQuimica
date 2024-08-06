@@ -1,9 +1,11 @@
 <?php
-session_start();
-     if (!isset($_SESSION['usuario'])) {
-        header("Location: log.php");
-        exit();
-        }
+    include ('../PaginaInicial/name.php');
+    
+
+    if (!isset($_SESSION['usuario'])) {
+    header("Location: log.php");
+    exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -39,23 +41,23 @@ session_start();
                 <input type="date" placeholder="Data de instalação" class="data-style">
                 <input type="time" placeholder="Horário" class="time-style">
                 <input type="text" id="texto-sem-numeros" placeholder="Nome do Cliente" required>
-                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente">
-                <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" required>
+                <input type="number" id="texto-com-numeros" placeholder="Código do Cliente" required>
+                <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" value="<?php echo htmlspecialchars($nome_usuario); ?>" required>
                 <input type="text" id="texto-sem-numeros3" placeholder="Contato na instalação" required>
                 <textarea placeholder="Observação" class="obs"></textarea> 
                 <div class="buttons">
-                    <input type="checkbox" id="opt1" name="option" value="1" required>Cliente Novo
-                    <input type="checkbox" id="opt2" name="option" value="2" required>Cliente Existente
+                    <input type="checkbox" name="option" id="opt1" value="1" required>Cliente Novo
+                    <input type="checkbox" name="option" id="opt2" value="2" required>Cliente Existente
                 </div>
                 <div class="buttons-tens">
                     <p class="title-tens">Tensão da Tomada:</p>
-                    <input type="checkbox" id="opt3" name="option2" value="3" required>110v
-                    <input type="checkbox" id="opt4" name="option2" value="4" required>220v
+                    <input type="checkbox" name="option2" id="opt3" value="3" required>110v
+                    <input type="checkbox" name="option2" id="opt4" value="4" required>220v
                 </div>
                 <div class="buttons-conex">
                     <label class="title-tens">Conexão:</label>
-                    <input type="checkbox" id="opt5" name="option3" value="5" required>3/4
-                    <input type="checkbox" id="opt6" name="option3" value="6" required>1/2
+                    <input type="checkbox" name="option3" id="opt5" value="5" required>3/4
+                    <input type="checkbox" name="option3" id="opt6" value="6" required>1/2
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar"><a href="../PaginaInicial/mainpage.php">Voltar</a></button>
@@ -67,40 +69,45 @@ session_start();
                 <h1 class="title-cliente">Dados do Painel</h1>
                 <div class="buttons-tens2">
                     <p>O painel cabe?</p>
-                    <input type="checkbox" id="opt9" name="option5" value="9" required>Sim
-                    <input type="checkbox" id="opt10" name="option5" value="10" required>Não
+                    <input type="checkbox" name="option5" id="opt9" value="9" required>Sim
+                    <input type="checkbox" name="option5" id="opt10" value="10" required>Não
                 </div>
                 <div class="buttons">
                     <p>Posição CPU no Painel:</p>
-                    <input type="checkbox" id="opt7" name="option4" value="7" required>Direita
-                    <input type="checkbox" id="opt8" name="option4" value="8" required>Esquerda
+                    <input type="checkbox" name="option4" id="opt7" value="7" required>Direita
+                    <input type="checkbox" name="option4" id="opt8" value="8" required>Esquerda
                 </div>
                 <div class="med1">
                     <p>Medida do chão ao ponto inferior do painel (m): </p>
-                        <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="medpai1" required>
+                        <input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpai1" required>
                 </div>
                 <div class="med1">
-                    <p>Medida da parede (m): <p>
-                    <label>Altura<input type="text" class="med-painel" placeholder="Ex: 0,0" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
-                    <label>Largura<input type="text" class="med-painel" placeholder="Ex: 0,0" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
+                    <p>Medida da parede: <p>
+                    <div class="medidaparalt">
+                        <label>Altura<input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpar1" required></label>
+                    </div>
+                    <div class="medidaparlar">
+                        <label>Largura<input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpar2" required></label>
+                    </div>
+
                 </div>
                 <div class="med1">
                     <p>Distancia ponto de água até central (m): </p>
-                        <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist" required>
+                        <input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="dist" required>
                 </div>
                 <div class="med1">
                     <p>Distancia tomada até central (m): </p>
-                        <input type="text" class="med-painel" placeholder="Ex: 0,0" inputmode="decimal" pattern="\d*,?\d*" id="dist2" required>
+                        <input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="dist2" required>
                 </div>
                 <div class="buttons-conex2">
                     <label class="title-tens">Ponto de água cliente:</label>
-                    <input type="checkbox" id="opt11" name="option6" value="11" required>Direita
-                    <input type="checkbox" id="opt12" name="option6" value="12" required>Esquerda
+                    <input type="checkbox" name="option6" value="11" required>Direita
+                    <input type="checkbox" name="option6" value="12" required>Esquerda
                 </div>
                 <div class="buttons-conex2">
                     <label class="title-tens">Ponto elétrica cliente:</label>
-                    <input type="checkbox" id="opt13" name="option7" value="13" required>Direita
-                    <input type="checkbox" id="opt14" name="option7" value="14" required>Esquerda
+                    <input type="checkbox" name="option7" value="13" required>Direita
+                    <input type="checkbox" name="option7" value="14" required>Esquerda
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario()">Voltar</button>
