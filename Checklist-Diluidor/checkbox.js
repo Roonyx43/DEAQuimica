@@ -95,3 +95,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+document.getElementById('opt7').addEventListener('change', function() {
+    if (this.checked) {
+        document.querySelector('.conditional-section').classList.remove('hidden');
+        setRequiredFields(true)
+    }
+});
+
+document.getElementById('opt8').addEventListener('change', function() {
+    if (this.checked) {
+        document.querySelector('.conditional-section').classList.add('hidden');
+        setRequiredFields(false)
+        clearConditionalFields()
+    }
+});
+
+function clearConditionalFields() {
+    // Desmarcar checkboxes
+    document.getElementById('medpar1').value = '';
+    document.getElementById('medpar2').value = '';
+}
+
+function setRequiredFields(isRequired) {
+    const fields = ['medpar1', 'medpar2'];
+    fields.forEach(function(id) {
+        const element = document.getElementById(id);
+        if (isRequired) {
+            element.setAttribute('required', 'required');
+        } else {
+            element.removeAttribute('required');
+        }
+    });
+}

@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include ('../PaginaInicial/name.php');
 
         if (!isset($_SESSION['usuario'])) {
         header("Location: log.php");
@@ -18,7 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.2.0/exceljs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="nexpage.js"></script>
-    <script src="checkbox.js"></script>
     <script src="script.js"></script>
     <script src="alert.js"></script>
     <script src="show.js"></script>
@@ -36,15 +35,13 @@
     <main>
         <div class="display-main">
             <h1 class="title-lavand">Checklist para Diluidor</h1>
-
-
             <form id="formdil1" class="formulario">
                 <h1 class="title-cliente">Dados do Cliente</h1>
                 <input type="date" id="dateInput" placeholder="Data de instalação" class="data-style">
                 <input type="time" placeholder="Horário" class="time-style">
                 <input type="text" id="texto-sem-numeros" placeholder="Nome do Cliente" required>
                 <input type="number" id="texto-com-numeros" placeholder="Código do Cliente">
-                <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" required>
+                <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" value="<?php echo htmlspecialchars($nome_usuario); ?>" required readonly>
                 <input type="text" id="texto-sem-numeros3" placeholder="Contato na instalação" required>
                 <textarea placeholder="Observação" class="obs"></textarea> 
                 <div class="buttons">
@@ -87,20 +84,23 @@
                     <input type="checkbox" name="option4" id="opt8" value="8" required>Não
                 </div>
                 <div class="buttons">
-                    <label class="title-tens">Entrada de Água</label>
-                    <input type="checkbox" name="option5" id="opt9" value="9" required>Direita
-                    <input type="checkbox" name="option5" id="opt10" value="10" required>Esquerda
+                        <label class="title-tens">Entrada de Água</label>
+                        <input type="checkbox" name="option5" id="opt9" value="9" required>Direita
+                        <input type="checkbox" name="option5" id="opt10" value="10" required>Esquerda
+                    </div>
+                    <div class="buttons">
+                        <label class="title-tens">Entrada Elétrica</label>
+                        <input type="checkbox" name="option6" id="opt11" value="11" required>Direita
+                        <input type="checkbox" name="option6" id="opt12" value="12" required>Esquerda
+                    </div>
+                <div class="conditional-section">
+                    <div class="med1">
+                        <p>Medida da parede (m): <p>
+                        <input type="text" class="med-painel" placeholder="Altura" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
+                        <input type="text" class="med-painel" placeholder="Largura" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
+                    </div>
                 </div>
-                <div class="buttons">
-                    <label class="title-tens">Entrada Elétrica</label>
-                    <input type="checkbox" name="option6" id="opt11" value="11" required>Direita
-                    <input type="checkbox" name="option6" id="opt12" value="12" required>Esquerda
-                </div>
-                <div class="med1">
-                    <p>Medida da parede (m): <p>
-                    <input type="text" class="med-painel" placeholder="Altura" id="medpar1" inputmode="decimal" pattern="\d*,?\d*" required></label>
-                    <input type="text" class="med-painel" placeholder="Largura" id="medpar2" inputmode="decimal" pattern="\d*,?\d*" required></label>
-                </div>
+            
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario()">Voltar</button>
                     <button type="button" class="next-page2">Próxima Página</button>
@@ -163,15 +163,15 @@
                     <input type="checkbox" name="option9" id="opt19" value="19" required>3/4
                     <input type="checkbox" name="option9" id="opt20" value="20" required>1/2
                 </div>
-                <div class="buttons">
+                <div class="buttons hidden" id="mangueira1">
                     <p>Mangueira Saída:</p>
-                    <input type="checkbox" name="option10" id="opt21" value="21" required>GRF
-                    <input type="checkbox" name="option10" id="opt22" value="22" required>BDE
+                    <input type="checkbox" name="option10" id="opt21" value="21">GRF
+                    <input type="checkbox" name="option10" id="opt22" value="22">BDE
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option11" id="opt23" value="23" required>1X5
-                    <input type="checkbox" name="option11" id="opt24" value="24" required>1X20
+                    <input type="checkbox" name="option11" id="opt23" value="23" required>Sim
+                    <input type="checkbox" name="option11" id="opt24" value="24" required>Não
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario2()">Voltar</button>
@@ -236,15 +236,15 @@
                     <input type="checkbox" name="option14" id="opt31" value="31">3/4
                     <input type="checkbox" name="option14" id="opt32" value="32">1/2
                 </div>
-                <div class="buttons">
+                <div class="buttons hidden" id="mangueira2">
                     <p>Mangueira Saída:</p>
                     <input type="checkbox" name="option15" id="opt33" value="33">GRF
                     <input type="checkbox" name="option15" id="opt34" value="34">BDE
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option16" id="opt35" value="35">1X5
-                    <input type="checkbox" name="option16" id="opt36" value="36">1X20
+                    <input type="checkbox" name="option16" id="opt35" value="35">Sim
+                    <input type="checkbox" name="option16" id="opt36" value="36">Não
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario3()">Voltar</button>
@@ -309,15 +309,15 @@
                     <input type="checkbox" name="option19" id="opt43" value="43">3/4
                     <input type="checkbox" name="option19" id="opt44" value="44">1/2
                 </div>
-                <div class="buttons">
+                <div class="buttons hidden" id="mangueira3">
                     <p>Mangueira Saída:</p>
                     <input type="checkbox" name="option20" id="opt45" value="45">GRF
                     <input type="checkbox" name="option20" id="opt46" value="46">BDE
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option21" id="opt47" value="47">1X5
-                    <input type="checkbox" name="option21" id="opt48" value="48">1X20
+                    <input type="checkbox" name="option21" id="opt47" value="47">Sim
+                    <input type="checkbox" name="option21" id="opt48" value="48">Não
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario4()">Voltar</button>
@@ -382,15 +382,15 @@
                     <input type="checkbox" name="option24" id="opt55" value="55">3/4
                     <input type="checkbox" name="option24" id="opt56" value="56">1/2
                 </div>
-                <div class="buttons">
+                <div class="buttons hidden" id="mangueira4">
                     <p>Mangueira Saída:</p>
                     <input type="checkbox" name="option25" id="opt57" value="57">GRF
                     <input type="checkbox" name="option25" id="opt58" value="58">BDE
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option26" id="opt59" value="59">1X5
-                    <input type="checkbox" name="option26" id="opt60" value="60">1X20
+                    <input type="checkbox" name="option26" id="opt59" value="59">Sim
+                    <input type="checkbox" name="option26" id="opt60" value="60">Não
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario5()">Voltar</button>
@@ -455,15 +455,15 @@
                     <input type="checkbox" name="option29" id="opt67" value="67">3/4
                     <input type="checkbox" name="option29" id="opt68" value="68">1/2
                 </div>
-                <div class="buttons">
+                <div class="buttons hidden" id="mangueira5">
                     <p>Mangueira Saída:</p>
                     <input type="checkbox" name="option30" id="opt69" value="69">GRF
                     <input type="checkbox" name="option30" id="opt70" value="70">BDE
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option31" id="opt71" value="71">1X5
-                    <input type="checkbox" name="option31" id="opt72" value="72">1X20
+                    <input type="checkbox" name="option31" id="opt71" value="71">Sim
+                    <input type="checkbox" name="option31" id="opt72" value="72">Não
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar" onclick="voltarParaFormulario6()">Voltar</button>
@@ -527,15 +527,15 @@
                     <input type="checkbox" name="option34" id="opt79" value="79">3/4
                     <input type="checkbox" name="option34" id="opt80" value="80">1/2
                 </div>
-                <div class="buttons">
+                <div class="buttons hidden" id="mangueira6">
                     <p>Mangueira Saída:</p>
                     <input type="checkbox" name="option35" id="opt81" value="81">GRF
                     <input type="checkbox" name="option35" id="opt82" value="82">BDE
                 </div>
                 <div class="buttons">
                     <p>Suporte de Produto:</p>
-                    <input type="checkbox" name="option36" id="opt83" value="83">1X5
-                    <input type="checkbox" name="option36" id="opt84" value="84">1X20
+                    <input type="checkbox" name="option36" id="opt83" value="83">Sim
+                    <input type="checkbox" name="option36" id="opt84" value="84">Não
                 </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar2" onclick="voltarParaFormulario7()">Voltar</button>
@@ -545,5 +545,6 @@
     
         </div>
     </main>
+    <script src="checkbox.js"></script>
 </body>
 </html>

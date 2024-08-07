@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv1_c = document.getElementById ('prod-hid1_c');
         var prodHidDiv1_d = document.getElementById ('prod-hid1_d');
         var prodHidDiv1_e = document.getElementById ('prod-hid1_e');
+        var mangueira1 = document.getElementById('mangueira1')
 
         if (this.checked) {
             prodHidDiv1.style.display = 'block';
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv1_c.style.display = 'block';
             prodHidDiv1_d.style.display = 'block';
             prodHidDiv1_e.style.display = 'block';
+            mangueira1.style.display = 'none'
         } else {
             prodHidDiv1.style.display = 'none';
             prodHidDiv1_b.style.display = 'none';
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv1_e.style.display = 'none';
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv1, prodHidDiv1_b, prodHidDiv1_c, prodHidDiv1_d, prodHidDiv1_e];
+            var fields = [prodHidDiv1, prodHidDiv1_b, prodHidDiv1_c, prodHidDiv1_d, prodHidDiv1_e, mangueira1];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -42,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv1_c = document.getElementById('prod-hid1_c');
         var prodHidDiv1_d = document.getElementById('prod-hid1_d');
         var prodHidDiv1_e = document.getElementById('prod-hid1_e');
+        var mangueira1 = document.getElementById('mangueira1')
+        
 
         if (this.checked) {
             prodHidDiv1.style.display = 'none';
@@ -49,9 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv1_c.style.display = 'none';
             prodHidDiv1_d.style.display = 'none';
             prodHidDiv1_e.style.display = 'none';
+            mangueira1.style.display = 'flex';
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv1, prodHidDiv1_b, prodHidDiv1_c, prodHidDiv1_d, prodHidDiv1_e];
+            var fields = [prodHidDiv1, prodHidDiv1_b, prodHidDiv1_c, prodHidDiv1_d, prodHidDiv1_e, mangueira1];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -73,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv1_c = document.getElementById ('prod-hid1_c');
         var prodHidDiv1_d = document.getElementById ('prod-hid1_d');
         var prodHidDiv1_e = document.getElementById ('prod-hid1_e');
+        var mangueira1 = document.getElementById('mangueira1')
 
         if (this.checked) {
             prodHidDiv1.style.display = 'none';
@@ -80,9 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv1_c.style.display = 'none';
             prodHidDiv1_d.style.display = 'none';
             prodHidDiv1_e.style.display = 'none';
+            mangueira1.style.display = 'none';
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv1, prodHidDiv1_b, prodHidDiv1_c, prodHidDiv1_d, prodHidDiv1_e];
+            var fields = [prodHidDiv1, prodHidDiv1_b, prodHidDiv1_c, prodHidDiv1_d, prodHidDiv1_e, mangueira1];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -106,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv2_c = document.getElementById ('prod-hid2_c');
         var prodHidDiv2_d = document.getElementById ('prod-hid2_d');
         var prodHidDiv2_e = document.getElementById ('prod-hid2_e');
+        var mangueira2 = document.getElementById('mangueira2')
 
         if (this.checked) {
             prodHidDiv2.style.display = 'block';
@@ -113,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv2_c.style.display = 'block';
             prodHidDiv2_d.style.display = 'block';
             prodHidDiv2_e.style.display = 'block';
+            mangueira2.style.display = 'none'
         } else {
             prodHidDiv2.style.display = 'none';
             prodHidDiv2_b.style.display = 'none';
@@ -121,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv2_e.style.display = 'none';
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv2, prodHidDiv2_b, prodHidDiv2_c, prodHidDiv2_d, prodHidDiv2_e];
+            var fields = [prodHidDiv2, prodHidDiv2_b, prodHidDiv2_c, prodHidDiv2_d, prodHidDiv2_e, mangueira2];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -145,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv2_c = document.getElementById ('prod-hid2_c');
         var prodHidDiv2_d = document.getElementById ('prod-hid2_d');
         var prodHidDiv2_e = document.getElementById ('prod-hid2_e');
+        var mangueira2 = document.getElementById('mangueira2')
 
         if (this.checked) {
             prodHidDiv2.style.display = 'none';
@@ -152,9 +162,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv2_c.style.display = 'none';
             prodHidDiv2_d.style.display = 'none';
             prodHidDiv2_e.style.display = 'none';
+            mangueira2.style.display = 'flex'
 
              // Definindo o valor dos campos como vazio
-             var fields = [prodHidDiv2, prodHidDiv2_b, prodHidDiv2_c, prodHidDiv2_d, prodHidDiv2_e];
+             var fields = [prodHidDiv2, prodHidDiv2_b, prodHidDiv2_c, prodHidDiv2_d, prodHidDiv2_e, mangueira2];
              fields.forEach(function(field) {
                  var inputElements = field.getElementsByTagName('input');
                  for (var i = 0; i < inputElements.length; i++) {
@@ -176,6 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv2_c = document.getElementById ('prod-hid2_c');
         var prodHidDiv2_d = document.getElementById ('prod-hid2_d');
         var prodHidDiv2_e = document.getElementById ('prod-hid2_e');
+        var mangueira2 = document.getElementById('mangueira2')
 
         if (this.checked) {
             prodHidDiv2.style.display = 'none';
@@ -183,9 +195,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv2_c.style.display = 'none';
             prodHidDiv2_d.style.display = 'none';
             prodHidDiv2_e.style.display = 'none';
+            mangueira2.style.display = 'none'
 
                 // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv2, prodHidDiv2_b, prodHidDiv2_c, prodHidDiv2_d, prodHidDiv2_e];
+            var fields = [prodHidDiv2, prodHidDiv2_b, prodHidDiv2_c, prodHidDiv2_d, prodHidDiv2_e, mangueira2];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -207,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv3_c = document.getElementById ('prod-hid3_c');
         var prodHidDiv3_d = document.getElementById ('prod-hid3_d');
         var prodHidDiv3_e = document.getElementById ('prod-hid3_e');
+        var mangueira3 = document.getElementById('mangueira3')
 
         if (this.checked) {
             prodHidDiv3.style.display = 'block';
@@ -214,6 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv3_c.style.display = 'block';
             prodHidDiv3_d.style.display = 'block';
             prodHidDiv3_e.style.display = 'block';
+            mangueira3.style.display = 'none'
         } else {
             prodHidDiv3.style.display = 'none';
             prodHidDiv3_b.style.display = 'none';
@@ -222,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv3_e.style.display = 'none';
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv3, prodHidDiv3_b, prodHidDiv3_c, prodHidDiv3_d, prodHidDiv3_e];
+            var fields = [prodHidDiv3, prodHidDiv3_b, prodHidDiv3_c, prodHidDiv3_d, prodHidDiv3_e, mangueira3];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -244,6 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv3_c = document.getElementById ('prod-hid3_c');
         var prodHidDiv3_d = document.getElementById ('prod-hid3_d');
         var prodHidDiv3_e = document.getElementById ('prod-hid3_e');
+        var mangueira3 = document.getElementById('mangueira3')
 
         if (this.checked) {
             prodHidDiv3.style.display = 'none';
@@ -251,9 +267,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv3_c.style.display = 'none';
             prodHidDiv3_d.style.display = 'none';
             prodHidDiv3_e.style.display = 'none';
+            mangueira3.style.display = 'flex'
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv3, prodHidDiv3_b, prodHidDiv3_c, prodHidDiv3_d, prodHidDiv3_e];
+            var fields = [prodHidDiv3, prodHidDiv3_b, prodHidDiv3_c, prodHidDiv3_d, prodHidDiv3_e, mangueira3];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -275,6 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv3_c = document.getElementById ('prod-hid3_c');
         var prodHidDiv3_d = document.getElementById ('prod-hid3_d');
         var prodHidDiv3_e = document.getElementById ('prod-hid3_e');
+        var mangueira3 = document.getElementById('mangueira3')
 
         if (this.checked) {
             prodHidDiv3.style.display = 'none';
@@ -282,9 +300,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv3_c.style.display = 'none';
             prodHidDiv3_d.style.display = 'none';
             prodHidDiv3_e.style.display = 'none';
+            mangueira3.style.display = 'none'
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv3, prodHidDiv3_b, prodHidDiv3_c, prodHidDiv3_d, prodHidDiv3_e];
+            var fields = [prodHidDiv3, prodHidDiv3_b, prodHidDiv3_c, prodHidDiv3_d, prodHidDiv3_e, mangueira3];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -307,6 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv4_c = document.getElementById ('prod-hid4_c');
         var prodHidDiv4_d = document.getElementById ('prod-hid4_d');
         var prodHidDiv4_e = document.getElementById ('prod-hid4_e');
+        var mangueira4 = document.getElementById('mangueira4')
 
         if (this.checked) {
             prodHidDiv4.style.display = 'block';
@@ -314,6 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv4_c.style.display = 'block';
             prodHidDiv4_d.style.display = 'block';
             prodHidDiv4_e.style.display = 'block';
+            mangueira4.style.display = 'none'
         } else {
             prodHidDiv4.style.display = 'none';
             prodHidDiv4_b.style.display = 'none';
@@ -322,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv4_e.style.display = 'none';
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv3, prodHidDiv3_b, prodHidDiv3_c, prodHidDiv3_d, prodHidDiv3_e];
+            var fields = [prodHidDiv4, prodHidDiv4_b, prodHidDiv4_c, prodHidDiv4_d, prodHidDiv4_e, mangueira4];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -344,6 +365,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv4_c = document.getElementById ('prod-hid4_c');
         var prodHidDiv4_d = document.getElementById ('prod-hid4_d');
         var prodHidDiv4_e = document.getElementById ('prod-hid4_e');
+        var mangueira4 = document.getElementById('mangueira4')
 
         if (this.checked) {
             prodHidDiv4.style.display = 'none';
@@ -351,9 +373,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv4_c.style.display = 'none';
             prodHidDiv4_d.style.display = 'none';
             prodHidDiv4_e.style.display = 'none';
+            mangueira4.style.display = 'flex'
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv4, prodHidDiv4_b, prodHidDiv4_c, prodHidDiv4_d, prodHidDiv4_e];
+            var fields = [prodHidDiv4, prodHidDiv4_b, prodHidDiv4_c, prodHidDiv4_d, prodHidDiv4_e, mangueira4];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -375,6 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv4_c = document.getElementById ('prod-hid4_c');
         var prodHidDiv4_d = document.getElementById ('prod-hid4_d');
         var prodHidDiv4_e = document.getElementById ('prod-hid4_e');
+        var mangueira4 = document.getElementById('mangueira4')
 
         if (this.checked) {
             prodHidDiv4.style.display = 'none';
@@ -382,9 +406,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv4_c.style.display = 'none';
             prodHidDiv4_d.style.display = 'none';
             prodHidDiv4_e.style.display = 'none';
+            mangueira4.style.display = 'none'
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv4, prodHidDiv4_b, prodHidDiv4_c, prodHidDiv4_d, prodHidDiv4_e];
+            var fields = [prodHidDiv4, prodHidDiv4_b, prodHidDiv4_c, prodHidDiv4_d, prodHidDiv4_e, mangueira4];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -407,6 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv5_c = document.getElementById ('prod-hid5_c');
         var prodHidDiv5_d = document.getElementById ('prod-hid5_d');
         var prodHidDiv5_e = document.getElementById ('prod-hid5_e');
+        var mangueira5 = document.getElementById('mangueira5')
 
         if (this.checked) {
             prodHidDiv5.style.display = 'block';
@@ -414,6 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv5_c.style.display = 'block';
             prodHidDiv5_d.style.display = 'block';
             prodHidDiv5_e.style.display = 'block';
+            mangueira5.style.display = 'none'
         } else {
             prodHidDiv5.style.display = 'none';
             prodHidDiv5_b.style.display = 'none';
@@ -422,7 +449,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv5_e.style.display = 'none';
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv5, prodHidDiv5_b, prodHidDiv5_c, prodHidDiv5_d, prodHidDiv5_e];
+            var fields = [prodHidDiv5, prodHidDiv5_b, prodHidDiv5_c, prodHidDiv5_d, prodHidDiv5_e, mangueira5];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -444,6 +471,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv5_c = document.getElementById ('prod-hid5_c');
         var prodHidDiv5_d = document.getElementById ('prod-hid5_d');
         var prodHidDiv5_e = document.getElementById ('prod-hid5_e');
+        var mangueira5 = document.getElementById('mangueira5')
 
         if (this.checked) {
             prodHidDiv5.style.display = 'none';
@@ -451,9 +479,10 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv5_c.style.display = 'none';
             prodHidDiv5_d.style.display = 'none';
             prodHidDiv5_e.style.display = 'none';
+            mangueira5.style.display = 'flex'
 
             // Definindo o valor dos campos como vazio
-            var fields = [prodHidDiv5, prodHidDiv5_b, prodHidDiv5_c, prodHidDiv5_d, prodHidDiv5_e];
+            var fields = [prodHidDiv5, prodHidDiv5_b, prodHidDiv5_c, prodHidDiv5_d, prodHidDiv5_e, mangueira5];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -475,6 +504,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv5_c = document.getElementById ('prod-hid5_c');
         var prodHidDiv5_d = document.getElementById ('prod-hid5_d');
         var prodHidDiv5_e = document.getElementById ('prod-hid5_e');
+        var mangueira5 = document.getElementById('mangueira5')
 
         if (this.checked) {
             prodHidDiv5.style.display = 'none';
@@ -482,8 +512,9 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv5_c.style.display = 'none';
             prodHidDiv5_d.style.display = 'none';
             prodHidDiv5_e.style.display = 'none';
+            mangueira5.style.display = 'none'
 
-            var fields = [prodHidDiv5, prodHidDiv5_b, prodHidDiv5_c, prodHidDiv5_d, prodHidDiv5_e];
+            var fields = [prodHidDiv5, prodHidDiv5_b, prodHidDiv5_c, prodHidDiv5_d, prodHidDiv5_e, mangueira5];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -505,6 +536,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv6_c = document.getElementById ('prod-hid6_c');
         var prodHidDiv6_d = document.getElementById ('prod-hid6_d');
         var prodHidDiv6_e = document.getElementById ('prod-hid6_e');
+        var mangueira6 = document.getElementById('mangueira6')
 
         if (this.checked) {
             prodHidDiv6.style.display = 'block';
@@ -512,6 +544,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv6_c.style.display = 'block';
             prodHidDiv6_d.style.display = 'block';
             prodHidDiv6_e.style.display = 'block';
+            mangueira6.style.display = 'none'
         } else {
             prodHidDiv6.style.display = 'none';
             prodHidDiv6_b.style.display = 'none';
@@ -519,7 +552,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv6_d.style.display = 'none';
             prodHidDiv6_e.style.display = 'none';
 
-            var fields = [prodHidDiv6, prodHidDiv6_b, prodHidDiv6_c, prodHidDiv6_d, prodHidDiv6_e];
+            var fields = [prodHidDiv6, prodHidDiv6_b, prodHidDiv6_c, prodHidDiv6_d, prodHidDiv6_e, mangueira6];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -541,6 +574,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv6_c = document.getElementById ('prod-hid6_c');
         var prodHidDiv6_d = document.getElementById ('prod-hid6_d');
         var prodHidDiv6_e = document.getElementById ('prod-hid6_e');
+        var mangueira6 = document.getElementById('mangueira6')
 
         if (this.checked) {
             prodHidDiv6.style.display = 'none';
@@ -548,8 +582,9 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv6_c.style.display = 'none';
             prodHidDiv6_d.style.display = 'none';
             prodHidDiv6_e.style.display = 'none';
+            mangueira6.style.display = 'flex'
 
-            var fields = [prodHidDiv6, prodHidDiv6_b, prodHidDiv6_c, prodHidDiv6_d, prodHidDiv6_e];
+            var fields = [prodHidDiv6, prodHidDiv6_b, prodHidDiv6_c, prodHidDiv6_d, prodHidDiv6_e, mangueira6];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
@@ -571,6 +606,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv6_c = document.getElementById ('prod-hid6_c');
         var prodHidDiv6_d = document.getElementById ('prod-hid6_d');
         var prodHidDiv6_e = document.getElementById ('prod-hid6_e');
+        var mangueira6 = document.getElementById('mangueira6')
 
         if (this.checked) {
             prodHidDiv6.style.display = 'none';
@@ -578,8 +614,9 @@ document.addEventListener('DOMContentLoaded', function() {
             prodHidDiv6_c.style.display = 'none';
             prodHidDiv6_d.style.display = 'none';
             prodHidDiv6_e.style.display = 'none';
+            mangueira6.style.display = 'none'
 
-            var fields = [prodHidDiv6, prodHidDiv6_b, prodHidDiv6_c, prodHidDiv6_d, prodHidDiv6_e];
+            var fields = [prodHidDiv6, prodHidDiv6_b, prodHidDiv6_c, prodHidDiv6_d, prodHidDiv6_e, mangueira6];
             fields.forEach(function(field) {
                 var inputElements = field.getElementsByTagName('input');
                 for (var i = 0; i < inputElements.length; i++) {
