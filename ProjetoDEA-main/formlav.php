@@ -42,7 +42,7 @@
                 <input type="time" placeholder="Horário" class="time-style">
                 <input type="text" id="texto-sem-numeros" placeholder="Nome do Cliente" required>
                 <input type="number" id="texto-com-numeros" placeholder="Código do Cliente">
-                <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" value="<?php echo htmlspecialchars($nome_usuario); ?>" required>
+                <input type="text" id="texto-sem-numeros2" placeholder="Vendedor" value="<?php echo htmlspecialchars($nome_usuario); ?>" required readonly>
                 <input type="text" id="texto-sem-numeros3" placeholder="Contato na instalação" required>
                 <textarea placeholder="Observação" class="obs"></textarea> 
                 <div class="buttons">
@@ -72,24 +72,25 @@
                     <input type="checkbox" name="option5" id="opt9" value="9" required>Sim
                     <input type="checkbox" name="option5" id="opt10" value="10" required>Não
                 </div>
-                <div class="buttons">
-                    <p>Posição CPU no Painel:</p>
-                    <input type="checkbox" name="option4" id="opt7" value="7" required>Direita
-                    <input type="checkbox" name="option4" id="opt8" value="8" required>Esquerda
-                </div>
-                <div class="med1">
-                    <p>Medida do chão ao ponto inferior do painel (m): </p>
+                <div class="conditional-section">
+                    <div class="buttons">
+                        <p>Posição CPU no Painel:</p>
+                        <input type="checkbox" name="option4" id="opt7" value="7" required>Direita
+                        <input type="checkbox" name="option4" id="opt8" value="8" required>Esquerda
+                    </div>
+                    <div class="med1">
+                        <p>Medida do chão ao ponto inferior do painel (m): </p>
                         <input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpai1" required>
-                </div>
-                <div class="med1">
-                    <p>Medida da parede: <p>
-                    <div class="medidaparalt">
-                        <label>Altura<input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpar1" required></label>
                     </div>
-                    <div class="medidaparlar">
-                        <label>Largura<input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpar2" required></label>
+                    <div class="med1">
+                        <p>Medida da parede: </p>
+                        <div class="medidaparalt">
+                            <label>Altura<input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpar1" required></label>
+                        </div>
+                        <div class="medidaparlar">
+                            <label>Largura<input type="text" class="med-painel" placeholder="Ex: 0.0m" inputmode="decimal" pattern="\d*,?\d*" id="medpar2" required></label>
+                        </div>
                     </div>
-
                 </div>
                 <div class="med1">
                     <p>Distancia ponto de água até central (m): </p>
