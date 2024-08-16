@@ -581,7 +581,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const blob = new Blob([buffer], { type: "application/octet-stream" });
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
-                link.download = ('dados_cliente_' +nomeCliente +'.xlsx');
+                link.download = ('Checklist Diluidor ('+nomeCliente+') - '+vendedor+'.xlsx');
                 link.click();
             })
             .catch(error => console.error('Erro ao carregar o modelo:', error));
