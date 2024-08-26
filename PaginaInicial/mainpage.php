@@ -48,7 +48,8 @@
                         <li class="checklist-lavanderia2"><a href="../Checklist-Diluidor/formdil.php" class="checklist-b">Diluidor</a></li>
                     </ul>
                 </div>
-                
+
+                <!--
                 <div class="checkboxlist-list" style="width: 80%;">
                     <ul>
                         <h2 class="title-checklists">Clientes</h2>
@@ -65,6 +66,7 @@
                         
                     </ul>
                 </div>
+                -->
                 
             </div>
         </div>
