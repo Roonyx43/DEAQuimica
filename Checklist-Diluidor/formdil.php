@@ -6,7 +6,6 @@
         exit();
         }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,7 +20,6 @@
     <script src="script.js"></script>
     <script src="alert.js"></script>
     <script src="show.js"></script>
-
 </head>
 <body>
     <header>
@@ -31,7 +29,6 @@
             </a>
         </div>
     </header>
-
     <main>
         <div class="display-main">
             <h1 class="title-lavand">Checklist para Diluidor</h1>

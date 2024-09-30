@@ -20,6 +20,7 @@ if (isset($_POST['entrar']) && !empty($_POST['usuario']) && !empty($_POST['senha
         $row = $result->fetch_assoc();
         $_SESSION['usuario'] = $row['usuario']; // Armazene informações na sessão
         $_SESSION['id'] = $row['id'];
+        $_SESSION['vendedor'] = $row['vendedor']; // Certifique-se de que o campo 'vendedor' exista na tabela de usuários
         header('Location: /PaginaInicial/mainpage.php');
         exit();
     }

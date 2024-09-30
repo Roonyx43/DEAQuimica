@@ -1,3 +1,8 @@
+<?php
+    include('../check_session.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +16,10 @@
 </head>
 <body>
     <header>
-        
         <div class="imaged">
-            <img src="/assets/logo.jpg" alt="D&A Tools">
-        </div>
-
+            <a href="../PaginaInicial/mainpage.php">
+                <img src="../assets/logo.jpg" alt="D&A Tools">
+            </a>
         </div>
     </header>
     <div class="container">
@@ -23,6 +27,9 @@
         <h1>Gestão Clientes</h1>
         <form id="clienteForm" action="salvar_cliente.php" method="post">
             <input type="hidden" id="id" name="id">
+
+            <input type="hidden" id="nomeFixo" name="nomeFixo" value="Taniele">
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="cnpj">CNPJ</label>
@@ -109,7 +116,7 @@
                     <input type="text" id="municipio2" name="municipio2">
                 </div>
                 <div class="form-group">
-                    <label for="uf2">UF (Entrega)</label>
+                    <label for="uf2" class="uf_ent">UF (Entrega)</label>
                     <input type="text" id="uf2" name="uf2">
                 </div>
             </div>
@@ -152,11 +159,13 @@
                 <div class="form-group">
                     <label for="vendedor">Vendedor</label>
                     <input type="text" id="vendedor" name="vendedor" required>
+                    <label for="vendedor2"></label>
+                    <input type="hidden" id="vendedor2" name="vendedor2" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label for="apelidoEmpresa">Apelido Empresa</label>
+                    <label for="apelidoEmpresa">Identificação Empresa</label>
                     <input type="text" id="apelidoEmpresa" name="apelidoEmpresa">
                 </div>
             </div>
@@ -175,12 +184,29 @@
                 </div>
             </div>
             <div class="form-actions">
-                <button type="submit" onclick="generateReport()">Gerar Relatório</button>
-                <button type="submit">Salvar</button>
+                <button type="button" id="gerarRelatorio" onclick="generateReport()">Gerar Relatório</button>
+                <button type="submit" id="but_salvar" onclick="setVendedorTaniele()">Salvar</button>
             </div>
         </form>
     </div>
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Extrai o valor do vendedor da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const vendedor = urlParams.get('vendedor');
+        
+        // Exibe o nome do vendedor no campo
+        document.getElementById("vendedor").value = vendedor
+
+        // Verifica se o vendedor é "Taniele"
+        if (vendedor !== "Taniele") {
+            document.getElementById("gerarRelatorio").style.display = "none";
+        }
+        if (vendedor == "Taniele") {
+            document.getElementById("but_salvar").style.display = "none"
+        }
+    });
+
     document.addEventListener('DOMContentLoaded', function() {
         var urlParams = new URLSearchParams(window.location.search);
         var clientId = urlParams.get('id');
@@ -210,6 +236,10 @@
             xhr.send('id=' + encodeURIComponent(clientId));
         }
     });
+
+    function setVendedorTaniele() {
+        document.getElementById("vendedor").value = "Taniele";
+    }
 
     function generateReport() {
         const { jsPDF } = window.jspdf;
@@ -241,8 +271,8 @@
             ["Telefone Financeiro", document.getElementById("telFinanceiro").value],
             ["Email Financeiro", document.getElementById("emailFinanceiro").value],
             ["Email para Envio de NF", document.getElementById("emailNF").value],
-            ["Vendedor", document.getElementById("vendedor").value],
-            ["Apelido Empresa", document.getElementById("apelidoEmpresa").value],
+            ["Vendedor", document.getElementById("vendedor2").value],
+            ["Ident. Empresa", document.getElementById("apelidoEmpresa").value],
             ["Comodato", document.getElementById("comodato").value],
             ["Condições de Pagamento", document.getElementById("condicoesPagamento").value],
             ["Volume de Compras", document.getElementById("volumeCompras").value]
@@ -255,6 +285,60 @@
         });
 
         doc.save('relatorio_cliente.pdf');
+
+        // Primeiro, salva os dados na tabela relatorios
+        saveReport();
+    }
+
+    function saveReport() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var clientId = urlParams.get('id');
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'buscar_dados_cliente.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                var cliente = JSON.parse(xhr.responseText);
+
+                // Agora que temos os dados, salvamos na tabela relatorios
+                var xhrSave = new XMLHttpRequest();
+                xhrSave.open('POST', 'salvar_relatorio.php', true);
+                xhrSave.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhrSave.onload = function () {
+                    if (xhrSave.status === 200) {
+                        // Após salvar o relatório, excluir o cliente
+                        deleteClient();
+                    } else {
+                        alert('Erro ao salvar o relatório.');
+                    }
+                };
+                xhrSave.send('razaoSocial=' + encodeURIComponent(cliente.razaoSocial) + 
+                            '&dataCriacao=' + encodeURIComponent(cliente.dataCriacao) + 
+                            '&dataModificacao=' + encodeURIComponent(cliente.dataModificacao));
+            } else {
+                alert('Erro ao buscar os dados do cliente.');
+            }
+        };
+        xhr.send('id=' + encodeURIComponent(clientId));
+    }
+
+    function deleteClient() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var clientId = urlParams.get('id');
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'excluir_cliente.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                alert('Cadastro excluído com sucesso!');
+                window.location.href = "../gestao-cliente/index.php";
+            } else {
+                alert('Erro ao excluir o cadastro.');
+            }
+        };
+        xhr.send('id=' + encodeURIComponent(clientId));
     }
     </script>
 </body>

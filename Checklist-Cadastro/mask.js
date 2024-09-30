@@ -7,4 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#cep2').mask('99999-999');
     $('#telComercial').mask('(99) 9 9999-9999')
     $('#telFinanceiro').mask('(99) 9 9999-9999')
+    $('#cnpjField2').mask('99.999.999/9999-99');
+    $('#cpfField2').mask('999.999.999-99');
+
 });

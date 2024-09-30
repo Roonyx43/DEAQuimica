@@ -53,6 +53,16 @@
     .form-group {
         margin-bottom: 15px;
     }
+
+    .ie{
+        margin-bottom: 15px;
+        display: flex;
+        margin-left: 57px;
+        }
+
+    .isent{
+        margin-top: 15px;
+    }
     
     label {
         display: block;
@@ -333,4 +343,11 @@
     .hidden {
         display: none;
     }
-    
+    @media(max-width: 600px){
+        .ie{
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 0px;
+        }
+    }

@@ -30,8 +30,8 @@ body {
 .container {
     width: 900px;
     margin: auto; 
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 50px;
+    
     border: 1px solid #000;
     padding: 20px;
     border-radius: 10px;
@@ -235,6 +235,28 @@ input#valor:focus {
 
 }
 
+label.uf_ent {
+    letter-spacing: 3px;
+}
+
+.comodato_container {
+    display: flex;
+    justify-content: center;
+    
+}
+.label_sim{
+    margin-top: 5px;
+}
+.label_nao{
+    margin-top: 5px;
+}
+input#comodato_nao{
+    width: 20px
+}
+input#comodato_sim{
+    width: 20px
+}
+
 @media (max-width: 768px) {
     .container {
         width: 85%;
@@ -314,6 +336,6 @@ input#valor:focus {
         text-align: center;
         margin-bottom: 15px;
         margin-right: 270px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 }

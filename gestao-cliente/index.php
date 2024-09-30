@@ -1,5 +1,17 @@
 <?php
-    include('../check_session.php')
+include('../check_session.php');
+include('../config.php'); // Inclua a configuração do banco de dados
+
+// Capture o nome do vendedor logado da sessão
+$vendedorNome = $_SESSION['vendedor'];
+
+// Consulta para obter todos os clientes cadastrados pelo vendedor logado
+$sql = "SELECT * FROM clientes WHERE vendedor = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param('s', $vendedorNome);
+$stmt->execute();
+$result = $stmt->get_result();
+$clientes = $result->fetch_all(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -9,16 +21,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Cliente</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 </head>
 <body>
-    <header>  
+    <header>
         <div class="imaged">
-            <img src="/assets/logo.jpg" alt="D&A Tools">
+            <a href="../PaginaInicial/mainpage.php">
+                <img src="../assets/logo.jpg" alt="D&A Tools">
+            </a>
         </div>
     </header>
     <main>
         <div class="container-busca">
-            <a class='volt' href="../PaginaInicial/mainpage.php" >Voltar</a>
+            <a class='volt' href="../PaginaInicial/mainpage.php">Voltar</a>
             <form id="buscarForm">
                 <label for="campo">Filtro:</label>
                 <select name="campo" id="campo">
@@ -29,14 +45,36 @@
                 </select>
                 <label for="valor">Pesquisa:</label>
                 <input type="text" name="valor" id="valor" required>
+                <input type="hidden" name="vendedor" value="<?php echo htmlspecialchars($vendedorNome); ?>">
                 <button type="submit">Buscar</button>
             </form>
         </div>
         <div id="resultados" class="container">
-            <H1>Clientes</H1>
+            <h1>Clientes</h1>
+            <div class='table-container'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Razão Social</th>
+                            <th>CNPJ/CPF</th>
+                            <th>Estado</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clienteTableBody">
+                        <?php foreach ($clientes as $cliente): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($cliente['razaoSocial']); ?></td>
+                                <td><?php echo htmlspecialchars(!empty($cliente['cnpj']) ? $cliente['cnpj'] : $cliente['cpf']); ?></td>
+                                <td><?php echo htmlspecialchars($cliente['uf']); ?></td>
+                                <td><button class='edit-btn' data-id='<?php echo htmlspecialchars($cliente['id']); ?>' style='background-color: green; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer;'>Editar</button></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
-    
 
     <script>
         document.getElementById('buscarForm').addEventListener('submit', function(event) {
@@ -50,8 +88,8 @@
             xhr.open('POST', 'buscar_dados.php', true);
             xhr.onload = function () {
                 if (xhr.status === 200) {
-                    // Atualize a div de resultados com a resposta do servidor
-                    document.getElementById('resultados').innerHTML = xhr.responseText;
+                    // Atualize apenas o corpo da tabela com os resultados da pesquisa
+                    document.getElementById('clienteTableBody').innerHTML = xhr.responseText;
                     addEditButtonsEvent();
                 } else {
                     console.error('Erro ao buscar os dados.');
@@ -65,7 +103,7 @@
             editButtons.forEach(function(button) {
                 button.addEventListener('click', function() {
                     var clientId = this.getAttribute('data-id');
-                    
+
                     // Faça uma requisição AJAX para buscar os dados do cliente
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', 'buscar_cliente.php', true);
@@ -83,6 +121,25 @@
                 });
             });
         }
+
+        document.getElementById('campo').addEventListener('change', function() {
+            const valorInput = document.getElementById('valor');
+            const selectedOption = this.value;
+
+            if (selectedOption === 'cnpj') {
+                valorInput.id = 'cnpjField2';
+            } else if (selectedOption === 'cpf') {
+                valorInput.id = 'cpfField2';
+            } else {
+                valorInput.id = 'valor';  // ID padrão
+            }
+        });
+
+        // Adicione o evento para os botões de edição após carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            addEditButtonsEvent();
+        });
     </script>
+    <script src="../Checklist-Cadastro/mask.js"></script>
 </body>
 </html>

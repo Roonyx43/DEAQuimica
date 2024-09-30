@@ -68,6 +68,7 @@ main{
     align-items: center;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: 0px 2px 3px 0px black;
 }
 
 .logout-but:hover{
@@ -118,25 +119,41 @@ hr{
     border: 4px solid rgb(23, 172, 138);
     color: rgb(23, 172, 138);
     overflow: hidden;
+    box-shadow: 0px 2px 4px 0px black;
 }
 
 .checks{
     display: flex;
     justify-content: center;
-    
+    max-width: 100%
 }
-.checkboxlist-list{
-    width: 80%;
+
+#but_cop{
+    cursor: pointer;
 }
+
+.clientes {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-bubble {
+    position: absolute;
+    top: -15px;
+    right: -12px;
+    background-color: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
 @media (max-width: 1356px) {
     img{
         width: 10%;
     }
     header{
         width: 100%;
-    }
-    body{
-        min-height: 100vh;
     }
     main {
         
@@ -164,9 +181,6 @@ hr{
         align-items: center;
     }
 
-    .checkboxlist-list{
-        width: 90%;
-    }
 }
 
 @media (max-width: 400px){

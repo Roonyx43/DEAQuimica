@@ -1,3 +1,7 @@
+<?php
+    include '../config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -63,7 +67,7 @@
 
                 <div class="form-group">
                     <label for="nomeFantasia">Nome Fantasia:</label>
-                    <input type="text" id="nomeFantasia" name="nomeFantasia" required placeholder="*">
+                    <input type="text" id="nomeFantasia" name="nomeFantasia">
                 </div>
 
                 <div class="form-group">
@@ -71,9 +75,15 @@
                     <input type="text" id="ramo" name="ramo" required placeholder="*">
                 </div>
 
-                <div class="form-group">
-                    <label for="ie">Inscrição Estadual:</label>
-                    <input type="text" id="ie" name="ie" required placeholder="*">
+                <div class="ie">
+                    <div class="insc_est">
+                        <label for="ie">Inscrição Estadual:</label>
+                        <input type="text" id="ie" name="ie" required>
+                    </div>
+                    <div class="isento">
+                        <label for="isento" class="isento">Isento</label>
+                        <input type="checkbox" name="isento" id="isento" class="isent" style="margin-top: 11px;">
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -212,12 +222,23 @@
                     <input type="email" id="emailNF" name="emailNF" required placeholder="*">
                 </div>
 
+                <input type="hidden" id="vendedorNome" name="vendedorNome" value="">
+
+                <input type="hidden" id="vendedor2" name="vendedor2" value="">
+
                 <button type="submit" id="validarForm">Cadastrar</button>
 
             </form>
 
 
             <script src="script.js"></script>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const vendedorNome = urlParams.get('vendedor');
+                const vendedor2 = urlParams.get('vendedor2');
+                document.getElementById('vendedorNome').value = vendedorNome;
+                document.getElementById('vendedor2').value = vendedor2;
+            </script>
         </div>
     </main>
 </body>

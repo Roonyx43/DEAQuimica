@@ -1,8 +1,14 @@
 <?php
-    session_start(); // Inicie a sessão
+// check_session.php
+session_start();
 
-    if(!isset($_SESSION['usuario'])){
-        header('Location: index.php');
-        exit();
-    }
+// Supondo que o nome do vendedor seja armazenado na sessão durante o login
+if (!isset($_SESSION['usuario'])) {
+    // Redireciona para a página de login se o vendedor não estiver logado
+    header('Location: /log.php');
+    exit();
+}
+
+// Obtém o nome do vendedor da sessão
+$vendedorNome = $_SESSION['vendedor'];
 ?>

@@ -4,6 +4,8 @@
 }
 
 header {
+    position: sticky;
+    top: 0px;
     display: flex;
     font-family:"Poppins", sans-serif;
     background-color: white;

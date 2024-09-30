@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sim = document.getElementById('sim');
     const nao = document.getElementById('nao');
+    const cep = document.getElementById('cep');
+    const end = document.getElementById('end');
+    const num = document.getElementById('num');
+    const comp = document.getElementById('comp')
+    const bairro = document.getElementById('bairro');
+    const municipio = document.getElementById('municipio');
+    const uf = document.getElementById('uf');
     const cep2 = document.getElementById('cep2');
     const end2 = document.getElementById('end2');
     const num2 = document.getElementById('num2');
@@ -21,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (nao.checked) {
+            
             cep2.parentElement.classList.remove('hidden');
             end2.parentElement.classList.remove('hidden');
             num2.parentElement.classList.remove('hidden');
@@ -30,12 +38,19 @@ document.addEventListener('DOMContentLoaded', function() {
             uf2.parentElement.classList.remove('hidden');
             enableFields();
         } else if (sim.checked) {
+            cep2.value = cep.value
             cep2.parentElement.classList.add('hidden');
+            end2.value = end.value 
             end2.parentElement.classList.add('hidden');
+            num2.value  = num.value 
             num2.parentElement.classList.add('hidden');
+            comp2.value  = comp.value 
             comp2.parentElement.classList.add('hidden');
+            bairro2.value  = bairro.value 
             bairro2.parentElement.classList.add('hidden');
+            municipio2.value  = municipio.value 
             municipio2.parentElement.classList.add('hidden');
+            uf2.value  = uf.value 
             uf2.parentElement.classList.add('hidden');
             disableFields();
         }

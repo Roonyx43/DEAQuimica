@@ -96,7 +96,8 @@
     height:18px;
     margin-top:-1px;
     cursor:pointer;
-    background-color:#fff
+    background-color:#fff;
+    accent-color: rgb(0, 162, 184);
     }
     
     input {
@@ -330,7 +331,8 @@
     height:18px;
     margin-top:-1px;
     cursor:pointer;
-    background-color:#fff
+    background-color:#fff;
+    accent-color: #7bc3cb
     }
     
     

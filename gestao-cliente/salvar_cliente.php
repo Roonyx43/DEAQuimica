@@ -40,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $apelidoEmpresa = checkNull($_POST['apelidoEmpresa']);
     $comodato = checkNull($_POST['comodato']);
     $condicoesPagamento = checkNull($_POST['condicoesPagamento']);
+    $volumeCompras = checkNull($_POST['volumeCompras']);
 
     // Prepare a consulta SQL para atualizar os dados
     $sql = "UPDATE clientes SET 
@@ -49,14 +50,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             municipio2 = $municipio2, uf2 = $uf2, contatoComercial = $contatoComercial, telComercial = $telComercial, 
             emailComercial = $emailComercial, contatoFinanceiro = $contatoFinanceiro, telFinanceiro = $telFinanceiro, 
             emailFinanceiro = $emailFinanceiro, emailNF = $emailNF, vendedor = $vendedor, apelidoEmpresa = $apelidoEmpresa, 
-            comodato = $comodato, condicoesPagamento = $condicoesPagamento
+            comodato = $comodato, condicoesPagamento = $condicoesPagamento, data_modificacao = NOW() - INTERVAL 3 HOUR, volumeCompras = $volumeCompras
             WHERE id = '$id'";
 
     // Execute a consulta
     if (mysqli_query($conn, $sql)) {
-        echo "Cliente atualizado com sucesso.";
+        echo "<script>
+            alert('Cliente atualizado com sucesso.');
+            window.location.href = '../PaginaInicial/mainpage.php';
+        </script>";
     } else {
-        echo "Erro ao atualizar cliente: " . mysqli_error($conn);
+        echo "<script>
+            alert('Erro ao atualizar cliente: " . mysqli_error($conn) . "');
+            window.location.href = '../PaginaInicial/mainpage.php';
+        </script>";
     }
 
     // Feche a conexão
