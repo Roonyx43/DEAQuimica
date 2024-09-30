@@ -28,7 +28,6 @@
     <title>D&A Tools</title>
     <link rel="shortcut icon" href="../assets/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="fotoperf.js"></script>
     <link rel="stylesheet" href="stylechecklist.css">
     <script src="https://api.hgbrasil.com/weather?key=e78020af"></script>
 </head>
