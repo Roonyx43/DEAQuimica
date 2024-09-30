@@ -299,6 +299,7 @@
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function () {
             if (xhr.status === 200) {
+                console.log('Dados do cliente retornados:', xhr.responseText);
                 var cliente = JSON.parse(xhr.responseText);
 
                 // Agora que temos os dados, salvamos na tabela relatorios
@@ -307,18 +308,26 @@
                 xhrSave.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhrSave.onload = function () {
                     if (xhrSave.status === 200) {
-                        // Após salvar o relatório, excluir o cliente
+                        console.log('Relatório salvo com sucesso. Excluindo cliente...');
                         deleteClient();
                     } else {
+                        console.error('Erro ao salvar o relatório. Status:', xhrSave.status);
                         alert('Erro ao salvar o relatório.');
                     }
+                };
+                xhrSave.onerror = function () {
+                    console.error('Erro de rede ao tentar salvar o relatório.');
                 };
                 xhrSave.send('razaoSocial=' + encodeURIComponent(cliente.razaoSocial) + 
                             '&dataCriacao=' + encodeURIComponent(cliente.dataCriacao) + 
                             '&dataModificacao=' + encodeURIComponent(cliente.dataModificacao));
             } else {
+                console.error('Erro ao buscar os dados do cliente. Status:', xhr.status);
                 alert('Erro ao buscar os dados do cliente.');
             }
+        };
+        xhr.onerror = function () {
+            console.error('Erro de rede ao tentar buscar os dados do cliente.');
         };
         xhr.send('id=' + encodeURIComponent(clientId));
     }
@@ -332,11 +341,16 @@
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onload = function () {
             if (xhr.status === 200) {
+                console.log('Cliente excluído com sucesso.');
                 alert('Cadastro excluído com sucesso!');
                 window.location.href = "../gestao-cliente/index.php";
             } else {
+                console.error('Erro ao excluir o cliente. Status:', xhr.status);
                 alert('Erro ao excluir o cadastro.');
             }
+        };
+        xhr.onerror = function () {
+            console.error('Erro de rede ao tentar excluir o cliente.');
         };
         xhr.send('id=' + encodeURIComponent(clientId));
     }
