@@ -15,7 +15,7 @@ if (!$clientId) {
 }
 
 // Utiliza prepared statements para evitar SQL injection
-$query = $conn->prepare("SELECT razaoSocial, dataCriacao, dataModificacao FROM clientes WHERE id = ?");
+$query = $conn->prepare("SELECT razaoSocial, data_criacao, data_modificacao FROM clientes WHERE id = ?");
 $query->bind_param('i', $clientId);  // 'i' indica que o parâmetro é um inteiro
 $query->execute();
 $result = $query->get_result();
