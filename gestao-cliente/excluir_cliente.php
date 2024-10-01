@@ -66,7 +66,7 @@ if ($cliente) {
 
     // Insere os dados na tabela "relatorios"
     $sqlInsert = "INSERT INTO relatorios (id, empresa, vendedor2, data, data_modificação, data_finalização) 
-                  VALUES (?, ?, ?, ?, ?, NOW())";
+                  VALUES (?, ?, ?, ?, ?, NOW() - INTERVAL 3 HOUR)";
     $stmtInsert = $conn->prepare($sqlInsert);
     $stmtInsert->bind_param("issss", $availableId, $razaoSocial, $vendedor2, $dataCriacao, $dataModificacao);
     $stmtInsert->execute();

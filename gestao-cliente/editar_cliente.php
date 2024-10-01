@@ -187,7 +187,7 @@
                     <input type="text" id="condicoesPagamento" name="condicoesPagamento" required>
                 </div>
                 <div class="form-group">
-                    <label for="volumeCompras">Volume de Compras</label>
+                    <label for="volumeCompras">Volume de Compras Mensais (R$)</label>
                     <input type="text" id="volumeCompras" name="volumeCompras">
                 </div>
             </div>
@@ -302,7 +302,8 @@
             theme: 'striped'
         });
 
-        doc.save('relatorio_cliente.pdf');
+        const apelidoEmpresa = document.getElementById('apelidoEmpresa').value;
+        doc.save(`Cadastro do cliente ${apelidoEmpresa}).pdf`);
 
         // Primeiro, salva os dados na tabela relatorios
         saveReport();

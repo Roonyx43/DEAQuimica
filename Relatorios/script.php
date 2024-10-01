@@ -7,7 +7,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table>";
-    echo "<tr><th>ID</th><th>Empresa</th><th>Vendedor</th><th>Data de Cadastro</th><th>Data de Modificação</th><th>Data de Finalização</th><th>Ação</th></tr>";
+    echo "<tr><th>ID</th><th>Empresa</th><th>Vendedor</th><th>Data de Cadastro</th><th>Data de Modificação (Vendedor)</th><th>Data de Finalização (Registro)</th><th>Ação</th></tr>";
     // Iterar sobre os resultados e exibi-los na tabela
     while($row = $result->fetch_assoc()) {
         echo "<tr>";
