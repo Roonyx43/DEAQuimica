@@ -30,7 +30,7 @@
     <main>
         <div class="display-main">
             <h1 class="title-lavand">Bem-Vindo</h1>
-            <form id="formdil1" class="formulario" action="/insertData.php" method="POST">
+            <form id="formdil1" class="formulario" action="/insertData.php" method="POST" autocomplete="off">
                 <h1 class="title-cliente">Dados do Cliente</h1>
 
                 <div class="form-group">
@@ -127,48 +127,48 @@
                 <div class="form-group">
                     <label>Endereço de Entrega é o mesmo?</label>
                     <div class="form-group2">
-                        <input type="radio" id="sim" name="endereco?" value="sim" checked>
+                        <input type="radio" id="sim" name="endereco?" value="sim">
                         <label for="sim" class="labelCnpj">Sim</label>
-                        <input type="radio" id="nao" name="endereco?" value="nao">
+                        <input type="radio" id="nao" name="endereco?" value="nao"checked>
                         <label for="nao" class="labelCpf">Não</label>
                     </div>
                 </div>
 
-                <div class="form-group hidden">
+                <div class="form-group">
                     <label for="cep2">CEP (Entrega):</label>
-                    <input type="text" id="cep2" name="cep2" required onblur="buscarCEP()" value="2">
+                    <input type="text" id="cep2" name="cep2" required onblur="buscarCEP()" value="">
                 <br>
                 </div>
 
                 
-                <div class="form-group hidden">
+                <div class="form-group">
                     <label for="end2">Endereço (Entrega):</label>
-                    <input type="text" id="end2" name="end2" value="2">
+                    <input type="text" id="end2" name="end2" value="">
                 </div>
 
-                <div class="form-group hidden">
+                <div class="form-group">
                     <label for="num2">Número (Entrega):</label>
-                    <input type="text" id="num2" name="num2" value="2">
+                    <input type="text" id="num2" name="num2" value="">
                 </div>
 
-                <div class="form-group hidden">
+                <div class="form-group">
                     <label for="comp2">Complemento (Entrega):</label>
-                    <input type="text" id="comp2" name="comp2" value="2">
+                    <input type="text" id="comp2" name="comp2" value="">
                 </div>
 
-                <div class="form-group hidden">
+                <div class="form-group">
                     <label for="bairro2">Bairro (Entrega):</label>
-                    <input type="text" id="bairro2" name="bairro2" value="2">
+                    <input type="text" id="bairro2" name="bairro2" value="">
                 </div>
 
-                <div class="form-group hidden">
+                <div class="form-group">
                     <label for="municipio2">Município (Entrega):</label>
-                    <input type="text" id="municipio2" name="municipio2" value="2">
+                    <input type="text" id="municipio2" name="municipio2" value="">
                 </div>
 
-                <div class="form-group  hidden">
+                <div class="form-group">
                     <label for="uf2">UF (Entrega):</label>
-                    <input type="text" id="uf2" name="uf2" value="2" >
+                    <input type="text" id="uf2" name="uf2" value="" >
                 </div>
 
                 <hr>
