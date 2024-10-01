@@ -93,7 +93,7 @@
                         <li class="checklist-lavanderia2"><a href="../Checklist-Diluidor/formdil.php" class="checklist-b">Diluidor</a></li>
                     </ul>
                 </div>
-                   <!-- <div class="checkboxlist-list" style="width: 80%;">
+                     <div class="checkboxlist-list" style="width: 80%;">
                         <ul>
                                 
                             <h2 class="title-checklists">Clientes</h2>
@@ -110,7 +110,7 @@
                         <li class="checklist-lavanderia"><a onclick="copyToClipboard()" class="checklist-a" id="but_cop">Link</a></li>
                         <input type="hidden" id="userLink" value="<?php echo htmlspecialchars($userLink); ?>">
                     </ul>
-                </div> -->
+                </div>
                 <?php if ($categoria_usuario === 'Diretoria'): ?>
                     <div class="checkboxlist-list" style="width: 80%;">
                         <ul>
