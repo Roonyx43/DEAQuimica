@@ -179,7 +179,7 @@
                     <input type="text" id="condicoesPagamento" name="condicoesPagamento" required>
                 </div>
                 <div class="form-group">
-                    <label for="volumeCompras">Volume de Compras</label>
+                    <label for="volumeCompras">Volume de Compras Mensais (R$)</label>
                     <input type="text" id="volumeCompras" name="volumeCompras">
                 </div>
             </div>
