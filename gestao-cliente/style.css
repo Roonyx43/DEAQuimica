@@ -158,7 +158,6 @@ form {
     text-align: center;
 }
 form label {
-    margin-right: 10px;
     font-weight: bold;
 }
 form select, form input, form button {
@@ -239,22 +238,38 @@ label.uf_ent {
     letter-spacing: 3px;
 }
 
-.comodato_container {
+.comod_div{
     display: flex;
     justify-content: center;
-    
 }
-.label_sim{
+
+label.uf_ent{
+    letter-spacing: 4px;
+}
+
+input#comodatoNao{
+    width: 27px;
     margin-top: 5px;
 }
-.label_nao{
+
+input#comodatoSim{
+    width: 27px;
     margin-top: 5px;
 }
-input#comodato_nao{
-    width: 20px
+
+label#comod_nao{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 0px;
+    margin-left: 20px;
+    width: 30px
 }
-input#comodato_sim{
-    width: 20px
+label#comod_sim{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 0px;
+    margin-left: 20px;
+    width: 30px
 }
 
 @media (max-width: 768px) {

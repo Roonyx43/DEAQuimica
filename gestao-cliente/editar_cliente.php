@@ -171,9 +171,17 @@
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label for="comodato">Comodato</label>
-                    <input type="text" id="comodato" name="comodato" required>
-                </div>
+                        <label for=comodato class="comod_label">Comodato</label>
+                        <div class="comod_div">
+                            <label for="comodato" id="comod_sim">Sim</label>
+                            <input type="radio" id="comodatoNao" name="comodato" value="Sim" required>
+                            <label for="comodato" id="comod_nao">Não</label>
+                            <input type="radio" id="comodatoSim" name="comodato" value="Não" required>
+                            </label>
+                        </div>
+                        <input type="text" id="comodato" name="comodatoText" style="display: none">
+                    </div>
+                    
                 <div class="form-group">
                     <label for="condicoesPagamento">Condições de Pagamento</label>
                     <input type="text" id="condicoesPagamento" name="condicoesPagamento" required>
@@ -201,9 +209,19 @@
         // Verifica se o vendedor é "Taniele"
         if (vendedor !== "Taniele") {
             document.getElementById("gerarRelatorio").style.display = "none";
+            document.getElementById("comodatoSim").style.display = "block";
+            document.getElementById("comodatoNao").style.display = "block";
+            document.getElementById("comod_sim").style.display = "block";
+            document.getElementById("comod_nao").style.display = "block";
+            document.getElementById("comodato").style.display = "none";
         }
         if (vendedor == "Taniele") {
             document.getElementById("but_salvar").style.display = "none"
+            document.getElementById("comodatoSim").style.display = "none";
+            document.getElementById("comodatoNao").style.display = "none";
+            document.getElementById("comod_sim").style.display = "none";
+            document.getElementById("comod_nao").style.display = "none";
+            document.getElementById("comodato").style.display = "block";
         }
     });
 
@@ -354,6 +372,18 @@
         };
         xhr.send('id=' + encodeURIComponent(clientId));
     }
+    document.getElementById("vendedor").addEventListener("change", function() {
+        const vendedor = this.value.toLowerCase(); // Converte o valor para minúsculas para evitar problemas de capitalização
+        const comodatoDiv = document.getElementById("comodato");
+
+        if (vendedor === "Taniele") {
+            // Esconde o campo de comodato
+            comodatoDiv.style.display = "none";
+        } else {
+            // Exibe o campo de comodato
+            comodatoDiv.style.display = "block";
+        }
+    });
     </script>
 </body>
 </html>
