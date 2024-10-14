@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const tensao220v = document.querySelector('input[name="option2"][value="4"]').checked;
         const conexao34 = document.querySelector('input[name="option3"][value="5"]').checked;
         const conexao12 = document.querySelector('input[name="option3"][value="6"]').checked;
+        const pressostato = document.getElementById('optPress').checked;
+        const fluxostato = document.getElementById('optFlux').checked;
         const disthidr = document.getElementById('disthidr').value;
         const distelet = document.getElementById('distelet').value;
         const PCBs = document.querySelector('input[name="option4"][value="7"]').checked;
@@ -407,6 +409,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('T16').value = distelet + "m";
                 worksheet.getCell('B19').value = PCBs ? 'X' : '';
                 worksheet.getCell('E19').value = PCBn ? 'X' : '';
+                worksheet.getCell('N14').value = pressostato ? 'X' : '';
+                worksheet.getCell('N15').value = fluxostato ? 'X' : '';
                 worksheet.getCell('M18').value = entrAd ? 'X' : '';
                 worksheet.getCell('P18').value = entrAe ? 'X' : '';
                 worksheet.getCell('M19').value = entrEd ? 'X' : '';

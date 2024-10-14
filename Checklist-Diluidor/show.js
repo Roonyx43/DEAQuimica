@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
         var prodHidDiv1_d = document.getElementById ('prod-hid1_d');
         var prodHidDiv1_e = document.getElementById ('prod-hid1_e');
         var mangueira1 = document.getElementById('mangueira1')
+        
 
         if (this.checked) {
             prodHidDiv1.style.display = 'block';
-            prodHidDiv1_b.style.display = 'flex';
+            prodHidDiv1_b.style.display = 'flex'; 
             prodHidDiv1_c.style.display = 'block';
             prodHidDiv1_d.style.display = 'block';
             prodHidDiv1_e.style.display = 'block';
@@ -630,3 +631,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+

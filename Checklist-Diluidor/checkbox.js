@@ -96,6 +96,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+// Pressostato e Fluxostato lógica de marcação
+const pressostato = document.getElementById('optPress');
+const fluxostato = document.getElementById('optFlux');
+
+pressostato.addEventListener('change', function() {
+    if (pressostato.checked) {
+        fluxostato.checked = false;
+    }
+});
+
+fluxostato.addEventListener('change', function() {
+    if (fluxostato.checked) {
+        pressostato.checked = false;
+    }
+});
+
+
 document.getElementById('opt7').addEventListener('change', function() {
     if (this.checked) {
         document.querySelector('.conditional-section').classList.remove('hidden');
@@ -111,10 +128,27 @@ document.getElementById('opt8').addEventListener('change', function() {
     }
 });
 
+
+document.getElementById('opt5').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('pressorflux').classList.remove('hidden');
+    }
+})
+
+document.getElementById('opt6').addEventListener('change', function() {
+    if (this.checked) {
+        document.getElementById('pressorflux').classList.add('hidden');
+        clearConditionalFields()
+    }
+})
+
+
 function clearConditionalFields() {
     // Desmarcar checkboxes
     document.getElementById('medpar1').value = '';
     document.getElementById('medpar2').value = '';
+    document.getElementById('optPress').value = '';
+    document.getElementById('optFlux').value = '';
 }
 
 function setRequiredFields(isRequired) {

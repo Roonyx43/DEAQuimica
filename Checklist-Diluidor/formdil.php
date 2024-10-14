@@ -60,6 +60,10 @@
                     <input type="checkbox" name="option3" id="opt5" value="5" required>Sim
                     <input type="checkbox" name="option3" id="opt6" value="6" required>Não
                 </div>
+                <div class="buttons-press hidden" id="pressorflux">
+                    <input type="checkbox" name="optionPress" id="optPress" value="85">Pressostato
+                    <input type="checkbox" name="optionFlux" id="optFlux" value="86">Fluxostato
+                </div>
                 <div class="distanciahidr">
                     <input type="text" id="disthidr" placeholder="Distancia da hidraulica à central (m):" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
