@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cnpj = checkNull($_POST['cnpj']);
     $cpf = checkNull($_POST['cpf']);
     $rg = checkNull($_POST['rg']);
-    $razaoSocial = checkNull($_POST['razaoSocial']);
+    $razaoSocial = mysqli_real_escape_string($conn, $_POST['razaoSocial']);  // Sem usar checkNull aqui
     $nomeFantasia = checkNull($_POST['nomeFantasia']);
     $ramo = checkNull($_POST['ramo']);
     $ie = checkNull($_POST['ie']);
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telFinanceiro = checkNull($_POST['telFinanceiro']);
     $emailFinanceiro = checkNull($_POST['emailFinanceiro']);
     $emailNF = checkNull($_POST['emailNF']);
-    $vendedor = checkNull($_POST['vendedor']);
+    $vendedor = mysqli_real_escape_string($conn, $_POST['vendedor']);  // Sem usar checkNull aqui
     $apelidoEmpresa = checkNull($_POST['apelidoEmpresa']);
     $comodato = checkNull($_POST['comodato']);
     $condicoesPagamento = checkNull($_POST['condicoesPagamento']);
@@ -44,18 +44,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare a consulta SQL para atualizar os dados
     $sql = "UPDATE clientes SET 
-            cnpj = $cnpj, cpf = $cpf, rg = $rg, razaoSocial = $razaoSocial, nomeFantasia = $nomeFantasia, 
+            cnpj = $cnpj, cpf = $cpf, rg = $rg, razaoSocial = '$razaoSocial', nomeFantasia = $nomeFantasia, 
             ramo = $ramo, ie = $ie, cep = $cep, end = $end, num = $num, bairro = $bairro, 
             municipio = $municipio, uf = $uf, end2 = $end2, num2 = $num2, bairro2 = $bairro2, 
             municipio2 = $municipio2, uf2 = $uf2, contatoComercial = $contatoComercial, telComercial = $telComercial, 
             emailComercial = $emailComercial, contatoFinanceiro = $contatoFinanceiro, telFinanceiro = $telFinanceiro, 
-            emailFinanceiro = $emailFinanceiro, emailNF = $emailNF, vendedor = $vendedor, apelidoEmpresa = $apelidoEmpresa, 
+            emailFinanceiro = $emailFinanceiro, emailNF = $emailNF, vendedor = '$vendedor', apelidoEmpresa = $apelidoEmpresa, 
             comodato = $comodato, condicoesPagamento = $condicoesPagamento, data_modificacao = NOW() - INTERVAL 3 HOUR, volumeCompras = $volumeCompras
             WHERE id = '$id'";
 
     // Execute a consulta
     if (mysqli_query($conn, $sql)) {
+        // Atribua as variáveis PHP ao JavaScript dentro da string de echo
         echo "<script>
+            var razaoSocial = '" . addslashes($razaoSocial) . "';
+            var vendedor = '" . addslashes($vendedor) . "';
             alert('Cliente atualizado com sucesso.');
             window.location.href = 'https://api.whatsapp.com/send?phone=554191097362&text=Chegou%20novo%20cliente%20para%20cadastro!%0A%0ACliente:' + encodeURIComponent(razaoSocial) + '%0AVendedor:' + encodeURIComponent(vendedor);
         </script>";
