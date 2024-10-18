@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_query($conn, $sql)) {
         echo "<script>
             alert('Cliente atualizado com sucesso.');
-            window.location.href = 'https://api.whatsapp.com/send?phone=554191097362&text=Chegou%20novo%20cliente%20para%20cadastro!%0A%0ACliente:' + razaoSocial + '%0AVendedor:' + vendedor;
+            window.location.href = 'https://api.whatsapp.com/send?phone=554191097362&text=Chegou%20novo%20cliente%20para%20cadastro!%0A%0ACliente:' + encodeURIComponent(razaoSocial) + '%0AVendedor:' + encodeURIComponent(vendedor);
         </script>";
     } else {
         echo "<script>
