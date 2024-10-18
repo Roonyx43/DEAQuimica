@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             var razaoSocial = '" . addslashes($razaoSocial) . "';
             var vendedor = '" . addslashes($vendedor) . "';
             alert('Cliente atualizado com sucesso.');
-            window.location.href = 'https://api.whatsapp.com/send?phone=554191097362&text=Chegou%20novo%20cliente%20para%20cadastro!%0A%0ACliente:' + encodeURIComponent(razaoSocial) + '%0AVendedor:' + encodeURIComponent(vendedor);
+            window.location.href = 'https://api.whatsapp.com/send?phone=554191097362&text=Chegou%20novo%20cliente%20para%20cadastro!%0A%0ACliente%20:' + encodeURIComponent(razaoSocial) + '%0AVendedor:%20' + encodeURIComponent(vendedor);
         </script>";
     } else {
         echo "<script>
