@@ -2,9 +2,47 @@
 // Inclua o arquivo de configuração do banco de dados
 include '../config.php';
 
+// Carregar classes do PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Carregar o autoload do PHPMailer se estiver usando Composer
+require '../vendor/autoload.php'; // Caminho para o autoload do Composer
+
 // Função para verificar se o campo está vazio e retornar NULL
 function checkNull($value) {
     return empty($value) ? 'NULL' : "'" . mysqli_real_escape_string($GLOBALS['conn'], $value) . "'";
+}
+
+// Função para enviar email usando PHPMailer
+function enviarEmail($razaoSocial) {
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configurações do servidor
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';  // Servidor SMTP do Gmail
+        $mail->SMTPAuth = true;
+        $mail->Username = 'tideaquimica@gmail.com';  // Seu endereço de email do Gmail
+        $mail->Password = 'xoja osrl nlch nglo';  // Sua senha do Gmail ou senha de app se você tiver 2FA ativado
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Remetente e destinatário
+        $mail->setFrom('tideaquimica@gmail.com', 'Cadastro Pendente - D&A Tools');
+        $mail->addAddress('ti@deaquimica.com.br');  // Destinatário
+
+        // Conteúdo do e-mail
+        $mail->isHTML(true);
+        $mail->Subject = 'Cliente Pendente';
+        $mail->Body = "Cliente pendente: $razaoSocial";
+
+        // Enviar o e-mail
+        $mail->send();
+        echo "<script>alert('E-mail enviado com sucesso.');</script>";
+    } catch (Exception $e) {
+        echo "<script>alert('Falha ao enviar e-mail. Erro: {$mail->ErrorInfo}');</script>";
+    }
 }
 
 // Verifique se a requisição é feita via POST
@@ -55,12 +93,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute a consulta
     if (mysqli_query($conn, $sql)) {
+        // Enviar email com a razão social do cliente
+        enviarEmail($razaoSocial);
+
         // Atribua as variáveis PHP ao JavaScript dentro da string de echo
         echo "<script>
             var razaoSocial = '" . addslashes($razaoSocial) . "';
             var vendedor = '" . addslashes($vendedor) . "';
             alert('Cliente atualizado com sucesso.');
-            window.location.href = 'https://api.whatsapp.com/send?phone=554191097362&text=Chegou%20novo%20cliente%20para%20cadastro!%0A%0ACliente%20:' + encodeURIComponent(razaoSocial) + '%0AVendedor:%20' + encodeURIComponent(vendedor);
+            window.location.href = '../PaginaInicial/mainpage.php';
         </script>";
     } else {
         echo "<script>
@@ -72,4 +113,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Feche a conexão
     mysqli_close($conn);
 }
+
 ?>
