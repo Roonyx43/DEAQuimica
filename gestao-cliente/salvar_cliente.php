@@ -30,7 +30,7 @@ function enviarEmail($razaoSocial) {
 
         // Remetente e destinatário
         $mail->setFrom('tideaquimica@gmail.com', 'Cadastro Pendente - D&A Tools');
-        $mail->addAddress('ti@deaquimica.com.br');  // Destinatário
+        $mail->addAddress('rh@deaquimica.com.br');  // Destinatário
 
         // Conteúdo do e-mail
         $mail->isHTML(true);
