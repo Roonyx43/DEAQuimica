@@ -166,7 +166,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="apelidoEmpresa">Identificação Empresa</label>
-                    <input type="text" id="apelidoEmpresa" name="apelidoEmpresa">
+                    <input type="text" id="apelidoEmpresa" name="apelidoEmpresa" required>
                 </div>
             </div>
             <div class="form-row">
