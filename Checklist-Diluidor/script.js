@@ -431,8 +431,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('E29').value = qtdm1_b;
                 worksheet.getCell('C30').value = desconto1 + "%";
                 worksheet.getCell('E30').value = desconto1_b + "%";
-                worksheet.getCell('B32').value = dil1 + "ml/L";
-                worksheet.getCell('D32').value = dil1_b + "ml/L";
+                worksheet.getCell('B32').value = dil1;
+                worksheet.getCell('D32').value = dil1_b;
                 worksheet.getCell('C41').value = bh1_a ? 'X' : '';
                 worksheet.getCell('E41').value = bh1_b ? 'X' : '';
                 worksheet.getCell('C43').value = ms1_a ? 'X' : '';
@@ -452,8 +452,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('I29').value = qtdm2_b;
                 worksheet.getCell('G30').value = desconto2 + "%";
                 worksheet.getCell('I30').value = desconto2_b + "%";
-                worksheet.getCell('F32').value = dil2 + "ml/L";
-                worksheet.getCell('H32').value = dil2_b + "ml/L";
+                worksheet.getCell('F32').value = dil2;
+                worksheet.getCell('H32').value = dil2_b;
                 worksheet.getCell('G41').value = bh2_a ? 'X' : '';
                 worksheet.getCell('I41').value = bh2_b ? 'X' : '';
                 worksheet.getCell('G43').value = ms2_a ? 'X' : '';
@@ -473,8 +473,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('M29').value = qtdm3_b;
                 worksheet.getCell('K30').value = desconto3 + "%";
                 worksheet.getCell('M30').value = desconto3_b + "%";
-                worksheet.getCell('J32').value = dil3 + "ml/L";
-                worksheet.getCell('L32').value = dil3_b + "ml/L";
+                worksheet.getCell('J32').value = dil3;
+                worksheet.getCell('L32').value = dil3_b;
                 worksheet.getCell('K41').value = bh3_a ? 'X' : '';
                 worksheet.getCell('M41').value = bh3_b ? 'X' : '';
                 worksheet.getCell('K43').value = ms3_a ? 'X' : '';
@@ -494,8 +494,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('Q29').value = qtdm4_b;
                 worksheet.getCell('O30').value = desconto4 + "%";
                 worksheet.getCell('Q30').value = desconto4_b + "%";
-                worksheet.getCell('N32').value = dil4 + "ml/L";
-                worksheet.getCell('P32').value = dil4_b + "ml/L";
+                worksheet.getCell('N32').value = dil4;
+                worksheet.getCell('P32').value = dil4_b;
                 worksheet.getCell('O41').value = bh4_a ? 'X' : '';
                 worksheet.getCell('Q41').value = bh4_b ? 'X' : '';
                 worksheet.getCell('O43').value = ms4_a ? 'X' : '';
@@ -515,8 +515,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('U29').value = qtdm5_b;
                 worksheet.getCell('S30').value = desconto5 + "%";
                 worksheet.getCell('U30').value = desconto5_b + "%";
-                worksheet.getCell('R32').value = dil5 + "ml/L";
-                worksheet.getCell('T32').value = dil5_b + "ml/L";
+                worksheet.getCell('R32').value = dil5 ;
+                worksheet.getCell('T32').value = dil5_b;
                 worksheet.getCell('S41').value = bh5_a ? 'X' : '';
                 worksheet.getCell('U41').value = bh5_b ? 'X' : '';
                 worksheet.getCell('S43').value = ms5_a ? 'X' : '';
@@ -536,8 +536,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('Y29').value = qtdm6_b;
                 worksheet.getCell('W30').value = desconto6 + "%";
                 worksheet.getCell('Y30').value = desconto6_b + "%";
-                worksheet.getCell('V32').value = dil6 + "ml/L";
-                worksheet.getCell('X32').value = dil6_b + "ml/L";
+                worksheet.getCell('V32').value = dil6;
+                worksheet.getCell('X32').value = dil6_b;
                 worksheet.getCell('W41').value = bh6_a ? 'X' : '';
                 worksheet.getCell('Y41').value = bh6_b ? 'X' : '';
                 worksheet.getCell('W43').value = ms6_a ? 'X' : '';
