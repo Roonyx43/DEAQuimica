@@ -59,6 +59,10 @@
                     <input type="checkbox" name="option3" id="opt5" value="5" required>3/4
                     <input type="checkbox" name="option3" id="opt6" value="6" required>1/2
                 </div>
+                <div class="email">
+                    <p class="title-tens" style="margin-top: 20px;">Email para envio de comodato:</p>
+                    <input type="email" id="email" required>
+                </div>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar"><a href="../PaginaInicial/mainpage.php">Voltar</a></button>
                     <button type="button" class="next-page">Próxima Página</button>

@@ -441,6 +441,44 @@ input[type="number"]{
     margin-right: 10px;
 }
 
+/* Estilo geral do select */
+select {
+    width: 80%; /* Faz o select ocupar toda a largura do contêiner pai */
+    padding: 10px; /* Adiciona espaço interno */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    border: 2px solid #ccc; /* Define a borda */
+    border-radius: 5px; /* Arredonda os cantos */
+    background-color: #f9f9f9; /* Define a cor de fundo */
+    color: #333; /* Cor do texto */
+    cursor: pointer; /* Mostra o cursor de "mãozinha" ao passar sobre o select */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    transition: all 0.3s ease; /* Adiciona transição para suavizar mudanças */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo ao passar o mouse sobre o select */
+select:hover {
+    border-color: #007bff; /* Altera a cor da borda no hover */
+    background-color: #eef7ff; /* Altera a cor de fundo no hover */
+}
+
+/* Estilo ao focar no select */
+select:focus {
+    outline: none; /* Remove o contorno padrão */
+    border-color: #007bff; /* Altera a cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adiciona um efeito de brilho */
+}
+
+/* Estilo das opções dentro do select */
+option {
+    padding: 10px; /* Adiciona espaço interno */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    background-color: #fff; /* Fundo branco padrão */
+}
+
+
 @media (max-width: 1000px) {
 
     .formulario {

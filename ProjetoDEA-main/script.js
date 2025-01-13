@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tensao220v = document.querySelector('input[name="option2"][value="4"]').checked;
         const conexao34 = document.querySelector('input[name="option3"][value="5"]').checked;
         const conexao12 = document.querySelector('input[name="option3"][value="6"]').checked;
+        const email = document.getElementById('email').value
         const CPUdir = document.querySelector('input[name="option4"][value="7"]').checked;
         const CPUesq = document.querySelector('input[name="option4"][value="8"]').checked;
         const painelSim = document.querySelector('input[name="option5"][value="9"]').checked;
@@ -34,13 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         //Máquina 1
         const kg0 = document.querySelector('input[name="kg0"]').value;
-        const ssc1 = document.querySelector('input[name="checkbox0_semi1"]').checked;        
-        const check500024v1 = document.querySelector('input[name="checkbox0_semi2"]').checked;
-        const check5000220v1 = document.querySelector('input[name="checkbox0_semi3"]').checked;
-        const check5000bvv1 = document.querySelector('input[name="checkbox0_semi4"]').checked;
+        const tipo0 = document.getElementById('equipmentType0').value;
+        const check500024v1 = document.querySelector('input[name="checkbox0_semi1"]').checked;
+        const check5000220v1 = document.querySelector('input[name="checkbox0_semi2"]').checked;
+        const check5000bvv1 = document.querySelector('input[name="checkbox0_semi3"]').checked;
         const a801 = document.querySelector('input[name="checkbox0_auto1"]').checked
         const a501 = document.querySelector('input[name="checkbox0_auto2"]').checked
-        const aEB = document.querySelector('input[name="checkbox0_auto3"]').checked
+        const wash1mq = document.querySelector('input[name="checkbox0_wash1"]').checked
+        const wash2mq = document.querySelector('input[name="checkbox0_wash2"]').checked
+        const wash3mq = document.querySelector('input[name="checkbox0_wash3"]').checked
         const vb3_4 = document.querySelector('input[name="checkbox0_valvula1"]').checked
         const vb50 = document.querySelector('input[name="checkbox0_valvula2"]').checked
         const vbel = document.querySelector('input[name="checkbox0_valvula3"]').checked
@@ -52,20 +55,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const flesq = document.querySelector('input[name="checkbox_esquerda0"]').checked
         const fldir = document.querySelector('input[name="checkbox_direita0"]').checked
 
+        
+
         // Verifica a existência da div equipment-item2
         const equipmentItem2Exists = document.getElementById('equipment-item2') !== null;
 
         //Máquina 2 (se a div equipment-item2 existir)
-        let kg1, ssc2, check500024v2, check5000220v2, check5000bvv2, a801_2, a501_2, aEB2, vb3_4_2, vb50_2, vbel2, vbpn2, drenoinp2, drenoel2, drenopn2, distlp2, flesq2, fldir2;
+        let kg1, tipo1, check500024v2, check5000220v2, check5000bvv2, a801_2, a501_2, wash1mq_2, wash2mq_2, wash3mq_2, aEB2, vb3_4_2, vb50_2, vbel2, vbpn2, drenoinp2, drenoel2, drenopn2, distlp2, flesq2, fldir2;
         if (equipmentItem2Exists) {
-            kg1 = document.querySelector('input[name="kg1"]').value;
-            ssc2 = document.querySelector('input[name="checkbox1_semi1"]').checked;        
-            check500024v2 = document.querySelector('input[name="checkbox1_semi2"]').checked;
-            check5000220v2 = document.querySelector('input[name="checkbox1_semi3"]').checked;
-            check5000bvv2 = document.querySelector('input[name="checkbox1_semi4"]').checked;
+            kg1 = document.querySelector('input[name="kg1"]').value;     
+            tipo1 = document.getElementById('equipmentType1').value;
+            check500024v2 = document.querySelector('input[name="checkbox1_semi1"]').checked;
+            check5000220v2 = document.querySelector('input[name="checkbox1_semi2"]').checked;
+            check5000bvv2 = document.querySelector('input[name="checkbox1_semi3"]').checked;
             a801_2 = document.querySelector('input[name="checkbox1_auto1"]').checked;
             a501_2 = document.querySelector('input[name="checkbox1_auto2"]').checked;
-            aEB2 = document.querySelector('input[name="checkbox1_auto3"]').checked;
+            wash1mq_2 = document.querySelector('input[name="checkbox1_wash1"]').checked
+            wash2mq_2 = document.querySelector('input[name="checkbox1_wash2"]').checked
+            wash3mq_2 = document.querySelector('input[name="checkbox1_wash3"]').checked
             vb3_4_2 = document.querySelector('input[name="checkbox1_valvula1"]').checked;
             vb50_2 = document.querySelector('input[name="checkbox1_valvula2"]').checked;
             vbel2 = document.querySelector('input[name="checkbox1_valvula3"]').checked;
@@ -76,20 +83,24 @@ document.addEventListener('DOMContentLoaded', function() {
             distlp2 = document.querySelector('input[name="distancia1_input"]').value;
             flesq2 = document.querySelector('input[name="checkbox_esquerda1"]').checked;
             fldir2 = document.querySelector('input[name="checkbox_direita1"]').checked;
+
+            let tipoValor2;
         }
 
         const equipmentItem3Exists = document.getElementById('equipment-item3') !== null;
 
-        let kg2, ssc3, check500024v3, check5000220v3, check5000bvv3, a801_3, a501_3, aEB3, vb3_4_3, vb50_3, vbel3, vbpn3, drenoinp3, drenoel3, drenopn3, distlp3, flesq3, fldir3;
+        let kg2, tipo2, check500024v3, check5000220v3, check5000bvv3, a801_3, a501_3, wash1mq_3, wash2mq_3, wash3mq_3, vb3_4_3, vb50_3, vbel3, vbpn3, drenoinp3, drenoel3, drenopn3, distlp3, flesq3, fldir3;
         if (equipmentItem3Exists) {
             kg2 = document.querySelector('input[name="kg2"]').value;
-            ssc3 = document.querySelector('input[name="checkbox2_semi1"]').checked;        
-            check500024v3 = document.querySelector('input[name="checkbox2_semi2"]').checked;
-            check5000220v3 = document.querySelector('input[name="checkbox2_semi3"]').checked;
-            check5000bvv3 = document.querySelector('input[name="checkbox2_semi4"]').checked;
+            tipo2 = document.getElementById('equipmentType2').value;
+            check500024v3 = document.querySelector('input[name="checkbox2_semi1"]').checked;
+            check5000220v3 = document.querySelector('input[name="checkbox2_semi2"]').checked;
+            check5000bvv3 = document.querySelector('input[name="checkbox2_semi3"]').checked;
             a801_3 = document.querySelector('input[name="checkbox2_auto1"]').checked;
             a501_3 = document.querySelector('input[name="checkbox2_auto2"]').checked;
-            aEB3 = document.querySelector('input[name="checkbox2_auto3"]').checked;
+            wash1mq_3 = document.querySelector('input[name="checkbox2_wash1"]').checked
+            wash2mq_3 = document.querySelector('input[name="checkbox2_wash2"]').checked
+            wash3mq_3 = document.querySelector('input[name="checkbox2_wash3"]').checked
             vb3_4_3 = document.querySelector('input[name="checkbox2_valvula1"]').checked;
             vb50_3 = document.querySelector('input[name="checkbox2_valvula2"]').checked;
             vbel3 = document.querySelector('input[name="checkbox2_valvula3"]').checked;
@@ -100,20 +111,24 @@ document.addEventListener('DOMContentLoaded', function() {
             distlp3 = document.querySelector('input[name="distancia2_input"]').value;
             flesq3 = document.querySelector('input[name="checkbox_esquerda2"]').checked;
             fldir3 = document.querySelector('input[name="checkbox_direita2"]').checked;
+
+            let tipoValor3
         }
 
         const equipmentItem4Exists = document.getElementById('equipment-item4') !== null;
 
-        let kg3, ssc4, check500024v4, check5000220v4, check5000bvv4, a801_4, a501_4, aEB4, vb3_4_4, vb50_4, vbel4, vbpn4, drenoinp4, drenoel4, drenopn4, distlp4, flesq4, fldir4;
+        let kg3, tipo3, check500024v4, check5000220v4, check5000bvv4, a801_4, a501_4, wash1mq_4, wash2mq_4, wash3mq_4, vb3_4_4, vb50_4, vbel4, vbpn4, drenoinp4, drenoel4, drenopn4, distlp4, flesq4, fldir4;
         if (equipmentItem3Exists) {
             kg3 = document.querySelector('input[name="kg3"]').value;
-            ssc4 = document.querySelector('input[name="checkbox3_semi1"]').checked;        
-            check500024v4 = document.querySelector('input[name="checkbox3_semi2"]').checked;
-            check5000220v4 = document.querySelector('input[name="checkbox3_semi3"]').checked;
-            check5000bvv4 = document.querySelector('input[name="checkbox3_semi4"]').checked;
+            tipo3 = document.getElementById('equipmentType3').value;
+            check500024v4 = document.querySelector('input[name="checkbox3_semi1"]').checked;
+            check5000220v4 = document.querySelector('input[name="checkbox3_semi2"]').checked;
+            check5000bvv4 = document.querySelector('input[name="checkbox3_semi3"]').checked;
             a801_4 = document.querySelector('input[name="checkbox3_auto1"]').checked;
             a501_4 = document.querySelector('input[name="checkbox3_auto2"]').checked;
-            aEB4 = document.querySelector('input[name="checkbox3_auto3"]').checked;
+            wash1mq_4 = document.querySelector('input[name="checkbox3_wash1"]').checked
+            wash2mq_4 = document.querySelector('input[name="checkbox3_wash2"]').checked
+            wash3mq_4 = document.querySelector('input[name="checkbox3_wash3"]').checked
             vb3_4_4 = document.querySelector('input[name="checkbox3_valvula1"]').checked;
             vb50_4 = document.querySelector('input[name="checkbox3_valvula2"]').checked;
             vbel4 = document.querySelector('input[name="checkbox3_valvula3"]').checked;
@@ -124,6 +139,9 @@ document.addEventListener('DOMContentLoaded', function() {
             distlp4 = document.querySelector('input[name="distancia3_input"]').value;
             flesq4 = document.querySelector('input[name="checkbox_esquerda3"]').checked;
             fldir4 = document.querySelector('input[name="checkbox_direita3"]').checked;
+
+            let tipoValor4;
+
         }
 
         // Captura os valores dos inputs de produto adicionados dinamicamente
@@ -169,6 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('N15').value = tensao220v ? 'X' : '';
                 worksheet.getCell('V15').value = conexao34 ? 'X' : '';
                 worksheet.getCell('Z15').value = conexao12 ? 'X' : '';
+                worksheet.getCell('P8').value = email;
                 worksheet.getCell('I17').value = CPUdir ? 'X' : '';
                 worksheet.getCell('O17').value = CPUesq ? 'X' : '';
                 worksheet.getCell('W17').value = painelSim ? 'X' : '';
@@ -185,13 +204,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Inserindo Máquina 1
                 worksheet.getCell('B34').value = kg0 + "KG";
-                worksheet.getCell('N31').value = ssc1 ? 'X' : '';
-                worksheet.getCell('R31').value = check500024v1 ? 'X' : '';
-                worksheet.getCell('V31').value = check5000220v1 ? 'X' : '';
-                worksheet.getCell('Z31').value = check5000bvv1 ? 'X' : '';
+                worksheet.getCell('B35').value = tipo0;
+                worksheet.getCell('N31').value = check500024v1 ? 'X' : '';
+                worksheet.getCell('S31').value = check5000220v1 ? 'X' : '';
+                worksheet.getCell('X31').value = check5000bvv1 ? 'X' : '';
                 worksheet.getCell('K32').value = a801 ? 'X' : '';
                 worksheet.getCell('M32').value = a501 ? 'X' : '';
-                worksheet.getCell('Q32').value = aEB ? 'X' : '';
+                worksheet.getCell('Q32').value = wash1mq ? 'X' : '';
+                worksheet.getCell('T32').value = wash2mq ? 'X' : '';
+                worksheet.getCell('W32').value = wash3mq ? 'X' : '';
                 worksheet.getCell('L33').value = vb3_4 ? 'X' : '';
                 worksheet.getCell('O33').value = vb50 ? 'X' : '';
                 worksheet.getCell('S33').value = vbel ? 'X' : '';
@@ -206,13 +227,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Inserção da Máquina 2 (se a div equipment-item2 existir)
                 if (equipmentItem2Exists) {
                     worksheet.getCell('B39').value = kg1 + "KG";
-                    worksheet.getCell('N36').value = ssc2 ? 'X' : '';
-                    worksheet.getCell('R36').value = check500024v2 ? 'X' : '';
-                    worksheet.getCell('V36').value = check5000220v2 ? 'X' : '';
-                    worksheet.getCell('Z36').value = check5000bvv2 ? 'X' : '';
+                    worksheet.getCell('B40').value = tipo1;
+                    worksheet.getCell('N36').value = check500024v2 ? 'X' : '';
+                    worksheet.getCell('S36').value = check5000220v2 ? 'X' : '';
+                    worksheet.getCell('X36').value = check5000bvv2 ? 'X' : '';
                     worksheet.getCell('K37').value = a801_2 ? 'X' : '';
                     worksheet.getCell('M37').value = a501_2 ? 'X' : '';
-                    worksheet.getCell('Q37').value = aEB2 ? 'X' : '';
+                    worksheet.getCell('Q37').value = wash1mq_2 ? 'X' : '';
+                    worksheet.getCell('T37').value = wash2mq_2 ? 'X' : '';
+                    worksheet.getCell('W37').value = wash3mq_2 ? 'X' : '';
                     worksheet.getCell('L38').value = vb3_4_2 ? 'X' : '';
                     worksheet.getCell('O38').value = vb50_2 ? 'X' : '';
                     worksheet.getCell('S38').value = vbel2 ? 'X' : '';
@@ -227,13 +250,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (equipmentItem3Exists) {
                     worksheet.getCell('B44').value = kg2 + "KG";
-                    worksheet.getCell('N41').value = ssc3 ? 'X' : '';
-                    worksheet.getCell('R41').value = check500024v3 ? 'X' : '';
-                    worksheet.getCell('V41').value = check5000220v3 ? 'X' : '';
-                    worksheet.getCell('Z41').value = check5000bvv3 ? 'X' : '';
+                    worksheet.getCell('B45').value = tipo2;
+                    worksheet.getCell('N41').value = check500024v3 ? 'X' : '';
+                    worksheet.getCell('S41').value = check5000220v3 ? 'X' : '';
+                    worksheet.getCell('X41').value = check5000bvv3 ? 'X' : '';
                     worksheet.getCell('K42').value = a801_3 ? 'X' : '';
                     worksheet.getCell('M42').value = a501_3 ? 'X' : '';
-                    worksheet.getCell('Q42').value = aEB3 ? 'X' : '';
+                    worksheet.getCell('Q42').value = wash1mq_3 ? 'X' : '';
+                    worksheet.getCell('T42').value = wash2mq_3 ? 'X' : '';
+                    worksheet.getCell('W42').value = wash3mq_3 ? 'X' : '';
                     worksheet.getCell('L43').value = vb3_4_3 ? 'X' : '';
                     worksheet.getCell('O43').value = vb50_3 ? 'X' : '';
                     worksheet.getCell('S43').value = vbel3 ? 'X' : '';
@@ -248,13 +273,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (equipmentItem4Exists) {
                     worksheet.getCell('B49').value = kg3 + "KG";
-                    worksheet.getCell('N46').value = ssc4 ? 'X' : '';
-                    worksheet.getCell('R46').value = check500024v4 ? 'X' : '';
-                    worksheet.getCell('V46').value = check5000220v4 ? 'X' : '';
-                    worksheet.getCell('Z46').value = check5000bvv4 ? 'X' : '';
+                    worksheet.getCell('B50').value = tipo3;
+                    worksheet.getCell('N46').value = check500024v4 ? 'X' : '';
+                    worksheet.getCell('S46').value = check5000220v4 ? 'X' : '';
+                    worksheet.getCell('X46').value = check5000bvv4 ? 'X' : '';
                     worksheet.getCell('K47').value = a801_4 ? 'X' : '';
                     worksheet.getCell('M47').value = a501_4 ? 'X' : '';
-                    worksheet.getCell('Q47').value = aEB4 ? 'X' : '';
+                    worksheet.getCell('Q47').value = wash1mq_4 ? 'X' : '';
+                    worksheet.getCell('T47').value = wash2mq_4 ? 'X' : '';
+                    worksheet.getCell('W47').value = wash3mq_4 ? 'X' : '';
                     worksheet.getCell('L48').value = vb3_4_4 ? 'X' : '';
                     worksheet.getCell('O48').value = vb50_4 ? 'X' : '';
                     worksheet.getCell('S48').value = vbel4 ? 'X' : '';

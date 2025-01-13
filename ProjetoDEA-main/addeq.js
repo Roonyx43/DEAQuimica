@@ -47,13 +47,19 @@ document.addEventListener("DOMContentLoaded", function() {
         equipmentDiv.appendChild(kgLabel);
         equipmentDiv.appendChild(document.createElement("br"));
 
+
         // Creating a container for the four columns
         const columnsContainer = document.createElement("div");
         columnsContainer.classList.add("columns-container");
 
+        //Tipo
+        const selectSection = createSelectSection("Escolha o tipo de equipamento:", "equipmentType");
+        // Adiciona a seção gerada ao seu container ou elemento desejado
+        columnsContainer.appendChild(selectSection);
+
+
         // Semi-automação
         const semiAutomacaoDiv = createSection('Semi-automação', [
-            'Smart Speed Control',
             '5000IR 24V',
             '5000IR 220V',
             '5000IR BV'
@@ -64,9 +70,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const automacaoDiv = createSection('Automação', [
             '801',
             '501',
-            'Smart EB'
         ], `checkbox${id}_auto`, 1, false);
         columnsContainer.appendChild(automacaoDiv);
+
+        // WASH DOSE
+        const washdoseDiv = createSection('Wash Dose', [
+            '1 Máquina',
+            '2 Máquinas',
+            '3 Máquinas'
+        ], `checkbox${id}_wash`, 1, false);
+        columnsContainer.appendChild(washdoseDiv);
 
         // Valvula Bermard
         const valvulaDiv = createSection('Valvula Bermard', [
@@ -239,6 +252,55 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     }
+
+
+    function createSelectSection(titleText, namePrefix, isRequired = true) {
+        const sectionDiv = document.createElement("div");
+        sectionDiv.classList.add("column");
+    
+        const title = document.createElement("h3");
+        title.textContent = titleText;
+        sectionDiv.appendChild(title);
+    
+        // Função para encontrar o menor índice disponível
+        const findNextAvailableIndex = () => {
+            const existingIndices = Array.from(document.querySelectorAll(`select[name^="${namePrefix}"]`))
+                .map(select => parseInt(select.name.replace(namePrefix, ""), 10)) // Extrai os índices existentes
+                .filter(Number.isInteger); // Remove valores inválidos
+            let nextIndex = 0;
+            while (existingIndices.includes(nextIndex)) {
+                nextIndex++; // Incrementa até encontrar o menor índice disponível
+            }
+            return nextIndex;
+        };
+    
+        const nextIndex = findNextAvailableIndex();
+    
+        // Criação do elemento select
+        const select = document.createElement("select");
+        select.name = `${namePrefix}${nextIndex}`; // Gera o name com base no índice disponível
+        select.id = `${namePrefix}${nextIndex}`;   // Gera o id com base no índice disponível
+    
+        if (isRequired) {
+            select.setAttribute('required', 'required'); // Define o atributo required
+        }
+    
+        // Adicionando as opções ao select
+        const options = ["Auto-Serviço", "Extratora", "Convencional"];
+        options.forEach(optionText => {
+            const option = document.createElement("option");
+            option.value = optionText;
+            option.textContent = optionText;
+            select.appendChild(option);
+        });
+    
+        sectionDiv.appendChild(select);
+    
+        return sectionDiv;
+    }
+    
+
+    
 
     // Adicionando lógica de validação no envio do formulário
     const form = document.getElementById('myForm');
