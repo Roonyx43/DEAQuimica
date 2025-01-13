@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dtinst = document.querySelector('input[placeholder="Data de instalação"]').value;
         const hor = document.querySelector('input[placeholder="Horário"]').value;
         const nomeCliente = document.querySelector('input[placeholder="Nome do Cliente"]').value;
-        const codigoCliente = document.querySelector('input[placeholder="Código do Cliente"]').value;
+        const codigoCliente = document.querySelector('input[placeholder="CNPJ do Cliente"]').value;
         const vendedor = document.querySelector('input[placeholder="Vendedor"]').value;
         const contatoInstalacao = document.querySelector('input[placeholder="Contato na instalação"]').value;
         const clienteNovo = document.querySelector('input[name="option"][value="1"]').checked;
@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const check5000bvv1 = document.querySelector('input[name="checkbox0_semi3"]').checked;
         const a801 = document.querySelector('input[name="checkbox0_auto1"]').checked
         const a501 = document.querySelector('input[name="checkbox0_auto2"]').checked
+        const washdose1 = document.querySelector('input[name="checkbox0_auto3"]').checked
         const wash1mq = document.querySelector('input[name="checkbox0_wash1"]').checked
         const wash2mq = document.querySelector('input[name="checkbox0_wash2"]').checked
         const wash3mq = document.querySelector('input[name="checkbox0_wash3"]').checked
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const equipmentItem2Exists = document.getElementById('equipment-item2') !== null;
 
         //Máquina 2 (se a div equipment-item2 existir)
-        let kg1, tipo1, check500024v2, check5000220v2, check5000bvv2, a801_2, a501_2, wash1mq_2, wash2mq_2, wash3mq_2, aEB2, vb3_4_2, vb50_2, vbel2, vbpn2, drenoinp2, drenoel2, drenopn2, distlp2, flesq2, fldir2;
+        let kg1, tipo1, check500024v2, check5000220v2, check5000bvv2, a801_2, a501_2, washdose2, wash1mq_2, wash2mq_2, wash3mq_2, aEB2, vb3_4_2, vb50_2, vbel2, vbpn2, drenoinp2, drenoel2, drenopn2, distlp2, flesq2, fldir2;
         if (equipmentItem2Exists) {
             kg1 = document.querySelector('input[name="kg1"]').value;     
             tipo1 = document.getElementById('equipmentType1').value;
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             check5000bvv2 = document.querySelector('input[name="checkbox1_semi3"]').checked;
             a801_2 = document.querySelector('input[name="checkbox1_auto1"]').checked;
             a501_2 = document.querySelector('input[name="checkbox1_auto2"]').checked;
+            washdose2 = document.querySelector('input[name="checkbox1_auto3"]').checked
             wash1mq_2 = document.querySelector('input[name="checkbox1_wash1"]').checked
             wash2mq_2 = document.querySelector('input[name="checkbox1_wash2"]').checked
             wash3mq_2 = document.querySelector('input[name="checkbox1_wash3"]').checked
@@ -84,12 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
             flesq2 = document.querySelector('input[name="checkbox_esquerda1"]').checked;
             fldir2 = document.querySelector('input[name="checkbox_direita1"]').checked;
 
-            let tipoValor2;
         }
 
         const equipmentItem3Exists = document.getElementById('equipment-item3') !== null;
 
-        let kg2, tipo2, check500024v3, check5000220v3, check5000bvv3, a801_3, a501_3, wash1mq_3, wash2mq_3, wash3mq_3, vb3_4_3, vb50_3, vbel3, vbpn3, drenoinp3, drenoel3, drenopn3, distlp3, flesq3, fldir3;
+        let kg2, tipo2, check500024v3, check5000220v3, check5000bvv3, a801_3, a501_3, washdose3, wash1mq_3, wash2mq_3, wash3mq_3, vb3_4_3, vb50_3, vbel3, vbpn3, drenoinp3, drenoel3, drenopn3, distlp3, flesq3, fldir3;
         if (equipmentItem3Exists) {
             kg2 = document.querySelector('input[name="kg2"]').value;
             tipo2 = document.getElementById('equipmentType2').value;
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
             check5000bvv3 = document.querySelector('input[name="checkbox2_semi3"]').checked;
             a801_3 = document.querySelector('input[name="checkbox2_auto1"]').checked;
             a501_3 = document.querySelector('input[name="checkbox2_auto2"]').checked;
+            washdose3 = document.querySelector('input[name="checkbox2_auto3"]').checked
             wash1mq_3 = document.querySelector('input[name="checkbox2_wash1"]').checked
             wash2mq_3 = document.querySelector('input[name="checkbox2_wash2"]').checked
             wash3mq_3 = document.querySelector('input[name="checkbox2_wash3"]').checked
@@ -111,13 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
             distlp3 = document.querySelector('input[name="distancia2_input"]').value;
             flesq3 = document.querySelector('input[name="checkbox_esquerda2"]').checked;
             fldir3 = document.querySelector('input[name="checkbox_direita2"]').checked;
-
-            let tipoValor3
+        
         }
 
         const equipmentItem4Exists = document.getElementById('equipment-item4') !== null;
 
-        let kg3, tipo3, check500024v4, check5000220v4, check5000bvv4, a801_4, a501_4, wash1mq_4, wash2mq_4, wash3mq_4, vb3_4_4, vb50_4, vbel4, vbpn4, drenoinp4, drenoel4, drenopn4, distlp4, flesq4, fldir4;
+        let kg3, tipo3, check500024v4, check5000220v4, check5000bvv4, a801_4, a501_4, washdose4, wash1mq_4, wash2mq_4, wash3mq_4, vb3_4_4, vb50_4, vbel4, vbpn4, drenoinp4, drenoel4, drenopn4, distlp4, flesq4, fldir4;
         if (equipmentItem3Exists) {
             kg3 = document.querySelector('input[name="kg3"]').value;
             tipo3 = document.getElementById('equipmentType3').value;
@@ -126,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             check5000bvv4 = document.querySelector('input[name="checkbox3_semi3"]').checked;
             a801_4 = document.querySelector('input[name="checkbox3_auto1"]').checked;
             a501_4 = document.querySelector('input[name="checkbox3_auto2"]').checked;
+            washdose4 = document.querySelector('input[name="checkbox3_auto3"]').checked
             wash1mq_4 = document.querySelector('input[name="checkbox3_wash1"]').checked
             wash2mq_4 = document.querySelector('input[name="checkbox3_wash2"]').checked
             wash3mq_4 = document.querySelector('input[name="checkbox3_wash3"]').checked
@@ -139,8 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
             distlp4 = document.querySelector('input[name="distancia3_input"]').value;
             flesq4 = document.querySelector('input[name="checkbox_esquerda3"]').checked;
             fldir4 = document.querySelector('input[name="checkbox_direita3"]').checked;
-
-            let tipoValor4;
 
         }
 
@@ -210,9 +210,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('X31').value = check5000bvv1 ? 'X' : '';
                 worksheet.getCell('K32').value = a801 ? 'X' : '';
                 worksheet.getCell('M32').value = a501 ? 'X' : '';
-                worksheet.getCell('Q32').value = wash1mq ? 'X' : '';
-                worksheet.getCell('T32').value = wash2mq ? 'X' : '';
-                worksheet.getCell('W32').value = wash3mq ? 'X' : '';
+                worksheet.getCell('Q32').value = washdose1 ? 'X' : '';
+                worksheet.getCell('T32').value = wash1mq ? 'X' : '';
+                worksheet.getCell('W32').value = wash2mq ? 'X' : '';
+                worksheet.getCell('Z32').value = wash3mq ? 'X' : '';
                 worksheet.getCell('L33').value = vb3_4 ? 'X' : '';
                 worksheet.getCell('O33').value = vb50 ? 'X' : '';
                 worksheet.getCell('S33').value = vbel ? 'X' : '';
@@ -233,9 +234,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     worksheet.getCell('X36').value = check5000bvv2 ? 'X' : '';
                     worksheet.getCell('K37').value = a801_2 ? 'X' : '';
                     worksheet.getCell('M37').value = a501_2 ? 'X' : '';
-                    worksheet.getCell('Q37').value = wash1mq_2 ? 'X' : '';
-                    worksheet.getCell('T37').value = wash2mq_2 ? 'X' : '';
-                    worksheet.getCell('W37').value = wash3mq_2 ? 'X' : '';
+                    worksheet.getCell('Q37').value = washdose1 ? 'X' : '';
+                    worksheet.getCell('T37').value = wash1mq_2 ? 'X' : '';
+                    worksheet.getCell('W37').value = wash2mq_2 ? 'X' : '';
+                    worksheet.getCell('Z37').value = wash3mq_2 ? 'X' : '';
                     worksheet.getCell('L38').value = vb3_4_2 ? 'X' : '';
                     worksheet.getCell('O38').value = vb50_2 ? 'X' : '';
                     worksheet.getCell('S38').value = vbel2 ? 'X' : '';
@@ -256,9 +258,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     worksheet.getCell('X41').value = check5000bvv3 ? 'X' : '';
                     worksheet.getCell('K42').value = a801_3 ? 'X' : '';
                     worksheet.getCell('M42').value = a501_3 ? 'X' : '';
-                    worksheet.getCell('Q42').value = wash1mq_3 ? 'X' : '';
-                    worksheet.getCell('T42').value = wash2mq_3 ? 'X' : '';
-                    worksheet.getCell('W42').value = wash3mq_3 ? 'X' : '';
+                    worksheet.getCell('Q42').value = washdose3 ? 'X' : '';
+                    worksheet.getCell('T42').value = wash1mq_3 ? 'X' : '';
+                    worksheet.getCell('W42').value = wash2mq_3 ? 'X' : '';
+                    worksheet.getCell('Z42').value = wash3mq_3 ? 'X' : '';
                     worksheet.getCell('L43').value = vb3_4_3 ? 'X' : '';
                     worksheet.getCell('O43').value = vb50_3 ? 'X' : '';
                     worksheet.getCell('S43').value = vbel3 ? 'X' : '';
@@ -279,9 +282,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     worksheet.getCell('X46').value = check5000bvv4 ? 'X' : '';
                     worksheet.getCell('K47').value = a801_4 ? 'X' : '';
                     worksheet.getCell('M47').value = a501_4 ? 'X' : '';
-                    worksheet.getCell('Q47').value = wash1mq_4 ? 'X' : '';
-                    worksheet.getCell('T47').value = wash2mq_4 ? 'X' : '';
-                    worksheet.getCell('W47').value = wash3mq_4 ? 'X' : '';
+                    worksheet.getCell('Q47').value = washdose4 ? 'X' : '';
+                    worksheet.getCell('T47').value = wash1mq_4 ? 'X' : '';
+                    worksheet.getCell('W47').value = wash2mq_4 ? 'X' : '';
+                    worksheet.getCell('Z47').value = wash3mq_4 ? 'X' : '';
                     worksheet.getCell('L48').value = vb3_4_4 ? 'X' : '';
                     worksheet.getCell('O48').value = vb50_4 ? 'X' : '';
                     worksheet.getCell('S48').value = vbel4 ? 'X' : '';

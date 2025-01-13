@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const automacaoDiv = createSection('Automação', [
             '801',
             '501',
+            'Wash Dose'
         ], `checkbox${id}_auto`, 1, false);
         columnsContainer.appendChild(automacaoDiv);
 
