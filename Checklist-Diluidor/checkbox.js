@@ -97,18 +97,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // Pressostato e Fluxostato lógica de marcação
+const nothing = document.getElementById('optNothing');
 const pressostato = document.getElementById('optPress');
 const fluxostato = document.getElementById('optFlux');
 
 pressostato.addEventListener('change', function() {
     if (pressostato.checked) {
         fluxostato.checked = false;
+        nothing.checked = false
     }
 });
 
 fluxostato.addEventListener('change', function() {
     if (fluxostato.checked) {
         pressostato.checked = false;
+        nothing.checked = false
+    }
+});
+
+nothing.addEventListener('change', function() {
+    if (nothing.checked) {
+        pressostato.checked = false;
+        fluxostato.checked = false
     }
 });
 

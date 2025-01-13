@@ -55,12 +55,8 @@
                         <input type="checkbox" name="option2" id="opt4" value="4" required>220v
                     </div>
                 </div>
-                <div class="buttons-conex">
-                    <label class="title-tens">Motobomba:</label>
-                    <input type="checkbox" name="option3" id="opt5" value="5" required>Sim
-                    <input type="checkbox" name="option3" id="opt6" value="6" required>Não
-                </div>
-                <div class="buttons-press hidden" id="pressorflux">
+                <div class="buttons-press" id="pressorflux">
+                    <input type="checkbox" name="optionNothing" id="optNothing" value="400">Sem motobomba
                     <input type="checkbox" name="optionPress" id="optPress" value="85">Pressostato
                     <input type="checkbox" name="optionFlux" id="optFlux" value="86">Fluxostato
                 </div>

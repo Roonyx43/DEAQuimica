@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const clienteExistente = document.querySelector('input[name="option"][value="2"]').checked;
         const tensao110v = document.querySelector('input[name="option2"][value="3"]').checked;
         const tensao220v = document.querySelector('input[name="option2"][value="4"]').checked;
-        const conexao34 = document.querySelector('input[name="option3"][value="5"]').checked;
-        const conexao12 = document.querySelector('input[name="option3"][value="6"]').checked;
+        const nothing = document.getElementById('optNothing').checked;
         const pressostato = document.getElementById('optPress').checked;
         const fluxostato = document.getElementById('optFlux').checked;
         const disthidr = document.getElementById('disthidr').value;
@@ -403,14 +402,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('P12').value = clienteExistente ? 'X' : '';
                 worksheet.getCell('H14').value = tensao110v ? 'X' : '';
                 worksheet.getCell('K14').value = tensao220v ? 'X' : '';
-                worksheet.getCell('H15').value = conexao34 ? 'X' : '';
-                worksheet.getCell('K15').value = conexao12 ? 'X' : '';
                 worksheet.getCell('H16').value = disthidr + "m";
                 worksheet.getCell('T16').value = distelet + "m";
                 worksheet.getCell('B19').value = PCBs ? 'X' : '';
                 worksheet.getCell('E19').value = PCBn ? 'X' : '';
-                worksheet.getCell('N14').value = pressostato ? 'X' : '';
-                worksheet.getCell('N15').value = fluxostato ? 'X' : '';
+                worksheet.getCell('H15').value = nothing ? 'X' : '';
+                worksheet.getCell('K15').value = pressostato ? 'X' : '';
+                worksheet.getCell('O15').value = fluxostato ? 'X' : '';
                 worksheet.getCell('M18').value = entrAd ? 'X' : '';
                 worksheet.getCell('P18').value = entrAe ? 'X' : '';
                 worksheet.getCell('M19').value = entrEd ? 'X' : '';
