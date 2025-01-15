@@ -66,6 +66,7 @@
                 <div class="distanciaelet">
                     <input type="text" id="distelet" placeholder="Distancia do ponto elétrico à central (m):" inputmode="decimal" pattern="\d*,?\d*">
                 </div>
+                <input type="email" id="email" placeholder="Email para envio comodato" required>
                 <div class="buttons-enviar">
                     <button type="button" class="button-voltar"><a href="../PaginaInicial/mainpage.php">Voltar</a></button>
                     <button type="button" class="next-page">Próxima Página</button>
