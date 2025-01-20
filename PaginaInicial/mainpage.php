@@ -26,8 +26,6 @@
     $stmt->close();
     $conn->close();
 
-    // Exemplo de uso do $userLink
-    echo "Link relativo do usuário: " . htmlspecialchars($userLink);
 ?>
 <!DOCTYPE html>
 <html lang="en">
