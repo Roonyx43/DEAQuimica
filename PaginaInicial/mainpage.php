@@ -13,12 +13,21 @@
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $userLink = $row['link']; // Link do cliente
+
+        // Tornar o link relativo, removendo a parte fixa
+        $base_url = "https://dea-tools.up.railway.app/";
+        if (strpos($userLink, $base_url) === 0) { // Verifica se começa com o base_url
+            $userLink = str_replace($base_url, '', $userLink); // Remove a parte fixa
+        }
     } else {
         $userLink = ''; // Caso não encontre o link, pode deixar vazio
     }
- 
+
     $stmt->close();
     $conn->close();
+
+    // Exemplo de uso do $userLink
+    echo "Link relativo do usuário: " . htmlspecialchars($userLink);
 ?>
 <!DOCTYPE html>
 <html lang="en">
