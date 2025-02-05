@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const disthidr = document.getElementById('disthidr').value;
         const distelet = document.getElementById('distelet').value;
         const email = document.getElementById('email').value;
+        const radiosim = document.getElementById('radiosim').checked
+        const radionao = document.getElementById('radionao').checked
         const PCBs = document.querySelector('input[name="option4"][value="7"]').checked;
         const PCBn = document.querySelector('input[name="option4"][value="8"]').checked;
         const entrAd = document.querySelector('input[name="option5"][value="9"]').checked;
@@ -399,6 +401,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 worksheet.getCell('W9').value = codigoCliente;
                 worksheet.getCell('H10').value = vendedor;
                 worksheet.getCell('H11').value = contatoInstalacao;
+                worksheet.getCell('L4').value = radiosim ? 'X' : '';
+                worksheet.getCell('O4').value = radionao ? 'X' : '';
                 worksheet.getCell('H12').value = clienteNovo ? 'X' : '';
                 worksheet.getCell('P12').value = clienteExistente ? 'X' : '';
                 worksheet.getCell('H14').value = tensao110v ? 'X' : '';
